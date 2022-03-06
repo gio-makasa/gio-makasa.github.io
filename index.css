@@ -1,6 +1,5 @@
-*{
-    background-color: brown;
-}
-h1{
-    color: blue;
+body{
+    background-image: url("galaxy.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
