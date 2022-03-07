@@ -11,17 +11,15 @@
     <div class="frame">
         <header>
             <img src="CV.png" alt="CV">
-            <ul>
+            <ul id="header">
                 <li><a class="active" href="#home">Home</a></li>
                 <li><a href="#games">Games</a></li>
             </ul>
         </header>
 
         <main>
-            <div class="pic">
-                <img src="walker.jpg" alt="walker">
-            </div>
             <div class="info">
+                <img src="walker.jpg" alt="walker">
                 <h2>გიორგი მაკასარაშვილი</h2>
                 <hr>
                 <p>B.Date: 30-Nov-2001</p>
@@ -29,14 +27,46 @@
                 <p>E-mail: giorgimakasarashvili@gmail.com</p>
             </div>
             <div class="skills">
-                <h2 style="border-bottom: solid 1px purple;">SKILLS</h2>
-                <p>HTML</p>
-                <p>CSS</p>
-                <p>JAvaScript</p>
-                <p>JQuery</p>
-                <p>SQL</p>
+                <div class="tab"><h2>SKILLS</h2></div>
+                <div class="tabcontent">
+                    <p>HTML</p>
+                    <p>CSS</p>
+                    <p>JavaScript</p>
+                    <p>JQuery</p>
+                    <p>SQL</p>
+                    <p>Git</p>
+                    <p>Github</p>
+                </div>
+            </div>
+            <br>
+            <div class="experience">
+                <div class="tab"><h2>EXPERIENCE</h2></div>
+                <div class="tabcontent">
+                    <p>-----</p>
+                </div>
+            </div>
+            <br>
+            <div class="education">
+                <div class="tab"><h2>EDUCATION</h2></div>
+                <div class="tabcontent">
+                    <p>სკოლა</p>
+                </div>
             </div>
         </main>
     </div>
 </body>
+<script>
+    window.onscroll = function() {myFunction()};
+    var header = document.getElementById("header");
+    var sticky = header.offsetTop;
+    function myFunction() {
+        if(window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+            header.style.opacity = '0.6';
+        } else{
+            header.classList.remove("sticky");
+            header.style.opacity = '1';
+        }
+    }
+</script>
 </html>
