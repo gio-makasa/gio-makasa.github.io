@@ -3,3 +3,61 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
+.frame{
+    border: solid 3px black;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 15px blueviolet;
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    bottom: 5%;
+    left: 10%;
+}
+header > img{
+    margin: 10px 25px;
+    width: 100px;
+    height: 60px;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+li{
+    float: left;
+    border-right:1px solid #bbb;
+}
+li:last-child {
+    border-right: none;
+}
+li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover:not(.active){
+    background-color: rgb(51, 15, 85);
+}
+.active{
+    background-color: blueviolet;
+}
+.pic > img{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: 0 1%;
+    float: left;
+}
+.skills{
+    float: left;
+    border: solid 2px purple;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
