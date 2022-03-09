@@ -19,25 +19,14 @@ body{
     background-size: cover;
     background-attachment: fixed;
 }
-.sticky{
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: block;
-    text-align: center;
-}
 .frame{
     border: solid 3px black;
     background-color: rgb(20,20,20);
     border-radius: 20px;
     box-shadow: 0 0 15px blueviolet;
-    position: absolute;
     height: fit-content;
-    top: 5%;
-    right: 10%;
-    bottom: 5%;
-    left: 10%;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
+    margin: 0 15%;
 }
 header{
     background-image: url("galaxy-head.jpg");
@@ -86,8 +75,6 @@ li a:hover:not(.active){
 .skills{
     border: solid 2px purple;
     border-radius: 10px;
-    left: 0;
-    right: 0;
 }
 .skills > .tab{
     border-bottom: solid 1px purple;
@@ -95,7 +82,8 @@ li a:hover:not(.active){
 }
 .skills > .tabcontent{
     display: flex;
-    height: 100px;
+    min-height: 100px;
+    flex-wrap: wrap;
 }
 .skills > .tabcontent > p{
     width: fit-content;
@@ -110,8 +98,6 @@ li a:hover:not(.active){
 .experience{
     border: solid 2px rgb(190, 190, 0);
     border-radius: 10px;
-    left: 0;
-    right: 0;
 }
 .experience > .tab{
     border-bottom: solid 1px rgb(190, 190, 0);
@@ -119,7 +105,8 @@ li a:hover:not(.active){
 }
 .experience > .tabcontent{
     display: flex;
-    height: 100px;
+    min-height: 100px;
+    flex-wrap: wrap;
 }
 .experience > .tabcontent > p{
     width: fit-content;
@@ -134,8 +121,6 @@ li a:hover:not(.active){
 .education{
     border: solid 2px royalblue;
     border-radius: 10px;
-    left: 0;
-    right: 0;
 }
 .education > .tab{
     border-bottom: solid 1px royalblue;
@@ -143,7 +128,8 @@ li a:hover:not(.active){
 }
 .education > .tabcontent{
     display: flex;
-    height: 100px;
+    min-height: 100px;
+    flex-wrap: wrap;
 }
 .education > .tabcontent > p{
     width: fit-content;
@@ -151,7 +137,37 @@ li a:hover:not(.active){
     color: black;
     font-size: large;
     border-radius: 50px;
-    background-color: rgb(35, 60, 135);
+    background-color: rgb(140, 140, 255);
     padding: 1px 4px;
     margin: 10px 8px;
+}
+footer{
+    padding-top: 50px;
+}
+.social{
+    padding: 15px;
+}
+.social > img{
+    width: 50px;
+    height: 50px;
+}
+hr{
+    height: 3px;
+    background-color: white;
+    box-shadow: 0 0 20px blue,0 0 30px rgb(56, 56, 255),0 0 40px rgb(107, 107, 255);
+}
+@media screen and (max-width: 600px){
+    li{
+        width: 100%;
+    }
+    .frame{
+        margin: auto;
+    }
+    .info > img{
+        margin: 0 50% 20px 50%;
+        transform: translate(-50%);
+    }
+    .info > *{
+        text-align: center;
+    }
 }
