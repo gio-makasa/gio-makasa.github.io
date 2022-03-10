@@ -65,85 +65,15 @@ li a:hover:not(.active){
 .active{
     background-color: blueviolet;
 }
-.info > img{
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    margin: 0 1%;
-    float: left;
+/*end of header*/
+img{
+    width: 200px;
 }
-.skills{
-    border: solid 2px purple;
-    border-radius: 10px;
-}
-.skills > .tab{
-    border-bottom: solid 1px purple;
-    padding: 0 12px;
-}
-.skills > .tabcontent{
-    display: flex;
-    min-height: 100px;
-    flex-wrap: wrap;
-}
-.skills > .tabcontent > p{
+.tictactoe, .flip-coin{
+    margin: 20px;
+    border: solid 5px white;
+    border-style: ridge;
     width: fit-content;
-    height: fit-content;
-    color: black;
-    font-size: large;
-    border-radius: 50px;
-    background-color: palevioletred;
-    padding: 1px 4px;
-    margin: 10px 8px;
-}
-.experience{
-    border: solid 2px rgb(190, 190, 0);
-    border-radius: 10px;
-}
-.experience > .tab{
-    border-bottom: solid 1px rgb(190, 190, 0);
-    padding: 0 12px;
-}
-.experience > .tabcontent{
-    display: flex;
-    min-height: 100px;
-    flex-wrap: wrap;
-}
-.experience > .tabcontent > p{
-    width: fit-content;
-    height: fit-content;
-    color: black;
-    font-size: large;
-    border-radius: 50px;
-    background-color: rgb(255, 136, 0);
-    padding: 1px 4px;
-    margin: 10px 8px;
-}
-.education{
-    border: solid 2px royalblue;
-    border-radius: 10px;
-}
-.education > .tab{
-    border-bottom: solid 1px royalblue;
-    padding: 0 12px;
-}
-.education > .tabcontent{
-    display: flex;
-    min-height: 100px;
-    flex-wrap: wrap;
-}
-.education > .tabcontent > p{
-    width: fit-content;
-    height: fit-content;
-    color: black;
-    font-size: large;
-    border-radius: 50px;
-    background-color: rgb(140, 140, 255);
-    padding: 1px 4px;
-    margin: 10px 8px;
-}
-abbr{
-    text-decoration: none;
-    color: black;
 }
 footer{
     padding-top: 50px;
