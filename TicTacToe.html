@@ -12,7 +12,7 @@
         <h1>TIC TAC TOE</h1>
         <br>
         <h2 id="X" class="high">PLAYER 1 -- X</h2>
-        <h2 id="O">PLAYER 2 -- O</h2>
+        <h2 id="O" class="low">PLAYER 2 -- O</h2>
         <br>
         <!-- 3*3 grid of Boxes -->
         <input type="text" id="b1" onclick="myfunc_1();" readonly>
@@ -99,14 +99,10 @@
         }
 
     function checker() {
-        if(XO == 'O'){
-        document.getElementById("X").classList.add("high");
-        document.getElementById("O").classList.remove("high");
-        }
-        else if(XO == 'X'){
-        document.getElementById("O").classList.add("high");
-        document.getElementById("X").classList.remove("high");
-        }
+        document.getElementById("X").classList.toggle("high");
+        document.getElementById("O").classList.toggle("high");
+        document.getElementById("X").classList.toggle("low");
+        document.getElementById("O").classList.toggle("low");
 
         var b1, b2, b3, b4, b5, b6, b7, b8, b9;
         b1 = document.getElementById("b1").value;

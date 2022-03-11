@@ -20,7 +20,10 @@ h1 {
 		text-align: center;
 	}
 	.high{
-		text-shadow: 0 0 15px blue;
+		text-shadow: 0 0 15px blue,0 0 30px blue;
+	}
+	.low{
+		color: gray;
 	}
 	#but {
 		box-sizing: border-box;
