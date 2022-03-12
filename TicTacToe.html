@@ -8,13 +8,18 @@
     <title>TicTacToe</title>
 </head>
 <body>
-    <div id="main">
+    <div id="head">
         <h1>TIC TAC TOE</h1>
-        <br>
+        <div>
+        <pre id="print">
+        </pre>
+        </div>
         <h2 id="X" class="high">PLAYER 1 -- X</h2>
         <h2 id="O" class="low">PLAYER 2 -- O</h2>
         <br>
-        <!-- 3*3 grid of Boxes -->
+    </div>
+    <div id="main">
+            <!-- 3*3 grid of Boxes -->
         <input type="text" id="b1" onclick="myfunc_1();" readonly>
    
         <input type="text" id="b2" onclick="myfunc_2();" readonly>
@@ -37,8 +42,6 @@
    
         <br><br><br>
         <button id="but" onclick="reset()">RESET</button>
-        <br><br>
-        <p id="print"></p>
      </div>
 </body>
 <script>

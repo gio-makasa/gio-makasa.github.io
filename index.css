@@ -3,6 +3,11 @@
 }
 .info > img{
     animation: glow 1s ease-in-out infinite alternate;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: 0 1%;
+    float: left;
 }
 @keyframes glow {
     from {
@@ -64,13 +69,6 @@ li a:hover:not(.active){
 }
 .active{
     background-color: blueviolet;
-}
-.info > img{
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    margin: 0 1%;
-    float: left;
 }
 .skills{
     border: solid 2px purple;
