@@ -32,9 +32,9 @@ body{
     transform: rotateX(180deg);
 }
 .stats{
+    color: white;
     display: flex;
     justify-content: space-around;
-    color: #101020;
     margin: 45px;
     box-shadow: 0 0 30px rgb(1, 70, 126);
     border-radius: 50px;
@@ -62,7 +62,7 @@ button{
 #flip-button:disabled{
     background-color: #e1e0ee;
     border-color: #e1e0ee;
-    color: #101020;
+    color: grey;
 }
 p{
     color: white;
