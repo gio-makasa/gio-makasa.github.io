@@ -57,12 +57,12 @@ else{
     }, 100);
     me++;
     texti = 'გილოცავ!!!';
-    feri = 'green';
+    feri = 'rgb(0,255,0)';
 }
 setTimeout(updateStats, 3000);
 disableButton();
 document.querySelector("p").textContent = '3-მდეა';
-document.querySelector("p").style.color = 'black';
+document.querySelector("p").style.color = 'white';
 });
 //HEAD
 flip_head.addEventListener("click", () => {
@@ -74,7 +74,7 @@ if(i){
     }, 100);
     me++;
     texti = 'გილოცავ!!!';
-    feri = 'green';
+    feri = 'rgb(0,255,0)';
 }
 else{
     setTimeout(function(){
@@ -87,7 +87,7 @@ else{
 setTimeout(updateStats, 3000);
 disableButton();
 document.querySelector("p").textContent = '3-მდეა';
-document.querySelector("p").style.color = 'black';
+document.querySelector("p").style.color = 'white';
 });
 
 function updateStats(){
@@ -126,7 +126,7 @@ flip_head.disabled = false;
 me = 0;
 pc = 0;
 texti = '3-მდეა';
-feri = 'black';
+feri = 'white';
 updateStats();
 });
 </script>
