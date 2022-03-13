@@ -42,3 +42,8 @@ input{
 #main, #head{
 	text-align: center;
 }
+@media screen and (max-width: 600px) {
+	input{
+		width: 60px;
+	}
+}
