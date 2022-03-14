@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container">
-        <p class="top">3-მდეა</p>
+        <p class="top">UP TO 3</p>
         <div class="coin" id="coin">
             <div class="heads">
                 <img src="pictures/head.png" alt="head">
@@ -48,7 +48,7 @@ if(i){
         coin.style.animation = "spin-heads 3s forwards";
     }, 100);
     pc++;
-    texti = 'სამწუხაროდ წააგე';
+    texti = 'Wrong';
     feri = 'red';
 }
 else{
@@ -56,12 +56,12 @@ else{
         coin.style.animation = "spin-tails 3s forwards";
     }, 100);
     me++;
-    texti = 'გილოცავ!!!';
+    texti = 'Congrats!!!';
     feri = 'rgb(0,255,0)';
 }
 setTimeout(updateStats, 3000);
 disableButton();
-document.querySelector("p").textContent = '3-მდეა';
+document.querySelector("p").textContent = 'UP TO 3';
 document.querySelector("p").style.color = 'white';
 });
 //HEAD
@@ -73,7 +73,7 @@ if(i){
         coin.style.animation = "spin-heads 3s forwards";
     }, 100);
     me++;
-    texti = 'გილოცავ!!!';
+    texti = 'Congrats!!!';
     feri = 'rgb(0,255,0)';
 }
 else{
@@ -81,12 +81,12 @@ else{
         coin.style.animation = "spin-tails 3s forwards";
     }, 100);
     pc++;
-    texti = 'სამწუხაროდ წააგე';
+    texti = 'Wrong';
     feri = 'red';
 }
 setTimeout(updateStats, 3000);
 disableButton();
-document.querySelector("p").textContent = '3-მდეა';
+document.querySelector("p").textContent = 'UP TO 3';
 document.querySelector("p").style.color = 'white';
 });
 
@@ -94,11 +94,11 @@ function updateStats(){
 document.querySelector("#ME").textContent = `YOU: ${me}`;
 document.querySelector("#PC").textContent = `PC: ${pc}`;
 if(me == 3){
-document.querySelector("p").textContent = 'გაიმარჯვე!!!';
+document.querySelector("p").textContent = 'YOU WON!!!';
 document.querySelector("p").style.color = 'gold';
 disableButton();
 } else if(pc == 3){
-document.querySelector("p").textContent = 'დამარცხდი';
+document.querySelector("p").textContent = 'YOU LOST';
 document.querySelector("p").style.color = feri;
 disableButton();
 }else {
@@ -125,7 +125,7 @@ flip_tail.disabled = false;
 flip_head.disabled = false;
 me = 0;
 pc = 0;
-texti = '3-მდეა';
+texti = 'UP TO 3';
 feri = 'white';
 updateStats();
 });

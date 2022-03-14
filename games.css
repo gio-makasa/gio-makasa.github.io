@@ -69,6 +69,37 @@ main{
     border-style: ridge;
     width: 200px;
     height: 150px;
+    background-color: transparent;
+    cursor: pointer;
+}
+.games{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.game_frame:hover .games{
+    transform: rotateY(180deg);
+}
+.front, .back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.front{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.front h2{
+    color: white;
+    text-shadow: 0 0 10px blue, 0 0 20px rgb(64, 64, 255);
+}
+.back{
+    transform: rotateY(180deg);
 }
 footer{
     padding-top: 50px;
