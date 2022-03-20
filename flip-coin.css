@@ -11,7 +11,7 @@ body{
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
-    width: 80%;
+    width: 70%;
 }
 .coin{
     height: 140px;
@@ -95,11 +95,7 @@ p{
 }
 @media screen and (max-width: 600px) {
     .container{
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,-50%);
-        width: 80%;
+        width: 95%;
     }
     p{
         font-size: 30px;
