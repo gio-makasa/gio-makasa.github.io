@@ -16,6 +16,7 @@ pre{
 }
 header{ 
     text-align: center;
+    color: white;
 }
 article{
     margin: 20px 0;
@@ -30,6 +31,7 @@ img{
     justify-content: center;
 }
 button{
+    font-weight: bold;
     background-color: powderblue;
     border-style: none;
     border-radius: 10px;
