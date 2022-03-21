@@ -32,9 +32,12 @@
 			</pre>
 		</section>
 	</div>
+	<div id="alert">
+		<span id="closebtn">&times;</span>
+		გამოიცანით მომდევნო კარტი ბოლო კარტზე მაღალი იქნება თუ დაბალი, <strong>შეგიძლიათ 1-ხელ შეცვლა.</strong>
+	</div>
 </body>
 <script>
-	alert("გამოიცანით მომდევნო კარტი ბოლო კარტზე მაღალი იქნება თუ დაბალი,\nშეგიძლიათ 1-ხელ შეცვლა");
 	let kartebi = [
 				  "6a","6g","6j","6k"
 				  ,"7a","7g","7j","7k"
@@ -141,6 +144,10 @@
 	}
 	function reset(){
 		location.reload();
+	}
+	close = document.getElementById("closebtn").onclick = function(){
+		this.parentElement.style.opacity = "0";
+		setTimeout(function(){ div.style.display = "none"; }, 1000);
 	}
 </script>
 </html>

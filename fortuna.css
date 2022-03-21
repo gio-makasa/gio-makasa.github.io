@@ -51,16 +51,31 @@ button{
 #reset{
     background-color: red;
 }
+#alert{
+    padding: 20px;
+    background-color: #ff9800;
+    opacity: 1;
+    transition: opacity 1s;
+    border-radius: 10px;
+    position: fixed;
+    margin: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 0;
+}
+#closebtn{
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+}
 @media screen and (max-width:600px) {
     .frame{
         width: 95%;
-        top: 50%;
     }
     #game_over{
         font-size: 20px;
-    }
-    article{
-        width: fit-content;
     }
     .buttons{
         flex-direction: column;
