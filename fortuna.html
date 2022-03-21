@@ -146,7 +146,7 @@
 	function reset(){
 		location.reload();
 	}
-	close = document.getElementById("closebtn").onclick = function(){
+	document.getElementById("closebtn").onclick = function(){
 		this.parentElement.style.opacity = "0";
 		setTimeout(function(){ div.style.display = "none"; }, 1000);
 	}
