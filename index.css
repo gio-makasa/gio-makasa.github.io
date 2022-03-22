@@ -1,23 +1,22 @@
 *{
     color: white;
 }
-.info > img{
-    animation: glow 1s ease-in-out infinite alternate;
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    margin: 0 1%;
-    float: left;
-}
-@keyframes glow {
-    from {
+@keyframes glow{
+    from{
       box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px rgb(40, 0, 230), 0 0 40px rgb(40, 0, 230), 0 0 50px rgb(40, 0, 230), 0 0 60px rgb(40, 0, 230);
     }
-    
-    to {
+    to{
       box-shadow: 0 0 20px #fff, 0 0 30px rgb(77, 80, 255), 0 0 40px rgb(77, 80, 255), 0 0 50px rgb(77, 80, 255), 0 0 60px rgb(77, 80, 255), 0 0 70px rgb(77, 80, 255);
     }
 }
+@keyframes glowCV{
+    from{
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #9200e6, 0 0 40px #9200e6, 0 0 50px #9200e6, 0 0 60px #9200e6, 0 0 70px #9200e6;
+    }
+    to{
+      text-shadow: 0 0 20px #fff, 0 0 30px #be4dff, 0 0 40px #be4dff, 0 0 50px #be4dff, 0 0 60px #be4dff, 0 0 70px #be4dff, 0 0 80px #be4dff;
+    }
+  }
 body{
     background-image: url("pictures/galaxy.jpg");
     background-repeat: no-repeat;
@@ -34,17 +33,22 @@ body{
     margin: 0 15%;
 }
 header{
+    margin: 0;
+    padding: 0;
     background-image: url("pictures/galaxy-head.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 20px;
 }
-header > img{
-    margin: 10px 25px;
-    width: 100px;
-    height: 60px;
+header > h1{
+    font-family: cursive;
+    font-size: 80px;
+    color: white;
+    margin: 0;
+    padding-left: 30px;
+    animation: glowCV 1s ease-in-out infinite alternate;
 }
-#header{
+#nav-bar{
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -69,6 +73,14 @@ li a:hover:not(.active){
 }
 .active{
     background-color: blueviolet;
+}
+.info > img{
+    animation: glow 1.5s ease-in-out infinite alternate;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: 0 1%;
+    float: left;
 }
 .skills{
     border: solid 2px purple;
