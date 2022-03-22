@@ -16,7 +16,7 @@
     to{
       text-shadow: 0 0 20px #fff, 0 0 30px #be4dff, 0 0 40px #be4dff, 0 0 50px #be4dff, 0 0 60px #be4dff, 0 0 70px #be4dff, 0 0 80px #be4dff;
     }
-  }
+}
 body{
     background-image: url("pictures/galaxy.jpg");
     background-repeat: no-repeat;

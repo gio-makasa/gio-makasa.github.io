@@ -7,6 +7,14 @@ body{
     background-size: cover;
     background-attachment: fixed;
 }
+@keyframes glowCV{
+    from{
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #9200e6, 0 0 40px #9200e6, 0 0 50px #9200e6, 0 0 60px #9200e6, 0 0 70px #9200e6;
+    }
+    to{
+      text-shadow: 0 0 20px #fff, 0 0 30px #be4dff, 0 0 40px #be4dff, 0 0 50px #be4dff, 0 0 60px #be4dff, 0 0 70px #be4dff, 0 0 80px #be4dff;
+    }
+}
 .frame{
     border: solid 3px black;
     background-color: rgb(20,20,20);
@@ -21,12 +29,15 @@ header{
     background-size: cover;
     border-radius: 20px;
 }
-header > img{
-    margin: 10px 25px;
-    width: 100px;
-    height: 60px;
+header > h1{
+    font-family: cursive;
+    font-size: 80px;
+    color: white;
+    margin: 0;
+    padding-left: 30px;
+    animation: glowCV 1s ease-in-out infinite alternate;
 }
-#header{
+#nav-bar{
     list-style-type: none;
     margin: 0;
     padding: 0;
