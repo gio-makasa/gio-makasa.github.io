@@ -75,7 +75,7 @@ li a:hover:not(.active){
     background-color: blueviolet;
 }
 .info > img{
-    animation: glow 1.5s ease-in-out infinite alternate;
+    animation: glow 0.9s ease-in-out infinite alternate;
     border-radius: 50%;
     width: 150px;
     height: 150px;

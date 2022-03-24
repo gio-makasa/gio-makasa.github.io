@@ -58,6 +58,7 @@
 		let z = Math.floor(Math.random() * 36);
 		document.images[I].src="pictures/deck/"+ kartebi[z] +".gif";
 		document.getElementById("chng").disabled = true;
+		document.getElementById("chng").style.opacity = "0.5" ;
 		pirveli_karti = score(z);
 	}
 	function Up(){
@@ -77,8 +78,11 @@
 		  document.getElementById("game_over").innerHTML = "სამწუხაროდ თქვენ წააგეთ";
 		  document.getElementById("game_over").style.color = "red";
 		  document.getElementById("chng").disabled = true;
+		  document.getElementById("chng").style.opacity = "0.5" ;
 		  document.getElementById("up").disabled = true;
+		  document.getElementById("up").style.opacity = "0.5" ;
 		  document.getElementById("down").disabled = true;
+		  document.getElementById("down").style.opacity = "0.5" ;
 		}
 	}
 	function Down(){
@@ -98,8 +102,11 @@
 		  document.getElementById("game_over").innerHTML = "სამწუხაროდ თქვენ წააგეთ";
 		  document.getElementById("game_over").style.color = "red";
 		  document.getElementById("chng").disabled = true;
+		  document.getElementById("chng").style.opacity = "0.5" ;
 		  document.getElementById("up").disabled = true;
+		  document.getElementById("up").style.opacity = "0.5" ;
 		  document.getElementById("down").disabled = true;
+		  document.getElementById("down").style.opacity = "0.5" ;
 		}
 	}
 	function score(Z){
@@ -139,8 +146,11 @@
 			document.getElementById("game_over").innerHTML = "თქვენ მოიგეთ";
 			document.getElementById("game_over").style.color = "green";
 			document.getElementById("chng").disabled = true;
+			document.getElementById("chng").style.opacity = "0.5" ;
 			document.getElementById("up").disabled = true;
+			document.getElementById("up").style.opacity = "0.5" ;
 			document.getElementById("down").disabled = true;
+			document.getElementById("down").style.opacity = "0.5" ;
 		}
 	}
 	function reset(){
