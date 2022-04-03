@@ -74,6 +74,31 @@ main{
     justify-content: center;
     flex-wrap: wrap;
 }
+.quotes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2%;
+    width: 80%;
+    height: fit-content;
+}
+.quotes::after{
+    content: '';
+    width: 100%;
+    order: 1;
+}
+#q,#a{
+    font-family: cursive;
+    text-align: center;
+}
+#q{
+    order: 1;
+}
+#a{
+    font-style: italic;
+    order: 2;
+}
 .game_frame{
     margin: 20px;
     border: solid 5px white;

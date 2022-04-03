@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="games.css">
+    <script type="text/javascript" src="quotes.json"></script>
     <title>Games</title>
 </head>
 <body>
@@ -17,6 +18,10 @@
             </ul>
         </header>
         <main>
+            <div class="quotes">
+                <h2 id="q"></h2>
+                <h4 id="a"></h4>
+            </div>
             <div class="game_frame">
                 <div class="games">
                     <div class="front">
@@ -76,4 +81,10 @@
         </footer>
     </div>
 </body>
+<script>
+    var mydata = JSON.parse(quote);
+    var R = Math.floor(Math.random()*mydata.length);
+    document.getElementById("q").innerHTML = `${mydata[R].q}`;
+    document.getElementById("a").innerHTML = `- ${mydata[R].a}`;
+</script>
 </html>
