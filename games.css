@@ -89,7 +89,7 @@ main{
     order: 1;
 }
 #q,#a{
-    font-family: cursive;
+    font-family: 'Petit Formal Script', cursive;
     text-align: center;
 }
 #q{
@@ -165,5 +165,8 @@ hr{
     }
     .info > *{
         text-align: center;
+    }
+    #q,#a{
+        font-family: cursive;
     }
 }
