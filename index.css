@@ -1,81 +1,5 @@
-*{
-    color: white;
-}
-@keyframes glow{
-    from{
-      box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px rgb(40, 0, 230), 0 0 40px rgb(40, 0, 230), 0 0 50px rgb(40, 0, 230), 0 0 60px rgb(40, 0, 230);
-    }
-    to{
-      box-shadow: 0 0 20px #fff, 0 0 30px rgb(77, 80, 255), 0 0 40px rgb(77, 80, 255), 0 0 50px rgb(77, 80, 255), 0 0 60px rgb(77, 80, 255), 0 0 70px rgb(77, 80, 255);
-    }
-}
-@keyframes glowCV{
-    from{
-      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #9200e6, 0 0 40px #9200e6, 0 0 50px #9200e6, 0 0 60px #9200e6, 0 0 70px #9200e6;
-    }
-    to{
-      text-shadow: 0 0 20px #fff, 0 0 30px #be4dff, 0 0 40px #be4dff, 0 0 50px #be4dff, 0 0 60px #be4dff, 0 0 70px #be4dff, 0 0 80px #be4dff;
-    }
-}
-body{
-    background-image: url("pictures/galaxy.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-}
-.frame{
-    border: solid 3px black;
-    background-color: rgb(20,20,20);
-    border-radius: 20px;
-    box-shadow: 0 0 15px blueviolet;
-    height: fit-content;
-    padding-bottom: 15px;
-    margin: 0 15%;
-}
-header{
-    margin: 0;
-    padding: 0;
-    background-image: url("pictures/galaxy-head.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 20px;
-}
-header > h1{
-    font-family: cursive;
-    font-size: 80px;
-    color: white;
-    margin: 0;
-    padding-left: 30px;
-    animation: glowCV 1s ease-in-out infinite alternate;
-}
-#nav-bar{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: rgba(51, 51, 51);
-}
-li{
-    float: left;
-    border-right:1px solid #bbb;
-}
-li:last-child {
-    border-right: none;
-}
-li a{
-    display: block;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-li a:hover:not(.active){
-    background-color: rgb(51, 15, 85);
-}
-.active{
-    background-color: blueviolet;
-}
 .info > img{
-    animation: glow 0.9s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
     border-radius: 50%;
     width: 150px;
     height: 150px;
@@ -154,16 +78,6 @@ li a:hover:not(.active){
 abbr{
     text-decoration: none;
     color: black;
-}
-footer{
-    padding-top: 50px;
-}
-.social{
-    padding: 15px;
-}
-.social > a > img{
-    width: 50px;
-    height: 50px;
 }
 hr{
     height: 3px;
