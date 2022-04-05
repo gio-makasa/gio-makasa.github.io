@@ -4,21 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="header-footer.js"></script>
     <link rel="stylesheet" href="header-footer.css">
     <link rel="stylesheet" href="games.css">
+    <link href='https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap' rel='stylesheet'>
     <script type="text/javascript" src="quotes.json"></script>
     <title>Games</title>
 </head>
-<body>
+<body onload="status()">
     <div class="frame">
-        <header>
-            <h1>CV</h1>
-            <ul id="nav-bar">
-                <li><a href="index.html">Home</a></li>
-                <li><a class="active" href="games.html">Games</a></li>
-            </ul>
-        </header>
         <main>
             <div class="quotes">
                 <h2 id="q"></h2>
@@ -73,17 +68,13 @@
                 </div>
             </div>
         </main>
-        <footer>
-            <hr>
-            <div class="social">
-                <a href="https://github.com/gio-makasa" target="_blank" rel="noopener noreferrer">
-                    <img src="pictures/github.jpg" alt="github" title="Github">
-                </a>
-            </div>
-        </footer>
     </div>
 </body>
 <script>
+    function status(){
+        document.getElementById("home").classList.remove("active");
+        document.getElementById("games").classList.add("active");
+    }
     var mydata = JSON.parse(quote);
     var R = Math.floor(Math.random()*mydata.length);
     document.getElementById("q").innerHTML = `"${mydata[R].q}"`;
