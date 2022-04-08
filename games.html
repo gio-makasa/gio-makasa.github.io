@@ -12,7 +12,7 @@
     <script type="text/javascript" src="quotes.json"></script>
     <title>Games</title>
 </head>
-<body onload="status()">
+<body>
     <div class="frame">
         <main>
             <div class="quotes">
@@ -71,9 +71,9 @@
     </div>
 </body>
 <script>
-    function status(){
-        document.getElementById("home").classList.remove("active");
+    window.onload = function(){
         document.getElementById("games").classList.add("active");
+        document.getElementById("home").classList.remove("active");
     }
     var mydata = JSON.parse(quote);
     var R = Math.floor(Math.random()*mydata.length);
