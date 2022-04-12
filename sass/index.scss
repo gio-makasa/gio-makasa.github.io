@@ -1,0 +1,99 @@
+@mixin tabs{
+    border: solid 2px;
+    border-radius: 10px;
+}
+@mixin tab_title{
+    border-bottom: solid 1px;
+    padding: 0 12px;
+}
+@mixin tabcontent{
+    display: flex;
+    min-height: 100px;
+    flex-wrap: wrap;
+}
+@mixin tab_p{
+    width: fit-content;
+    height: fit-content;
+    color: black;
+    font-size: large;
+    border-radius: 50px;
+    padding: 1px 4px;
+    margin: 10px 8px;
+}
+.info > img{
+    animation: glow 1s ease-in-out infinite alternate;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: 0 1%;
+    float: left;
+}
+.skills{
+    @include tabs;
+    border-color: purple;
+}
+.skills > .tab{
+    @include tab_title;
+    border-color: purple;
+}
+.skills > .tabcontent{
+    @include tabcontent;
+}
+.skills > .tabcontent > p{
+    @include tab_p;
+    background-color: palevioletred;
+}
+.experience{
+    @include tabs;
+    border-color: rgb(190, 190, 0);
+}
+.experience > .tab{
+    @include tab_title;
+    border-color: rgb(190, 190, 0);
+}
+.experience > .tabcontent{
+    @include tabcontent;
+}
+.experience > .tabcontent > p{
+    @include tab_p;
+    background-color: rgb(255, 136, 0);
+}
+.education{
+    @include tabs;
+    border-color: royalblue;
+}
+.education > .tab{
+    @include tab_title;
+    border-color: royalblue;
+}
+.education > .tabcontent{
+    @include tabcontent;
+}
+.education > .tabcontent > p{
+    @include tab_p;
+    background-color: rgb(140, 140, 255);
+}
+abbr{
+    text-decoration: none;
+    color: black;
+}
+hr{
+    height: 3px;
+    background-color: white;
+    box-shadow: 0 0 20px blue,0 0 30px rgb(56, 56, 255),0 0 40px rgb(107, 107, 255);
+}
+@media screen and (max-width: 600px){
+    li{
+        width: 100%;
+    }
+    .frame{
+        margin: auto;
+    }
+    .info > img{
+        margin: 0 50% 20px 50%;
+        transform: translate(-50%);
+    }
+    .info > *{
+        text-align: center;
+    }
+}
