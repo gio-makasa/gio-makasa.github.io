@@ -328,6 +328,10 @@
         if(coin == 1000){
             document.getElementById("game_over").innerHTML = "გილოცავ, გაიმარჯვე!!!";
 			document.getElementById("game_over").style.color = "yellow";
+            document.getElementById("submit").disabled = true;
+            document.getElementById("submit").style.opacity = "0.5";
+            document.getElementById("reset").disabled = false;
+            document.getElementById("reset").style.opacity = "1";
         }
     }
 </script>
