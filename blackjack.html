@@ -32,6 +32,13 @@
         </div>
 	</div>
     <div class="coins">
+        <div class="bets">
+            <button value="1">1</button>
+            <button value="5">5</button>
+            <button value="20">20</button>
+            <button value="50">50</button>
+            <button value="100">100</button>
+        </div>
         <div id="bet">
             <form>
                 <label for="quantity">BET:</label>
@@ -98,6 +105,8 @@
             document.getElementById("bet").disabled = false;
             document.getElementById("bet").style.opacity = "1";
             reset();
+        } else if(val > coin){
+            alert("You don't have enough coins.");
         }
         liner.style.strokeDashoffset = 440 - (440 * coin) / 1000;
     }
@@ -230,7 +239,11 @@
             document.getElementById("submit").disabled = false;
             document.getElementById("submit").style.opacity = "1";
         }
-        liner.style.strokeDashoffset = 440 - (440 * coin) / 1000;
+        if(coin < 1000){
+            liner.style.strokeDashoffset = 440 - (440 * coin) / 1000;
+        } else {
+            liner.style.strokeDashoffset = 440 - (440 * 1000) / 1000;
+        }
         winner();
     }
 	
@@ -283,7 +296,11 @@
                 document.getElementById("reset").style.opacity = "1";}
             }
 		}
-        liner.style.strokeDashoffset = 440 - (440 * coin) / 1000;
+        if(coin < 1000){
+            liner.style.strokeDashoffset = 440 - (440 * coin) / 1000;
+        } else {
+            liner.style.strokeDashoffset = 440 - (440 * 1000) / 1000;
+        }
         winner();
 	}
 
@@ -325,7 +342,7 @@
     }
 
     function winner(){
-        if(coin == 1000){
+        if(coin >= 1000){
             document.getElementById("game_over").innerHTML = "გილოცავ, გაიმარჯვე!!!";
 			document.getElementById("game_over").style.color = "yellow";
             document.getElementById("submit").disabled = true;
@@ -334,5 +351,10 @@
             document.getElementById("reset").style.opacity = "1";
         }
     }
+
+    $(".bets button").click(function(){
+        $("#quantity").val($("#quantity").val()*1+1*$(this).val());
+    });
+
 </script>
 </html>
