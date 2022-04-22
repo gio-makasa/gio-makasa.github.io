@@ -39,7 +39,7 @@
             <button value="50">50</button>
             <button value="100">100</button>
         </div>
-        <div id="bet">
+        <div id="pot">
             <form>
                 <label for="quantity">BET:</label>
                 <input type="text" id="quantity" value="10">
@@ -106,7 +106,11 @@
             document.getElementById("bet").style.opacity = "1";
             reset();
         } else if(val > coin){
-            alert("You don't have enough coins.");
+            val = coin;
+            document.getElementById("quantity").value = val;
+        } else if(val < 0){
+            val = 0;
+            document.getElementById("quantity").value = val;
         }
         liner.style.strokeDashoffset = 440 - (440 * coin) / 1000;
     }

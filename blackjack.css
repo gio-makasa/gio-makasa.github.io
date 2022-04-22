@@ -13,7 +13,7 @@ body{
 }
 pre{
     text-align: center;
-    margin-bottom: 20px;
+    height: 10%;
     color: white;
 }
 section{
@@ -73,11 +73,6 @@ img{
     cursor: pointer; 
     float: left;
 }
-.bets:after{
-    content: "";
-    clear: both;
-    display: table;
-}
 .bets button:not(:last-child){
     border-right: none;
 }
@@ -93,8 +88,9 @@ img{
     align-items: center;
     position: absolute;
     background-color: #202020;
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
     border: solid 3px white;
+    border-bottom: none;
     color: white;
     width: 40%;
     height: 25%;
@@ -102,7 +98,7 @@ img{
     left: 50%;
     transform: translateX(-50%);
 }
-#bet{
+#pot{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -167,28 +163,19 @@ input{
         width: 80%;
     }
     .coins{
+        padding-top: 10%;
         width: 100%;
         border: none;
         border-radius: 0;
-        margin: 0;
     }
     .bets{
-        flex-direction: column;
-        height: 100%;
-        position: relative;
-        left: 0;
+        width: 100%;
+        justify-content: space-between;
     }
     .bets button:first-child{
-        border: 1px solid green;
-        border-bottom: none;
-        border-radius: 5px 0 0 0;
+        border-radius: 0;
     }
     .bets button:not(:last-child){
-        border: 1px solid green;
-        border-bottom: none;
-    }
-    .bets button:last-child{
-        border: 1px solid green;
-        border-radius: 0 0 0 5px;
+        border-right: 1px solid green;
     }
 }
