@@ -95,6 +95,15 @@
 				  ,"ta","tg","tj","tk"
     ];
 
+    var input = document.getElementById("quantity");
+
+    input.addEventListener("keypress", function(event) {
+        if (event.key === "Enter"){
+            event.preventDefault();
+            document.getElementById("submit").click();
+        }
+    });
+
     function submit(){
         val = document.getElementById("quantity").value;
         if(val > 0 && val <= coin){
