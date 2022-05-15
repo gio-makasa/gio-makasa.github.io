@@ -58,10 +58,10 @@
             <div class="game_frame">
                 <div class="games">
                     <div class="front">
-                        <h2>ფორტუნ</h2>
+                        <h2>ფორტუნა</h2>
                     </div>
                     <div class="back">
-                        <a href="games/fortuna.html">
+                        <a href="123.html">
                             <img src="pictures/fortuna.PNG" alt="fortuna">
                         </a>
                     </div>
@@ -122,10 +122,7 @@
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
-    window.onload = function(){
-        document.getElementById("games").classList.add("active");
-        document.getElementById("home").classList.remove("active");
-    }
+
     var mydata = JSON.parse(quote);
     var R = Math.floor(Math.random()*mydata.length);
     document.getElementById("q").innerHTML = `"${mydata[R].q}"`;

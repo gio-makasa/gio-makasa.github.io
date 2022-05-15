@@ -2,7 +2,7 @@ $(document).ready(function(){
         $(".frame").prepend(`<header>
         <h1>CV</h1>
         <ul id="nav-bar">
-            <li id="home" class="active"><a href="index.html">Home</a></li>
+            <li id="home"><a href="index.html">Home</a></li>
             <li id="games"><a href="games.html">Games</a></li>
         </ul>
     </header>`);
