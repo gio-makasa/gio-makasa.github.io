@@ -109,12 +109,15 @@
     </div>
 </body>
 <script>
+    /*tab color
     var tabs = document.getElementsByClassName("navbartabs");
     for(x of tabs){
         x.style.backgroundColor = "transparent";
     }
     document.getElementById("games").style.backgroundColor = "blueviolet";
+    */
 
+    /*scroll button*/
     var mybutton = document.getElementById("topbutton");
     window.onscroll = function() {scrollFunction()};
 
@@ -130,6 +133,7 @@
         document.documentElement.scrollTop = 0;
     }
 
+    /*quotes*/
     var mydata = JSON.parse(quote);
     var R = Math.floor(Math.random()*mydata.length);
     document.getElementById("q").innerHTML = `"${mydata[R].q}"`;
