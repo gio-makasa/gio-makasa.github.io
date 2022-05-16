@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script type="text/javascript" src="header-footer.js"></script>
+    <link href='https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <link rel="stylesheet" href="header-footer.css">
     <link rel="stylesheet" href="games.css">
-    <link href='https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap' rel='stylesheet'>
     <script type="text/javascript" src="quotes.json"></script>
     <title>Games</title>
 </head>
-<body>
+<body ng-app="">
     <div class="frame">
+        <div id="header" ng-include="'header.html'"></div>
         <main>
             <div class="quotes">
                 <h2 id="q"></h2>
@@ -25,7 +25,7 @@
                         <h2>TIC TAC TOE</h2>
                     </div>
                     <div class="back">
-                        <a href="TicTacToe.html">
+                        <a href="games/TicTacToe.html">
                             <img src="pictures/tictactoe.PNG" alt="tictactoe">
                         </a>
                     </div>
@@ -37,7 +37,7 @@
                         <h2>Flip a coin</h2>
                     </div>
                     <div class="back">
-                        <a href="flip-coin.html">
+                        <a href="games/flip-coin.html">
                             <img src="pictures/flip-coin.PNG" alt="flip-coin">
                         </a>
                     </div>
@@ -49,7 +49,7 @@
                         <h2>დომინო</h2>
                     </div>
                     <div class="back">
-                        <a href="domino.html">
+                        <a href="games/domino.html">
                             <img src="pictures/domino.PNG" alt="domino">
                         </a>
                     </div>
@@ -61,7 +61,7 @@
                         <h2>ფორტუნა</h2>
                     </div>
                     <div class="back">
-                        <a href="123.html">
+                        <a href="games/fortuna.html">
                             <img src="pictures/fortuna.PNG" alt="fortuna">
                         </a>
                     </div>
@@ -73,7 +73,7 @@
                         <h2>BLACKJACK</h2>
                     </div>
                     <div class="back">
-                        <a href="blackjack.html">
+                        <a href="games/blackjack.html">
                             <img src="pictures/blackjack.PNG" alt="BLACKJACK">
                         </a>
                     </div>
@@ -85,7 +85,7 @@
                         <h2>RACE</h2>
                     </div>
                     <div class="back">
-                        <a href="race.html">
+                        <a href="games/race.html">
                             <img src="pictures/race.png" alt="RACE">
                         </a>
                     </div>
@@ -97,17 +97,24 @@
                         <h2>Sonic</h2>
                     </div>
                     <div class="back">
-                        <a href="sonic.html">
+                        <a href="games/sonic.html">
                             <img src="pictures/sonic.png" alt="Sonic">
                         </a>
                     </div>
                 </div>
             </div>
         </main>
+        <div id="footer" ng-include="'footer.html'"></div>
         <button onclick="topFunction()" id="topbutton" class="glow" title="Go to top">&#8593</button>
     </div>
 </body>
 <script>
+    var tabs = document.getElementsByClassName("navbartabs");
+    for(x of tabs){
+        x.style.backgroundColor = "transparent";
+    }
+    document.getElementById("games").style.backgroundColor = "blueviolet";
+
     var mybutton = document.getElementById("topbutton");
     window.onscroll = function() {scrollFunction()};
 

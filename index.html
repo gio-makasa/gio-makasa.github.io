@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <link rel="stylesheet" href="header-footer.css">
     <link rel="stylesheet" href="index.css">
@@ -16,7 +15,7 @@
         <main>
             <div class="info">
                 <img src="pictures/avatar.png" alt="avatar">
-                <h1>George Makasaa</h1>
+                <h1>George Makasa</h1>
                 <hr>
                 <p>B.Date: 30-Nov-2001</p>
                 <p>Phone: 571 70 66 32</p>
@@ -62,6 +61,12 @@
     </div>
 </body>
 <script>
+    var tabs = document.getElementsByClassName("navbartabs");
+    for(x of tabs){
+        x.style.backgroundColor = "transparent";
+    }
+    document.getElementById("home").style.backgroundColor = "blueviolet";
+
     var mybutton = document.getElementById("topbutton");
     window.onscroll = function() {scrollFunction()};
 
