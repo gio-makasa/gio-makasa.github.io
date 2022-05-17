@@ -1,0 +1,44 @@
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.project_frame{
+    margin: 20px;
+    border: solid 5px white;
+    border-style: ridge;
+    width: 200px;
+    height: 150px;
+    background-color: transparent;
+    cursor: pointer;
+}
+.projects{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.project_frame:hover .projects{
+    transform: rotateY(180deg);
+}
+.front, .back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.front, .back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.front h2, .back h2{
+    color: white;
+    text-shadow: 0 0 10px blue, 0 0 20px rgb(64, 64, 255);
+}
+.back{
+    transform: rotateY(180deg);
+}
