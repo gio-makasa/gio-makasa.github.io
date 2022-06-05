@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>ტური საქართველოში</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/tour.css">
+<style>
+
+</style>
+</head>
+<body>
+
+
+<header style="background-image: url('images/background_batumi.jpg'); background-position: center;">
+  <h2>ტური საქართველოში</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <a href="index.html"><li>თბილისი</li></a>
+      <a href="baTumi.html"><li>ბათუმი</li></a>
+      <a href="quTaisi.html"><li>ქუთაისი</li></a>
+      <a href="gudauri.html"><li>გუდაური</li></a>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>ბათუმი</h1>
+    <p>
+      ცნობილია რომ XV საუკუნის შუა წლებში მდინარე ბათუსის წყალზე არსებობდა დასახლება სახელად Bathys ან Bathy. 
+      როდესაც აღნიშნული ტერიტორია ერისთავების ხელში გადავიდა ის მოიხსენიებოდა როგორც „პატონი“ (ვახუშტი ბატონიშვილის მიხედვით) ან 
+      „ბატონი“: „ყურისკენ მიმავალი გზა იბერიულ ენაზე წარმოითქმის როგორც ბატონი და მდებარეობს მდინარე ფაზისსა და ბოას შორის“ 
+      იბერიული სახელწოდება „პატომი“ თურქების დროს ტრანსფორმირდა და წარმოიქმნა ფორმა „პატუმ“, რომლითაც მოიხსენიებენ ისინი დღესაც. 
+      თავად მდინარე Bathys-ის სახელწოდება მომდინარეობს ყურის სახელწოდებიდან — ბერძ. Bathys limen — ღრმა ყურე. მართლაც, 
+      ბათუმს შავ ზღვაზე სევასტოპოლის შემდეგ, ყველაზე ღრმა (მაქ. სიღრმე 58 მ) და მოხერხებული ნავთსაყუდელი აქვს.
+    </p>
+  </article>
+</section>
+<div id="photos">
+  <h2 style="margin-left: 30px;">გალერეა</h2>
+  <div id="galery">
+    <img src="images/batumi_1.jpg" onclick="myFunction(this);">
+    <img src="images/batumi_2.jpg" onclick="myFunction(this);">
+    <img src="images/batumi_3.jpg" onclick="myFunction(this);">
+    <img src="images/batumi_4.jpg" onclick="myFunction(this);">
+  </div>
+</div>
+
+<div class="container">
+  <img id="expandedImg">
+</div>
+
+<footer>
+  <p>ყველა უფლება დაცულია &copy; 2022</p>
+</footer>
+
+</body>
+<script>
+  function myFunction(imgs) {
+    var expandImg = document.getElementById("expandedImg");
+    expandImg.parentElement.style.display = "block";
+    expandImg.src = imgs.src;
+  }
+</script>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>ტური საქართველოში</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/tour.css">
+<style>
+
+</style>
+</head>
+<body>
+
+
+<header style="background-image: url('images/background_tbilisi.jpg');">
+  <h2>ტური საქართველოში</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <a href="index.html"><li>თბილისი</li></a>
+      <a href="baTumi.html"><li>ბათუმი</li></a>
+      <a href="quTaisi.html"><li>ქუთაისი</li></a>
+      <a href="gudauri.html"><li>გუდაური</li></a>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>თბილისი</h1>
+    <p>
+        თბილისის ძველი სახელწოდება იყო ტფილისი. ადრინდელ ქართულ წერილობით ძეგლებში სწორედ ასეთი ფორმითაა ის დამოწმებული. 
+      მაგ. ევსტათი მცხეთელის, აბო ტფილელის წამებასასა და „მოქცევაჲ ქართლისაჲს“ ტექსტებში. საქართველოს დედაქალაქის ძველი ფორმიდან, 
+      ტფილისიდან წარმოსდგება მისი სახელი მეზობელთა ენებზე. მეზობელ ქვეყნებში ძველად ტფილისი სხვადასხვაგვარად გამოითქმოდა. 
+      თავდაპირველად სომხურად ტფილისი „ტფღის“-ად (სომხ. Տփղիս) ჟღერდა, ბერძნულად (ბიზანტიური ხანიდან) გვხვდება „ტიფლის/ტიფლიზა“ 
+      (ბერძ. Τιφλίδα), ხოლო ლათინურად როგორც „ტიფლისი“, „ტიფლიტანა“ ასევე „ტრიფელისი“ (ლათ. Tiphlis/Tephlis/Tiphilis; Tiphlitana; Triphelis).
+      ასევე ჟღერს თბილისის სახელი არამეულ (არამ. ܛܦܠܝܣ; תיפליס), სპარსულ (სპარს. تفلیس) და თურქულ ენებზე (თურქ. Tiflis). 
+      რუსული «Тифлис» არამეულ-სპარსულ-თურქულ ფორმას იმეორებს, მასვე მოსდევს ევროპის ენებში დამკვიდრებული „Tiflis“. 
+      საგულისხმოა ასევე თბილისი კავკასიურ ენებზე. ის ასე გამოითქმის: მეგრულად — „ქართი“, აფხაზურად — «Қарҭ» [ქართ]. 
+      რუსული ფორმა «Тифлис» დამკვიდრებული იყო 1936 წლის 17 აგვისტომდე, როდესაც სსრ კავშირის ცენტრალურმა აღმასრულებელმა კომიტეტმა დაადგინა, 
+      რომ თანახმად სსრ კავშირის შინაგან საქმეთა სახალხო კომისარიატის სახელმწიფო აგეგმვის და კარტოგრაფიის მთავარი სამმართველოს ბიუროს წარდეგნისა 
+      დამტკიცებულ იქნა ქალაქის სახელის ახალი ფორმა. 
+      რუსული ფორმა «Тбилиси», რომელიც წარმოადგენს ქართული ახალი სახელწოდების სახელობით ფორმას, თანდათან დამკვიდრდა და 
+      განმტკიცდა რუსულ ლიტერატურაში. რაც შეეხება ქართული სახელწოდების ძველ ფორმას მას რამდენიმე ხანი კვლავაც იყენებდნენ. 
+      1937 წლიდან საბოლოოდ დამკვიდრდა ქალაქის დღევანდელი სახელწოდება — თბილისი.
+    </p>
+  </article>
+</section>
+<div id="photos">
+  <h2 style="margin-left: 30px;">გალერეა</h2>
+  <div id="galery">
+    <img src="images/tbilisi_1.jpg" onclick="myFunction(this);">
+    <img src="images/tbilisi_2.jpg" onclick="myFunction(this);">
+    <img src="images/tbilisi_3.jpg" onclick="myFunction(this);">
+    <img src="images/tbilisi_4.jpg" onclick="myFunction(this);">
+  </div>
+</div>
+
+<div class="container">
+  <img id="expandedImg">
+</div>
+
+<footer>
+  <p>ყველა უფლება დაცულია &copy; 2022</p>
+</footer>
+
+</body>
+<script>
+  function myFunction(imgs) {
+    var expandImg = document.getElementById("expandedImg");
+    expandImg.parentElement.style.display = "block";
+    expandImg.src = imgs.src;
+  }
+</script>
+</html>

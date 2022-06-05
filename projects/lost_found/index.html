@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ge">
+	<head>
+		<title>დაკარგული/ნაპოვნი ცხოველები</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/animal.css">
+	</head>
+	
+	<body>
+		<header>
+		  <h2>დაკარგული/ნაპოვნი ცხოველები</h2>
+		</header>
+		
+		<nav>
+			<a href="index.html">დაიკარგა</a>
+			<a href="found.html">ნაპოვნია</a>
+			<a href="add.html">დამატება</a>
+			<a href="aboutus.html">ჩვენს შესახებ</a>
+		</nav>
+		
+		<section>
+		    <h3>დაკარგული</h3>
+		  <article>
+			<div>
+				<fieldset>
+				  <legend>მპოვნელის გამოხმაურება</legend>
+				  <form>
+					<img id="expandedImg" src="images/LostAnimals/lost (1).jpg"> <br><br>
+					
+					<input type="text" id="AnimalName" placeholder="მპოვნელის სახელი"><br><br>
+					<input type="text" id="Mobile" placeholder="მობილური nnn-nn-nn-nn" pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}-[0-9]{2}">
+					ან 
+					<input type="text" id="e_Mail" placeholder="მაილი"><br><br>
+					<input id="reset" type="reset"><input id="submit" type="submit">
+				  </form>
+				</fieldset>
+			</div>			
+		  </article>
+		</section>
+
+		<div id="galery">
+			<h2>დაკარგულები</h2>
+			<div id="photos">
+				<img src="images/LostAnimals/lost (1).jpg" alt="" onclick="myFunction(this);">
+				<img src="images/LostAnimals/lost (2).jpg" alt="" onclick="myFunction(this);">
+				<img src="images/LostAnimals/lost (3).jpg" alt="" onclick="myFunction(this);">
+				<img src="images/LostAnimals/lost (4).jpg" alt="" onclick="myFunction(this);">
+				<img src="images/LostAnimals/lost (5).jpg" alt="" onclick="myFunction(this);">
+				<img src="images/LostAnimals/lost (6).jpg" alt="" onclick="myFunction(this);">
+				<img src="images/LostAnimals/lost (7).jpg" alt="" onclick="myFunction(this);">
+				<img src="images/LostAnimals/lost (8).jpg" alt="" onclick="myFunction(this);">
+				<img src="images/LostAnimals/lost (9).jpg" alt="" onclick="myFunction(this);">
+				<img src="images/LostAnimals/lost (10).jpg"alt="" onclick="myFunction(this);">
+			</div>
+		</div>
+
+		<footer>
+		  <p>ყველა უფლება დაცულია 2022&copy;</p>
+		</footer>
+	</body>
+	<script>
+		function myFunction(imgs) {
+		  var expandImg = document.getElementById("expandedImg");
+		  document.body.scrollTop = 0;
+		  document.documentElement.scrollTop = 0;
+		  expandImg.src = imgs.src;
+		}
+	</script>
+</html>
