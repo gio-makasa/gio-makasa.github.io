@@ -1,3 +1,7 @@
+main img{
+    width: 200px;
+    height: 150px;
+}
 main{
     display: flex;
     align-items: center;
@@ -30,15 +34,38 @@ main{
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
-.front, .back{
+.front{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.front h2, .back h2{
+.front h2{
     color: white;
     text-shadow: 0 0 10px blue, 0 0 20px rgb(64, 64, 255);
 }
 .back{
     transform: rotateY(180deg);
+}
+hr{
+    height: 3px;
+    background-color: white;
+    box-shadow: 0 0 20px blue,0 0 30px rgb(56, 56, 255),0 0 40px rgb(107, 107, 255);
+}
+@media screen and (max-width: 600px){
+    li{
+        width: 100%;
+    }
+    .frame{
+        margin: auto;
+    }
+    .info > img{
+        margin: 0 50% 20px 50%;
+        transform: translate(-50%);
+    }
+    .info > *{
+        text-align: center;
+    }
+    #q,#a{
+        font-family: cursive;
+    }
 }
