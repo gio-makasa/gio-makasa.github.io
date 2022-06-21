@@ -1,0 +1,140 @@
+.info > img {
+  animation: glow 1s ease-in-out infinite alternate;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin: 0 1%;
+  float: left;
+}
+
+.skills {
+  border: solid 2px;
+  border-radius: 10px;
+  border-color: purple;
+}
+
+.skills > .tab {
+  border-bottom: solid 1px;
+  padding: 0 12px;
+  border-color: purple;
+}
+
+.skills > .tabcontent {
+  display: flex;
+  min-height: 100px;
+  flex-wrap: wrap;
+}
+
+.skills > .tabcontent > p {
+  width: fit-content;
+  height: fit-content;
+  color: black;
+  font-size: large;
+  border-radius: 50px;
+  padding: 1px 4px;
+  margin: 10px 8px;
+  background-color: palevioletred;
+}
+
+.experience {
+  border: solid 2px;
+  border-radius: 10px;
+  border-color: #bebe00;
+}
+
+.experience > .tab {
+  border-bottom: solid 1px;
+  padding: 0 12px;
+  border-color: #bebe00;
+}
+
+.experience > .tabcontent {
+  display: flex;
+  min-height: 100px;
+  flex-wrap: wrap;
+}
+
+.experience > .tabcontent > p {
+  width: fit-content;
+  height: fit-content;
+  color: black;
+  font-size: large;
+  border-radius: 50px;
+  padding: 1px 4px;
+  margin: 10px 8px;
+  background-color: #ff8800;
+}
+
+.education {
+  border: solid 2px;
+  border-radius: 10px;
+  border-color: royalblue;
+}
+
+.education > .tab {
+  border-bottom: solid 1px;
+  padding: 0 12px;
+  border-color: royalblue;
+}
+
+.education > .tabcontent {
+  display: flex;
+  min-height: 100px;
+  flex-wrap: wrap;
+}
+
+.education > .tabcontent > p {
+  width: fit-content;
+  height: fit-content;
+  color: black;
+  font-size: large;
+  border-radius: 50px;
+  padding: 1px 4px;
+  margin: 10px 8px;
+  background-color: #8c8cff;
+}
+
+abbr {
+  text-decoration: none;
+  color: black;
+}
+
+hr {
+  height: 3px;
+  background-color: white;
+  box-shadow: 0 0 20px blue, 0 0 30px #3838ff, 0 0 40px #6b6bff;
+}
+
+#topbutton {
+  display: none;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 30px;
+  right: 40px;
+  z-index: 99;
+  font-size: xx-large;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: blueviolet;
+  color: white;
+  border-radius: 4px;
+  box-shadow: 0 0 20px #fff, 0 0 30px #be4dff, 0 0 40px #be4dff, 0 0 50px #be4dff;
+}
+
+@media screen and (max-width: 600px) {
+  li {
+    width: 100%;
+  }
+  .frame {
+    margin: auto;
+  }
+  .info > img {
+    margin: 0 50% 20px 50%;
+    transform: translate(-50%);
+  }
+  .info > * {
+    text-align: center;
+  }
+}

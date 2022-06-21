@@ -1,142 +1,91 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap' rel='stylesheet'>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    <link rel="stylesheet" href="header-footer.css">
-    <link rel="stylesheet" href="games.css">
-    <script type="text/javascript" src="quotes.json"></script>
-    <title>Games</title>
-</head>
-<body ng-app="">
-    <div class="frame">
-        <div id="header" ng-include="'header.html'"></div>
-        <main>
-            <div class="quotes">
-                <h2 id="q"></h2>
-                <h3 id="a"></h3>
-            </div>
-            <div class="game_frame">
-                <div class="games">
-                    <div class="front">
-                        <h2>TIC TAC TOE</h2>
-                    </div>
-                    <div class="back">
-                        <a href="games/TicTacToe.html">
-                            <img src="pictures/tictactoe.PNG" alt="tictactoe">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="game_frame">
-                <div class="games">
-                    <div class="front">
-                        <h2>Flip a coin</h2>
-                    </div>
-                    <div class="back">
-                        <a href="games/flip-coin.html">
-                            <img src="pictures/flip-coin.PNG" alt="flip-coin">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="game_frame">
-                <div class="games">
-                    <div class="front">
-                        <h2>დომინო</h2>
-                    </div>
-                    <div class="back">
-                        <a href="games/domino.html">
-                            <img src="pictures/domino.PNG" alt="domino">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="game_frame">
-                <div class="games">
-                    <div class="front">
-                        <h2>ფორტუნა</h2>
-                    </div>
-                    <div class="back">
-                        <a href="games/fortuna.html">
-                            <img src="pictures/fortuna.PNG" alt="fortuna">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="game_frame">
-                <div class="games">
-                    <div class="front">
-                        <h2>BLACKJACK</h2>
-                    </div>
-                    <div class="back">
-                        <a href="games/blackjack.html">
-                            <img src="pictures/blackjack.PNG" alt="BLACKJACK">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="game_frame">
-                <div class="games">
-                    <div class="front">
-                        <h2>RACE</h2>
-                    </div>
-                    <div class="back">
-                        <a href="games/race.html">
-                            <img src="pictures/race.png" alt="RACE">
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="game_frame">
-                <div class="games">
-                    <div class="front">
-                        <h2>Sonic</h2>
-                    </div>
-                    <div class="back">
-                        <a href="games/sonic.html">
-                            <img src="pictures/sonic.png" alt="Sonic">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </main>
-        <div id="footer" ng-include="'footer.html'"></div>
-        <button onclick="topFunction()" id="topbutton" class="glow" title="Go to top">&#8593</button>
+<link rel="stylesheet" href="games.css">
+
+<div class="quotes" ng-controller="quotes">
+    <h2 id="q">{{q}}</h2>
+    <h3 id="a">{{a}}</h3>
+</div>
+
+<div class="game_frame">
+    <div class="games">
+        <div class="front">
+            <h2>TIC TAC TOE</h2>
+        </div>
+        <div class="back">
+            <a href="games/TicTacToe.html">
+                <img src="pictures/tictactoe.PNG" alt="tictactoe">
+            </a>
+        </div>
     </div>
-</body>
-<script>
-    /*tab color
-    var tabs = document.getElementsByClassName("navbartabs");
-    for(x of tabs){
-        x.style.backgroundColor = "transparent";
-    }
-    document.getElementById("games").style.backgroundColor = "blueviolet";
-    */
-
-    /*scroll button*/
-    var mybutton = document.getElementById("topbutton");
-    window.onscroll = function() {scrollFunction()};
-
-    function scrollFunction(){
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
-            mybutton.style.display = "block";
-            } else {
-                mybutton.style.display = "none";
-            }
-    }
-    function topFunction(){
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    }
-
-    /*quotes*/
-    var mydata = JSON.parse(quote);
-    var R = Math.floor(Math.random()*mydata.length);
-    document.getElementById("q").innerHTML = `"${mydata[R].q}"`;
-    document.getElementById("a").innerHTML = `- ${mydata[R].a}`;
-</script>
-</html>
+</div>
+<div class="game_frame">
+    <div class="games">
+        <div class="front">
+            <h2>Flip a coin</h2>
+        </div>
+        <div class="back">
+            <a href="games/flip-coin.html">
+                <img src="pictures/flip-coin.PNG" alt="flip-coin">
+            </a>
+        </div>
+    </div>
+</div>
+<div class="game_frame">
+    <div class="games">
+        <div class="front">
+            <h2>დომინო</h2>
+        </div>
+        <div class="back">
+            <a href="games/domino.html">
+                <img src="pictures/domino.PNG" alt="domino">
+            </a>
+        </div>
+    </div>
+</div>
+<div class="game_frame">
+    <div class="games">
+        <div class="front">
+            <h2>ფორტუნა</h2>
+        </div>
+        <div class="back">
+            <a href="games/fortuna.html">
+                <img src="pictures/fortuna.PNG" alt="fortuna">
+            </a>
+        </div>
+    </div>
+</div>
+<div class="game_frame">
+    <div class="games">
+        <div class="front">
+            <h2>BLACKJACK</h2>
+        </div>
+        <div class="back">
+            <a href="games/blackjack.html">
+                <img src="pictures/blackjack.PNG" alt="BLACKJACK">
+            </a>
+        </div>
+    </div>
+</div>
+<div class="game_frame">
+    <div class="games">
+        <div class="front">
+            <h2>RACE</h2>
+        </div>
+        <div class="back">
+            <a href="games/race.html">
+                <img src="pictures/race.png" alt="RACE">
+            </a>
+        </div>
+    </div>
+</div>
+<div class="game_frame">
+    <div class="games">
+        <div class="front">
+            <h2>Sonic</h2>
+        </div>
+        <div class="back">
+            <a href="games/sonic.html">
+                <img src="pictures/sonic.png" alt="Sonic">
+            </a>
+        </div>
+    </div>
+</div>

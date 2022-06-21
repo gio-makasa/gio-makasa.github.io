@@ -76,23 +76,6 @@ hr{
     background-color: white;
     box-shadow: 0 0 20px blue,0 0 30px rgb(56, 56, 255),0 0 40px rgb(107, 107, 255);
 }
-#topbutton{
-    display:none;
-    position:fixed;
-    width:50px;
-    height:50px;
-    bottom:30px;
-    right:40px;
-    z-index:99;
-    font-size:xx-large;
-    border:none;
-    outline:none;
-    cursor:pointer;
-    background-color:blueviolet;
-    color:white;
-    border-radius:4px;
-    box-shadow:0 0 20px #fff, 0 0 30px #be4dff, 0 0 40px #be4dff, 0 0 50px #be4dff
-}
 @media screen and (max-width: 600px){
     li{
         width: 100%;

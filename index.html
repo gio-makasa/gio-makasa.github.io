@@ -4,81 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap' rel='stylesheet'>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    <link rel="stylesheet" href="header-footer.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="quotes.json"></script>
+    <script src="games.js" defer></script>
+    <script src="index.js" defer></script>
     <link rel="stylesheet" href="index.css">
     <title>Page</title>
 </head>
-<body ng-app="">
+<body ng-app="CV">
     <div class="frame">
-        <div id="header" ng-include="'header.html'"></div>
-        <main>
-            <div class="info">
-                <img src="pictures/avatar.png" alt="avatar">
-                <h1>George Makasa</h1>
-                <hr>
-                <p>B.Date: 30-Nov-2001</p>
-                <p>Phone: 571 70 66 32</p>
-                <p>E-mail: <a href="mailto:giorgimakasarashvili@gmail.com">giorgimakasarashvili@gmail.com</a></p>
+        <div id="header">
+            <h1>CV</h1>
+            <ul id="nav-bar">
+                <li class="navbartabs" id="home"><a href="#/!">Home</a></li>
+                <li class="navbartabs" id="games"><a href="#!games">Games</a></li>
+                <li class="navbartabs" id="projects"><a href="#!projects">Projects</a></li>
+            </ul>
+        </div>
+        
+        <main ng-view></main>
+        
+        <button onclick="topFunction()" id="topbutton" class="glow" title="Go to top">&#8593</button>
+        <div id="footer">
+            <hr>
+            <div class="social">
+                <a href="https://github.com/gio-makasa" target="_blank" rel="noopener noreferrer">
+                    <img src="pictures/github.jpg" alt="github" title="Github">
+                </a>
             </div>
-            <div class="skills">
-                <div class="tab"><h2>SKILLS</h2></div>
-                <div class="tabcontent">
-                    <p>HTML</p>
-                    <p>CSS</p>
-                    <p>Sass</p>
-                    <p>Bootstrap 5</p>
-                    <p>JavaScript</p>
-                    <p>JQuery</p>
-                    <p>JSON</p>
-                    <p>AJAX</p>
-                    <p>React.js</p>
-                    <p>Git</p>
-                    <p>Github</p>
-                    <p>SQL</p>
-                </div>
-            </div>
-            <br>
-            <div class="experience">
-                <div class="tab">
-                    <h2>EXPERIENCE<i>(entry level)</i></h2>
-                </div>
-                <div class="tabcontent">
-                    <p>Upwork</p>
-                </div>
-            </div>
-            <br>
-            <div class="education">
-                <div class="tab"><h2>EDUCATION</h2></div>
-                <div class="tabcontent">
-                    <p>Computer Science(Caucasus university)</p>
-                </div>
-            </div>
-            <button onclick="topFunction()" id="topbutton" class="glow" title="Go to top">&#8593</button>
-        </main>
-        <div id="footer" ng-include="'footer.html'"></div>
+        </div>
     </div>
 </body>
 <script>
-    var tabs = document.getElementsByClassName("navbartabs");
-    for(x of tabs){
-        x.style.backgroundColor = "transparent";
-    }
-    document.getElementById("home").style.backgroundColor = "blueviolet";
-
-    var mybutton = document.getElementById("topbutton");
-    window.onscroll = function() {scrollFunction()};
-
-    function scrollFunction(){
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
-            mybutton.style.display = "block";
-            } else {
-                mybutton.style.display = "none";
-            }
-    }
-    function topFunction(){
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    }
+    var app = angular.module("CV", ["ngRoute"]);
+    app.config(function($routeProvider) {
+        $routeProvider
+        .when("/", {
+            templateUrl : "home.html"
+        })
+        .when("/games", {
+            templateUrl : "games.html"
+        })
+        .when("/projects", {
+            templateUrl : "projects.html"
+        });
+    });
 </script>
 </html>
