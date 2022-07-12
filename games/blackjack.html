@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<link rel="stylesheet" href="blackjack.css">
 	<title>blackjack</title>
 </head>
@@ -56,7 +57,7 @@
 </body>
 
 <script>
-    var old_html = document.getElementById("table").innerHTML;
+    var old_html = $("#table").html();
     var liner = document.getElementById("liner");
     var minus_count_pc = 0;
     var minus_count_me = 0;
@@ -337,7 +338,7 @@
     }
 
     function reset(){
-        document.getElementById("table").html(old_html);
+        $("#table").html(old_html);
         minus_count_pc = 0;
         minus_count_me = 0;
         
@@ -364,9 +365,9 @@
         }
     }
 
-    document.querySelector(".bets button").addEventListener("click", () => {
-        input.val(input.val()*1+1*$(this).val());
-    })
+    $(".bets button").click(function(){
+        $("#quantity").val($("#quantity").val()*1+1*$(this).val());
+    });
 
 </script>
 </html>
