@@ -5,6 +5,9 @@ html{
     color: white;
     box-sizing: border-box;
 }
+.hide{
+    display: none;
+}
 body{
     background-image: url("pictures/galaxy.jpg");
     background-repeat: no-repeat;
@@ -36,27 +39,27 @@ body{
     padding-left: 30px;
     text-shadow: 0 0 20px #fff, 0 0 30px blue, 0 0 40px blue, 0 0 50px blue;
 }
-#nav-bar{
+#header #nav-bar{
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: rgba(51, 51, 51);
 }
-#nav-bar li{
+#header #nav-bar li{
     float: left;
     border-right:1px solid white;
 }
-#nav-bar li:last-child {
+#header #nav-bar li:last-child {
     border-right: none;
 }
-#nav-bar li a{
+#header #nav-bar li a{
     display: block;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
-#nav-bar li:hover{
+#header #nav-bar li:hover{
     background-color: rgba(0, 0, 255, 0.2);
 }
 .active, .active:hover{
@@ -87,10 +90,10 @@ body{
 #footer{
     padding-top: 1rem;
 }
-.social{
+#footer .social{
     padding: 15px;
 }
-.social > a > img{
+#footer .social > a > img{
     width: 50px;
     height: 50px;
 }

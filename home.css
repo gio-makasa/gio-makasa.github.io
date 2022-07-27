@@ -1,13 +1,4 @@
-@keyframes glow{
-  from{
-    box-shadow: 0 0 20px black, 0 0 30px rgb(30, 30, 255);
-  }
-  to{
-    box-shadow: 0 0 20px black, 0 0 30px rgb(20, 20, 255), 0 0 40px rgb(0, 0, 255);
-  }
-}
-
-.info{
+#home .info {
   position: relative;
   display: flex;
   overflow: hidden;
@@ -16,7 +7,7 @@
   margin-bottom: 3rem;
 }
 
-#flash_background{
+#home #flash_background {
   position: absolute;
   display: block;
   bottom: 0;
@@ -25,7 +16,7 @@
   background-color: white;
 }
 
-#flash{
+#home #flash {
   position: absolute;
   display: block;
   bottom: 0;
@@ -37,16 +28,7 @@
   animation: flash-anim 2s linear infinite;
 }
 
-@keyframes flash-anim {
-  0% {
-    left: -100%;
-  }
-  50%,100% {
-    left: 100%;
-  }
-}
-
-.info img{
+#home .info img {
   animation: glow 1s ease-in-out infinite alternate;
   border-radius: 50%;
   width: 150px;
@@ -54,24 +36,24 @@
   margin: 1%;
 }
 
-#info_text{
+#home #info_text {
   display: flex;
   align-items: center;
   width: 100%;
 }
 
-#about{
+#home #about {
   width: 60%;
 }
 
-#contact{
+#home #contact {
   width: 40%;
   border-left: solid 5px blue;
   margin-left: 2rem;
   padding-left: 2rem;
 }
 
-#about > h1{
+#home #about > h1 {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -80,7 +62,14 @@
   padding: 0.5rem 1rem;
 }
 
-#about > h1::before{
+#home #about > h1:hover {
+  background: blue;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 5px blue, 0 0 25px blue, 0 0 50px blue, 0 0 100px blue;
+}
+
+#home #about > h1::before {
   content: '';
   position: absolute;
   width: 2rem;
@@ -91,7 +80,7 @@
   border-left: 5px solid blue;
 }
 
-#about > h1::after{
+#home #about > h1::after {
   content: '';
   position: absolute;
   width: 2rem;
@@ -102,24 +91,14 @@
   border-right: 5px solid blue;
 }
 
-#about > h1:hover {
-  background: blue;
-  color: white;
-  border-radius: 5px;
-  box-shadow: 0 0 5px blue,
-              0 0 25px blue,
-              0 0 50px blue,
-              0 0 100px blue;
-}
-
-.skills, .experience, .education {
+#home .skills, #home .experience, #home .education {
   border: solid 2px;
   border-radius: 10px;
   border-color: var(--color);
   margin-bottom: 2rem;
 }
 
-.skills > .tab,.experience > .tab,.education > .tab {
+#home .skills .tab, #home .experience .tab, #home .education .tab {
   overflow: hidden;
   position: relative;
   border-bottom: solid 1px;
@@ -127,13 +106,13 @@
   border-color: var(--color);
 }
 
-.tabcontent {
+#home .tabcontent {
   display: flex;
   min-height: 100px;
   flex-wrap: wrap;
 }
 
-.tabcontent > p {
+#home .tabcontent p {
   width: fit-content;
   height: fit-content;
   color: black;
@@ -144,26 +123,44 @@
   background-color: var(--color_p);
 }
 
-hr {
+#home hr {
   height: 3px;
   background-color: white;
   box-shadow: 0 0 20px blue, 0 0 30px #3838ff, 0 0 40px #6b6bff;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 20px black, 0 0 30px #1e1eff;
+  }
+  to {
+    box-shadow: 0 0 20px black, 0 0 30px #1414ff, 0 0 40px blue;
+  }
+}
+
+@keyframes flash-anim {
+  0% {
+    left: -100%;
+  }
+  50%, 100% {
+    left: 100%;
+  }
 }
 
 @media screen and (max-width: 600px) {
   li {
     width: 100%;
   }
-  .frame{
+  .frame {
     margin: 0;
   }
-  .info, #info_text{
+  .info, #info_text {
     flex-direction: column;
   }
-  .info img{
+  .info img {
     margin: 1rem;
   }
-  #contact, #about{
+  #contact, #about {
     width: 100%;
     border-left: none;
     text-align: center;

@@ -1,8 +1,8 @@
-main img{
+#games img{
     width: 200px;
     height: 150px;
 }
-main{
+#games{
     display: flex;
     align-items: center;
     justify-content: center;
