@@ -5,29 +5,84 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap' rel='stylesheet'>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script type="text/javascript" src="quotes.json"></script>
-    <script src="games.js" defer></script>
     <script src="index.js" defer></script>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="home.css">
     <title>Page</title>
 </head>
-<body ng-app="CV">
+<body>
     <div class="frame">
         <div id="header">
             <h1>CV</h1>
             <ul id="nav-bar">
-                <li class="navbartabs" id="home"><a href="#/!">Home</a></li>
-                <li class="navbartabs" id="games"><a href="#!games">Games</a></li>
-                <li class="navbartabs" id="projects"><a href="#!projects">Projects</a></li>
+                <li class="navbartabs active" id="home"><a href="/">Home</a></li>
+                <li class="navbartabs" id="games"><a href="/">Games</a></li>
+                <li class="navbartabs" id="projects"><a href="/">Projects</a></li>
             </ul>
         </div>
-        
-        <main ng-view></main>
-        
-        <button onclick="topFunction()" id="topbutton" class="glow" title="Go to top">&#8593</button>
+
+        <div id="home">
+            <div class="info">
+                <img src="pictures/avatar.png" alt="avatar">
+                <div id="info_text">
+                    <div id="about">
+                        <h1>George Makasa</h1>
+                        <hr>
+                        <p>I currently study at Caucasus University (Computer Science). I have experience of HTML, CSS(Sass) and JavaScript (JQuery),
+                        Also I can use CSS frameworks: Bootstrap5 and W3.css. and have basic knowledge of JavaScript frameworks: React and AngularJS.
+                        </p>
+                    </div>
+                    <div id="contact">
+                        <p>B.Date: 30-Nov-2001</p>
+                        <p>City: Tbilisi (Georgia)</p>
+                        <p>Phone: (+995) 571 70 66 32</p>
+                        <p>E-mail: <a href="mailto:giorgimakasarashvili@gmail.com">giorgimakasarashvili@gmail.com</a></p>
+                    </div>
+                </div>
+                <span id="flash_background"></span>
+                <span id="flash"></span>
+            </div>
+            <div class="skills" style="--color:purple">
+                <div class="tab"><h2>SKILLS</h2></div>
+                <div class="tabcontent" style="--color_p:palevioletred">
+                    <p>HTML</p>
+                    <p>CSS</p>
+                    <p>Sass</p>
+                    <p>Bootstrap 5</p>
+                    <p>W3.css</p>
+                    <p>JavaScript</p>
+                    <p>TypeScript</p>
+                    <p>JQuery</p>
+                    <p>JSON</p>
+                    <p>AJAX</p>
+                    <p>React.js</p>
+                    <p>AngularJS</p>
+                    <p>PHP</p>
+                    <p>Git</p>
+                    <p>Github</p>
+                    <p>SQL</p>
+                    <p>English (B2)</p>
+                </div>
+            </div>
+            <br>
+            <div class="experience" style="--color:#bebe00">
+                <div class="tab">
+                    <h2>EXPERIENCE<i>(entry level)</i></h2>
+                </div>
+                <div class="tabcontent" style="--color_p:#ff8800">
+                    <p>Upwork (Freelance)</p>
+                </div>
+            </div>
+            <br>
+            <div class="education" style="--color:royalblue">
+                <div class="tab"><h2>EDUCATION</h2></div>
+                <div class="tabcontent" style="--color_p:#8c8cff">
+                    <p>Computer Science (Caucasus University)</p>
+                </div>
+            </div>
+        </div>
+
+        <button onclick="topScroll()" id="topbutton" class="glow" title="Go to top">&#8593</button>
         <div id="footer">
             <hr>
             <div class="social">
@@ -38,19 +93,4 @@
         </div>
     </div>
 </body>
-<script>
-    var app = angular.module("CV", ["ngRoute"]);
-    app.config(function($routeProvider) {
-        $routeProvider
-        .when("/", {
-            templateUrl : "home.html"
-        })
-        .when("/games", {
-            templateUrl : "games.html"
-        })
-        .when("/projects", {
-            templateUrl : "projects.html"
-        });
-    });
-</script>
 </html>
