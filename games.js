@@ -1,7 +1,5 @@
 var mydata = JSON.parse(quote);
 var R = Math.floor(Math.random()*mydata.length);
 
-app.controller('quotes', function($scope) {
-  $scope.q = `"${mydata[R].q}"`;
-  $scope.a = `- ${mydata[R].a}`;
-});
+document.getElementById("q").innerHTML = `"${mydata[R].q}"`;
+document.getElementById("a").innerHTML = `- ${mydata[R].a}`;

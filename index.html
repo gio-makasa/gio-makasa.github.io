@@ -6,22 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap' rel='stylesheet'>
     <script src="index.js" defer></script>
+    <script src="games.js" defer></script>
+    <script type="text/javascript" src="quotes.json"></script>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="games_projects.css">
     <title>Page</title>
 </head>
 <body>
-    <div class="frame">
+    <div id="page">
         <div id="header">
             <h1>CV</h1>
             <ul id="nav-bar">
-                <li class="navbartabs active" id="home"><a href="/">Home</a></li>
-                <li class="navbartabs" id="games"><a href="/">Games</a></li>
-                <li class="navbartabs" id="projects"><a href="/">Projects</a></li>
+                <li class="navbartabs active" onclick="switcher('home')" id="home_tab">Home</li>
+                <li class="navbartabs" onclick="switcher('games')" id="games_tab">Games</li>
+                <li class="navbartabs" onclick="switcher('projects')" id="projects_tab">Projects</li>
             </ul>
         </div>
 
-        <div id="home">
+        <!-- HOME section starts-->
+        <div class="sections" id="home">
             <div class="info">
                 <img src="pictures/avatar.png" alt="avatar">
                 <div id="info_text">
@@ -81,6 +85,288 @@
                 </div>
             </div>
         </div>
+        <!-- HOME section ends-->
+
+
+        <!-- Games section starts-->
+        <div class="sections hide" id="games">
+            <div class="quotes" ng-controller="quotes">
+                <h2 id="q">{{q}}</h2>
+                <h3 id="a">{{a}}</h3>
+            </div>
+            
+            <div class="frames">
+                <div class="frame">
+                    <div class="front">
+                        <h2>TIC TAC TOE</h2>
+                    </div>
+                    <div class="back">
+                        <a href="games/TicTacToe.html">
+                            <img src="pictures/tictactoe.PNG" alt="tictactoe">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="frames">
+                <div class="frame">
+                    <div class="front">
+                        <h2>Flip a coin</h2>
+                    </div>
+                    <div class="back">
+                        <a href="games/flip-coin.html">
+                            <img src="pictures/flip-coin.PNG" alt="flip-coin">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="frames">
+                <div class="frame">
+                    <div class="front">
+                        <h2>დომინო</h2>
+                    </div>
+                    <div class="back">
+                        <a href="games/domino.html">
+                            <img src="pictures/domino.PNG" alt="domino">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="frames">
+                <div class="frame">
+                    <div class="front">
+                        <h2>ფორტუნა</h2>
+                    </div>
+                    <div class="back">
+                        <a href="games/fortuna.html">
+                            <img src="pictures/fortuna.PNG" alt="fortuna">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="frames">
+                <div class="frame">
+                    <div class="front">
+                        <h2>BLACKJACK</h2>
+                    </div>
+                    <div class="back">
+                        <a href="games/blackjack.html">
+                            <img src="pictures/blackjack.PNG" alt="BLACKJACK">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="frames">
+                <div class="frame">
+                    <div class="front">
+                        <h2>RACE</h2>
+                    </div>
+                    <div class="back">
+                        <a href="games/race.html">
+                            <img src="pictures/race.png" alt="RACE">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="frames">
+                <div class="frame">
+                    <div class="front">
+                        <h2>Sonic</h2>
+                    </div>
+                    <div class="back">
+                        <a href="games/sonic.html">
+                            <img src="pictures/sonic.png" alt="Sonic">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="frames">
+                <div class="frame">
+                    <div class="front">
+                        <h2>Tic Tac Toe (ReactJS)</h2>
+                    </div>
+                    <div class="back">
+                        <a href="https://makasa-tic-tac-toe.netlify.app">
+                            <img src="pictures/tictactoeReact.png" alt="tictactoe">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Games section ends-->
+
+
+        <!-- projects section starts-->
+        <div class="sections hide" id="projects">
+            <div class="frames">
+                <div class="frame">
+                    <div class="front">
+                        <h2>clock</h2>
+                    </div>
+                    <div class="back">
+                        <a href="projects/clock.html">
+                            <img src="pictures\clock.png" alt="clock">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="frames">
+                <div class="frame">
+                    <div class="front">
+                        <h2>shop</h2>
+                    </div>
+                    <div class="back">
+                        <a href="projects/shop.html">
+                            <img src="pictures/onlineshop.png" alt="onlineshop">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="frames">
+                <div class="frame">
+                    <div class="front">
+                        <h2>movies</h2>
+                    </div>
+                    <div class="back">
+                        <a href="projects/movies.html">
+                            <img src="pictures/movies.png" alt="movies">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="frames">
+                <div class="frame">
+                    <div class="front">
+                        <h2>Tours</h2>
+                    </div>
+                    <div class="back">
+                        <a href="projects/Tours/index.html">
+                            <img src="pictures/tours.png" alt="tours">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="frames">
+                <div class="frame">
+                    <div class="front">
+                        <h2>lost_found</h2>
+                    </div>
+                    <div class="back">
+                        <a href="projects/lost_found/index.html">
+                            <img src="pictures/lost_found.png" alt="lost_found">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="frames">
+                <div class="frame">
+                    <div class="front">
+                        <h2>Countdown</h2>
+                    </div>
+                    <div class="back">
+                        <a href="projects/Countdown.html">
+                            <img src="pictures/countdown.png" alt="Countdown">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="frames">
+                <div class="frame">
+                    <div class="front">
+                        <h2>Quiz</h2>
+                    </div>
+                    <div class="back">
+                        <a href="projects/quiz.html">
+                            <img src="pictures/quiz.png" alt="Quiz">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="frames">
+                <div class="frame">
+                    <div class="front">
+                        <h2>Notes</h2>
+                    </div>
+                    <div class="back">
+                        <a href="projects/notes.html">
+                            <img src="pictures/note.png" alt="Notes">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="frames">
+                <div class="frame">
+                    <div class="front">
+                        <h2>ToDo</h2>
+                    </div>
+                    <div class="back">
+                        <a href="projects/ToDo.html">
+                            <img src="pictures/ToDo.png" alt="ToDo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="frames">
+                <div class="frame">
+                    <div class="front">
+                        <h2>Password Generator</h2>
+                    </div>
+                    <div class="back">
+                        <a href="projects/passgenerator.html">
+                            <img src="pictures/PassGenerator.png" alt="PassGenerator">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="frames">
+                <div class="frame">
+                    <div class="front">
+                        <h2>Recipe</h2>
+                    </div>
+                    <div class="back">
+                        <a href="projects/recipe.html">
+                            <img src="pictures/recipe.png" alt="Recipe">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="frames">
+                <div class="frame">
+                    <div class="front">
+                        <h2>Movies_2</h2>
+                    </div>
+                    <div class="back">
+                        <a href="projects/movies/movies.html">
+                            <img src="pictures/movies2.png" alt="Movies">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="frames">
+                <div class="frame">
+                    <div class="front">
+                        <h2>Shopping List (AngularJS)</h2>
+                    </div>
+                    <div class="back">
+                        <a href="projects/Shopping_list.html">
+                            <img src="pictures/Shoping_list.png" alt="shopping_list">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="frames">
+                <div class="frame">
+                    <div class="front">
+                        <h2>city tours (ReactJS)</h2>
+                    </div>
+                    <div class="back">
+                        <a href="https://makasa-city-tours.netlify.app">
+                            <img src="pictures/city-tours.png" alt="city_tours">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- projects section ends-->
 
         <button onclick="topScroll()" id="topbutton" class="glow" title="Go to top">&#8593</button>
         <div id="footer">

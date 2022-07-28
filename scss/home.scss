@@ -126,12 +126,6 @@
       background-color: var(--color_p);
     }
   }
-  
-  hr {
-    height: 3px;
-    background-color: white;
-    box-shadow: 0 0 20px blue, 0 0 30px #3838ff, 0 0 40px #6b6bff;
-  }
 }
 
 @keyframes glow{
@@ -153,23 +147,25 @@
 }
 
 @media screen and (max-width: 600px) {
-  li {
-    width: 100%;
-  }
-  .frame{
-    margin: 0;
-  }
-  .info, #info_text{
-    flex-direction: column;
-  }
-  .info img{
-    margin: 1rem;
-  }
-  #contact, #about{
-    width: 100%;
-    border-left: none;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+  #home{
+    li {
+      width: 100%;
+    }
+    #page{
+      margin: 0;
+    }
+    .info, #info_text{
+      flex-direction: column;
+    }
+    .info img{
+      margin: 1rem;
+    }
+    #contact, #about{
+      width: 100%;
+      border-left: none;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
   }
 }

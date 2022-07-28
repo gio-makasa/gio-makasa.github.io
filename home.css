@@ -123,12 +123,6 @@
   background-color: var(--color_p);
 }
 
-#home hr {
-  height: 3px;
-  background-color: white;
-  box-shadow: 0 0 20px blue, 0 0 30px #3838ff, 0 0 40px #6b6bff;
-}
-
 @keyframes glow {
   from {
     box-shadow: 0 0 20px black, 0 0 30px #1e1eff;
@@ -148,19 +142,19 @@
 }
 
 @media screen and (max-width: 600px) {
-  li {
+  #home li {
     width: 100%;
   }
-  .frame {
+  #home #page {
     margin: 0;
   }
-  .info, #info_text {
+  #home .info, #home #info_text {
     flex-direction: column;
   }
-  .info img {
+  #home .info img {
     margin: 1rem;
   }
-  #contact, #about {
+  #home #contact, #home #about {
     width: 100%;
     border-left: none;
     text-align: center;

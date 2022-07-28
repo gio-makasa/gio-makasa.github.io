@@ -6,7 +6,7 @@ html{
     box-sizing: border-box;
 }
 .hide{
-    display: none;
+    display: none !important;
 }
 body{
     background-image: url("pictures/galaxy.jpg");
@@ -14,7 +14,7 @@ body{
     background-size: cover;
     background-attachment: fixed;
 }
-.frame{
+#page{
     border: solid 3px black;
     background-color: rgb(20,20,20);
     border-radius: 10px;
@@ -49,15 +49,14 @@ body{
 #header #nav-bar li{
     float: left;
     border-right:1px solid white;
-}
-#header #nav-bar li:last-child {
-    border-right: none;
-}
-#header #nav-bar li a{
     display: block;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    cursor: pointer;
+}
+#header #nav-bar li:last-child {
+    border-right: none;
 }
 #header #nav-bar li:hover{
     background-color: rgba(0, 0, 255, 0.2);
@@ -89,6 +88,11 @@ body{
 /*------------*/
 #footer{
     padding-top: 1rem;
+}
+hr{
+    height: 3px;
+    background-color: white;
+    box-shadow: 0 0 20px blue,0 0 30px rgb(56, 56, 255),0 0 40px rgb(107, 107, 255);
 }
 #footer .social{
     padding: 15px;
