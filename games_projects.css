@@ -90,9 +90,6 @@
   #games li {
     width: 100%;
   }
-  #games #page {
-    margin: auto;
-  }
   #games .info > img {
     margin: 0 50% 20px 50%;
     transform: translate(-50%);
