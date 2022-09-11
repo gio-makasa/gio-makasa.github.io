@@ -1,0 +1,104 @@
+#games, #projects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#games .quotes, #projects .quotes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2%;
+  width: 100%;
+  height: fit-content;
+}
+
+#games .quotes::after, #projects .quotes::after {
+  content: '';
+  width: 100%;
+  order: 1;
+}
+
+#games #q, #games #a, #projects #q, #projects #a {
+  font-family: 'Petit Formal Script', cursive;
+  text-align: center;
+}
+
+#games #q, #projects #q {
+  order: 1;
+}
+
+#games #a, #projects #a {
+  font-style: italic;
+  order: 2;
+}
+
+#games .frames, #projects .frames {
+  margin: 20px;
+  border: solid 5px white;
+  border-style: ridge;
+  width: 20%;
+  height: 160px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#games .frame, #projects .frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+#games .frames:hover .frame, #projects .frames:hover .frame {
+  transform: rotateY(180deg);
+}
+
+#games .front, #games .back, #projects .front, #projects .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+#games .front, #projects .front {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#games .front h2, #projects .front h2 {
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 10px blue, 0 0 20px #4040ff;
+}
+
+#games .back, #projects .back {
+  transform: rotateY(180deg);
+}
+
+#games .back img, #projects .back img {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  #games, #projects {
+    justify-content: space-around;
+  }
+  #games .frames, #projects .frames {
+    margin: 10px 0;
+    width: 48%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  #games .frames, #projects .frames {
+    margin: 10px 0;
+    width: 80%;
+  }
+}

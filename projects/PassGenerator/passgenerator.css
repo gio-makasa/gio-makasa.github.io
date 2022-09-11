@@ -1,0 +1,77 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: rgb(48, 65, 163);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#container{
+    background-color: rgb(31, 37, 94);
+    width: 400px;
+    max-width: 100%;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgb(31, 37, 94), 0 0 30px rgb(58, 65, 128), 0 0 60px white;
+}
+
+#container h2{
+    margin-top: 0;
+    text-align: center;
+}
+
+#output{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#output input{
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+}
+
+#copy{
+    font-size: large;
+    border: none;
+    background-color: rgb(48, 65, 163);
+    color: white;
+}
+
+#length{
+    width: 3rem;
+    outline: none;
+}
+
+#input{
+    padding: 1rem 2rem;
+    width: 100%;
+}
+
+.option{
+    margin: 0.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#generate{
+    background-color: rgb(48, 65, 163);
+    color: white;
+    width: 100%;
+    border: none;
+    padding: 1rem;
+    font-size: larger;
+    font-weight: bold;
+}
+
+button{
+    cursor: pointer;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ტური საქართველოში</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="tour.css">
+  <script src="tour.js" defer></script>
+  <script type="text/javascript" src="tour.json"></script>
+</head>
+<body>
+
+<header id="header">
+  <h2>ტური საქართველოში</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li onclick="switcher(0)">თბილისი</li>
+      <li onclick="switcher(1)">ბათუმი</li>
+      <li onclick="switcher(2)">ქუთაისი</li>
+      <li onclick="switcher(3)">გუდაური</li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1 id="title"></h1>
+    <p id="text"></p>
+  </article>
+</section>
+<div id="photos">
+  <h2 style="margin-left: 30px;">გალერეა</h2>
+  <div id="galery">
+    <img id="img_1" onclick="myFunction(this);">
+    <img id="img_2" onclick="myFunction(this);">
+    <img id="img_3" onclick="myFunction(this);">
+    <img id="img_4" onclick="myFunction(this);">
+  </div>
+</div>
+
+<div class="container">
+  <img id="expandedImg">
+</div>
+
+<footer>
+  <p>ყველა უფლება დაცულია &copy; 2022</p>
+</footer>
+
+</body>
+</html>

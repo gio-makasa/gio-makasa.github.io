@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ge">
+	<head>
+		<title>დაკარგული/ნაპოვნი ცხოველები</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<link rel="stylesheet" href="css/animal.css">
+	</head>
+	
+	<body>
+		<header>
+		  <h2 lang="ka">დაკარგული/ნაპოვნი ცხოველები</h2>
+		  <h2 lang="en">Lost/Found Animals</h2>
+		</header>
+		
+		<nav>
+			<a href="index.html"><span lang="ka">დაიკარგა</span> <span lang="en">Lost</span></a>
+			<a href="found.html"><span lang="ka">ნაპოვნია</span> <span lang="en">Found</span></a>
+			<a href="add.html"><span lang="ka">დამატება</span> <span lang="en">Add</span></a>
+			<a href="aboutus.html"><span lang="ka">ჩვენს შესახებ</span> <span lang="en">About us</span></a>
+			<div id="changer">
+				KA
+				<label class="switch">
+					<input type="checkbox">
+					<span class="slider round" id="switch_lang"></span>
+				</label>
+				ENG
+			</div>
+		</nav>
+		
+		<section>
+		    <h3 lang="ka">დაკარგული</h3><h3 lang="en">Lost</h3>
+		  <article>
+			<div>
+				<fieldset>
+				  <legend> <span lang="ka">მპოვნელის გამოხმაურება</span> <span lang="en">Founder's Response</span> </legend>
+				  <form>
+					<img id="expandedImg" src="images/LostAnimals/lost (1).jpg"> <br><br>
+					
+					<input type="text" id="AnimalName" placeholder="Name"><br><br>
+					<input type="text" id="Mobile" placeholder="Mobile" pattern="[0-9]{3}-[0-9]{2}-[0-9]{2}-[0-9]{2}">
+					<span lang="ka">ან</span> <span lang="en">OR</span>
+					<input type="text" id="e_Mail" placeholder="e-mail"><br><br>
+					<input id="reset" type="reset"><input id="submit" type="submit">
+				  </form>
+				</fieldset>
+			</div>			
+		  </article>
+		</section>
+
+		<div id="galery">
+			<h2 lang="ka">დაკარგულები</h2><h2 lang="en">Lost ones</h2>
+			<div id="photos">
+				<img src="images/LostAnimals/lost (1).jpg" alt="" onclick="myFunction(this);">
+				<img src="images/LostAnimals/lost (2).jpg" alt="" onclick="myFunction(this);">
+				<img src="images/LostAnimals/lost (3).jpg" alt="" onclick="myFunction(this);">
+				<img src="images/LostAnimals/lost (4).jpg" alt="" onclick="myFunction(this);">
+				<img src="images/LostAnimals/lost (5).jpg" alt="" onclick="myFunction(this);">
+				<img src="images/LostAnimals/lost (6).jpg" alt="" onclick="myFunction(this);">
+				<img src="images/LostAnimals/lost (7).jpg" alt="" onclick="myFunction(this);">
+				<img src="images/LostAnimals/lost (8).jpg" alt="" onclick="myFunction(this);">
+				<img src="images/LostAnimals/lost (9).jpg" alt="" onclick="myFunction(this);">
+				<img src="images/LostAnimals/lost (10).jpg"alt="" onclick="myFunction(this);">
+			</div>
+		</div>
+
+		<footer>
+		  <p lang="ka">ყველა უფლება დაცულია 2022&copy;</p>
+		  <p lang="en">All rights reserved 2022&copy;</p>
+		</footer>
+	</body>
+	<script>
+		function myFunction(imgs) {
+		  var expandImg = document.getElementById("expandedImg");
+		  document.body.scrollTop = 0;
+		  document.documentElement.scrollTop = 0;
+		  expandImg.src = imgs.src;
+		}
+
+		$('[lang="en"]').hide();
+		$('#switch_lang').click(function(){
+			$('[lang="en"]').toggle();
+			$('[lang="ka"]').toggle();
+		});
+	</script>
+</html>

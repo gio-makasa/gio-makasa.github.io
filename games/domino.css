@@ -1,0 +1,57 @@
+body{
+    background-color: rgb(0, 71, 27);
+}
+span, p{
+    color: aliceblue;
+}
+.frame{
+    display: block;
+    text-align: center;
+    background-color: rgb(20,20,20);
+    border-radius: 10px;
+    width: 40%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: 0;
+}
+.top{
+    display: block;
+    padding: 10px;
+}
+.top > span{
+    display: block;
+    width: 50%;
+    float: left;
+}
+.sides{
+    display: block;
+}
+.sides > img{
+    padding: 30px;
+}
+.stat{
+    display: block;
+    text-align: center;
+    background-color: rgb(50,50,50);
+}
+#reset{
+    background-color: rgb(0, 156, 21);
+    color: white;
+    border: none;
+    border-radius: 0 0 10px 10px;
+    font-size: 20px;
+    font-weight: bolder;
+    display: block;
+    width: 100%;
+    height: 50px;
+}
+#reset:hover{
+    background-color: rgb(0, 117, 16);
+}
+@media screen and (max-width: 600px) {
+    .frame{
+        width: 98%;
+    }
+}

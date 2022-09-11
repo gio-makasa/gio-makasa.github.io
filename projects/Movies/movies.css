@@ -1,0 +1,191 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+body{
+  background-color: #202020;
+}
+
+/*top bar navigation starts*/
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+.topnav img{
+  float: left;
+  height: 50px;
+}
+.topnav a {
+  height: 50px;
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  padding: 11px 16px;
+}
+.topnav a:hover {
+  background-color: rgba(0, 0, 255, 0.418);
+}
+.topnav .search-container {
+  float: right;
+}
+.topnav input[type=text] {
+  font-size: 17px;
+  padding: 14px;
+  height: 50px;
+  border: none;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  outline: none;
+}
+#searchResults{
+  position: absolute;
+  z-index: 10;
+  display: none;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  height: fit-content;
+  width: 100%;
+  background-color: rgba(90, 90, 90, 0.5);
+}
+.result{
+  height: 200px;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+[id*="submenu-"]{
+    color: white;
+    background-color: rgba(51, 51, 51, 0.7);
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    height: fit-content;
+}
+[id*="submenu-"] div{
+    background-color: rgba(61, 61, 61, 0.9);
+    text-align: center;
+    margin: 10px;
+    padding: 3rem;
+    cursor: pointer;
+}
+[id*="submenu-"] div:hover{
+  background-color: rgba(0, 0, 255, 0.3);
+}
+/*top bar navigation ends*/
+
+#ads{
+  width: 100%;
+  height: 7em;
+  padding: 1em 0;
+}
+#premiere{
+  background-image: url(../project_pictures/premiere.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: center;
+  margin: 3em 2em;
+  padding: 2em;
+}
+.slideshow-container {
+  background-color: #333;
+  width: 100%;
+  position: relative;
+  padding: 1em;
+}
+.title{
+  color: white;
+  margin: 0.5em 1em;
+}
+.flexslides{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.flexslides img{
+  width: 15%;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  transition: 0.3s ease;
+  user-select: none;
+  text-decoration: none;
+}
+.prev{
+  left: 0;
+}
+.next{
+  right: 0;
+}
+.prev:hover, .next:hover {
+  color: blue;
+  text-shadow: 0 0 10px white;
+}
+footer{
+  background-color: rgba(0, 0, 184, 0.623);
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+}
+@media screen and (max-width: 600px) {
+  .topnav img{
+    float: none;
+    width: 100%;
+  }
+
+  .topnav a, .topnav input[type=text]{
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+  }
+
+  .topnav .search-container {
+    float: none;
+  }
+
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+
+  [id*="submenu-"]{
+    grid-template-columns: auto auto auto;
+  }
+
+  [id*="submenu-"] div{
+    margin: 0;
+    padding: 1rem 0;
+  }
+
+  .result{
+    width: 100%;
+    height: auto;
+    margin: 0.1rem;
+  }
+
+  .prev, .next {
+    font-size: 11px
+  }
+
+  #carousel, .carousel-inner, .d-block{
+    height: 200px;
+  }
+
+  .flexslides img{
+    width: 19%;
+  }
+
+  #premiere{
+  margin: 0;
+  padding: 1rem;
+  }
+}
