@@ -20,6 +20,27 @@ quote = `[
     {"q":"All our dreams can come true, if we have the courage to pursue them.","a":"Walt Disney"}
 ]`;
 
-hardskills = `[{"s":"HTML","l":5},{"s":"CSS","l":5},{"s":"Sass","l":5},{"s":"Bootstrap 5","l":5},{"s":"W3.css","l":4},{"s":"JavaScript","l":4},{"s":"TypeScript","l":3},{"s":"JQuery","l":4},{"s":"JSON","l":3},{"s":"AJAX","l":3},{"s":"React.js","l":3},{"s":"AngularJS","l":3},{"s":"PHP","l":3},{"s":"Git","l":5},{"s":"Github","l":5},{"s":"SQL","l":4},{"s":"UI/UX Design","l":3},{"s":"Figma","l":5},{"s":"English (B2)","l":4},{"s":"Microsoft: Word, Excel, PowerPoint","l":5},{"s":"Algorithms","l":4},{"s":"Data structures","l":4},{"s":"Basic knowledge of Agile Methodology","l":2}]`;
+hardskills = `[{"s":"HTML","l":95,"clr1":"#762900","clr2":"orange"},{"s":"CSS","l":95,"clr1":"blue","clr2":"green"},{"s":"Sass","l":95,"clr1":"pink","clr2":"purple"},
+{"s":"Bootstrap 5","l":90,"clr1":"purple","clr2":"#4000ff"},{"s":"W3.css","l":85,"clr1":"#00ff78","clr2":"green"},{"s":"JavaScript","l":90,"clr1":"#ff4900","clr2":"yellow"},
+{"s":"TypeScript","l":85,"clr1":"#3178c6","clr2":"#083061"},{"s":"JQuery","l":90,"clr1":"#0868ac","clr2":"#131b28"},{"s":"JSON","l":90,"clr1":"#969696","clr2":"#222222"},
+{"s":"AJAX","l":85,"clr1":"#2284c6","clr2":"#4a98ce"},{"s":"React.js","l":60,"clr1":"#61d9fc","clr2":"#2b2c30"},{"s":"AngularJS","l":55,"clr1":"red","clr2":"white"},
+{"s":"PHP","l":40,"clr1":"#4f5b93","clr2":"white"},{"s":"Git","l":80,"clr1":"#e84e31","clr2":"#3c2b00"},{"s":"Github","l":85,"clr1":"white","clr2":"black"},
+{"s":"SQL","l":75,"clr1":"gold","clr2":"blue"},{"s":"UI/UX Design","l":65,"clr1":"green","clr2":"black"},{"s":"Figma","l":65,"clr1":"#f24e1e","clr2":"#ff7262"},
+{"s":"English (B2)","l":70,"clr1":"red","clr2":"blue"},{"s":"Microsoft apps","l":95,"clr1":"#f25022","clr2":"#ffb900"},{"s":"Algorithms","l":55,"clr1":"yellow","clr2":"green"},
+{"s":"Data structures","l":55,"clr1":"white","clr2":"blue"},{"s":"Agile Methodology","l":45,"clr1":"blue","clr2":"orange"}]`;
 
 softskills = `["Leadership","Collaboration/Teamwork","Time Management","Problem Solving","Critical thinking","Self Motivated","Responsibility","Flexibility/Adaptability","Accountability"]`;
+
+games = `[{"t":"TIC TAC TOE","l":"games/TicTacToe.html","p":"pictures/tictactoe.PNG"},{"t":"Flip a coin","l":"games/flip-coin.html","p":"pictures/flip-coin.PNG"},
+{"t":"დომინო","l":"games/domino.html","p":"pictures/domino.PNG"},{"t":"ფორტუნა","l":"games/fortuna.html","p":"pictures/fortuna.PNG"},
+{"t":"BLACKJACK","l":"games/blackjack.html","p":"pictures/blackjack.PNG"},{"t":"RACE","l":"games/race.html","p":"pictures/race.PNG"},
+{"t":"Sonic","l":"games/sonic.html","p":"pictures/sonic.PNG"},{"t":"TIC TAC TOE (ReactJS)","l":"https://makasa-tic-tac-toe.netlify.app","p":"pictures/tictactoeReact.PNG"}]`;
+
+projects = `[{"t":"Clock","l":"projects/Clock/clock.html","p":"pictures/clock.png"},{"t":"Shop","l":"projects/Shop/shop.html","p":"pictures/onlineshop.png"},
+{"t":"Movies","l":"projects/Movies/movies.html","p":"pictures/movies.png"},{"t":"Tours (Georgia)","l":"projects/Tours_Georgia/index.html","p":"pictures/tours.png"},
+{"t":"Lost_Found","l":"projects/Lost_Found/index.html","p":"pictures/lost_found.png"},{"t":"Countdown","l":"projects/Countdown/Countdown.html","p":"pictures/countdown.png"},
+{"t":"Quiz","l":"projects/Quiz/quiz.html","p":"pictures/quiz.png"},{"t":"Notes","l":"projects/Notes/notes.html","p":"pictures/note.png"},
+{"t":"ToDo","l":"projects/ToDo/ToDo.html","p":"pictures/ToDo.png"},{"t":"Password Generator","l":"projects/PassGenerator/passgenerator.html","p":"pictures/PassGenerator.png"},
+{"t":"Recipe","l":"projects/Recipe/recipe.html","p":"pictures/recipe.png"},{"t":"Movies_2","l":"projects/movies_2/movies.html","p":"pictures/movies2.png"},
+{"t":"Shopping List (AngularJS)","l":"projects/Shopping_list/Shopping_list.html","p":"pictures/Shoping_list.png"},{"t":"City Tours (ReactJS)","l":"https://makasa-city-tours.netlify.app","p":"pictures/city-tours.png"},
+{"t":"REDBERRY","l":"https://makasa-redberry.netlify.app","p":"pictures/redberry.png"},{"t":"Europebet","l":"projects/Europebet/index.html","p":"pictures/europebet.png"}]`;

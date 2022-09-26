@@ -1,404 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <script src="index.js" defer></script>
-    <script type="text/javascript" src="info.json"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="games_projects.css">
+    <script src="index.js" defer></script>
+    <script src="info.json"></script>
     <title>Page</title>
 </head>
-<body>
-    <div id="page">
-        <!-- NAV BAR starts-->
-        <div id="header">
-            <h1>CV</h1>
-            <ul id="nav-bar">
-                <li class="navbartabs active" id="home_tab">home</li>
-                <li class="navbartabs" id="games_tab">games</li>
-                <li class="navbartabs" id="projects_tab">projects</li>
-            </ul>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="10">
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+        <a class="nav-link tooltip" href="#main"><i class="fa-solid fa-house"></i><span class="tooltiptext">Home</span></a>
+        <a class="nav-link tooltip" href="#hardskillssep"><i class="fa-solid fa-brain"></i><span class="tooltiptext">Hard Skills</span></a>
+        <a class="nav-link tooltip" href="#softskills"><i class="fa-solid fa-brain"></i><span class="tooltiptext">Soft Skills</span></a>
+        <a class="nav-link tooltip" href="#gamessep"><i class="fa-solid fa-gamepad"></i><span class="tooltiptext">Games</span></a>
+        <a class="nav-link tooltip" href="#projectssep"><i class="fa-solid fa-diagram-project"></i><span class="tooltiptext">Projects</span></a>
+    </div>
+
+    <div class="col-12" id="main">
+        <div class="col-12" id="name">
+            <h1>George Makasarashvili</h1>
         </div>
-        <!-- NAV BAR ends-->
-
-        <div id="main">
-            <!-- HOME section starts-->
-            <div class="sections" id="home">
-                <div class="info">
-                    <img src="pictures/avatar.png" alt="avatar">
-                    <div id="info_text">
-                        <div id="about">
-                            <h1>George Makasarashvili</h1>
-                            <hr>
-                            <p>I currently study at Caucasus University (Computer Science). I have experience of HTML, CSS(Sass) and JavaScript (JQuery),
-                            Also I can use CSS frameworks: Bootstrap5 and W3.css. and have basic knowledge of JavaScript frameworks: React and AngularJS.
-                            </p>
-                        </div>
-                        <div id="contact">
-                            <p>B.Date: 30-Nov-2001</p>
-                            <p>City: Tbilisi (Georgia)</p>
-                            <p>Phone: (+995) 571 70 66 32</p>
-                            <p>E-mail: <a href="mailto:giorgimakasarashvili@gmail.com">giorgimakasarashvili@gmail.com</a></p>
-                        </div>
-                    </div>
-                    <span id="flash_background"></span>
-                    <span id="flash"></span>
-                </div>
-                <div class="skills" style="--color:purple">
-                    <div class="tab"><h2>SKILLS</h2>
-                        <div id="changer">
-                            HARD
-                            <label class="switch">
-                                <input id="switcher" type="checkbox">
-                                <span class="slider"></span>
-                            </label>
-                            SOFT
-                        </div>
-                    </div>
-                    <div id="hard_skills" class="tabcontent" style="--color_p:palevioletred"></div>
-                    <div id="soft_skills" class="tabcontent" style="--color_p:palevioletred"></div>
-                </div>
-                <br>
-                <div class="experience" style="--color:#bebe00">
-                    <div class="tab">
-                        <h2>EXPERIENCE<i>(entry level)</i></h2>
-                    </div>
-                    <div class="tabcontent" style="--color_p:#ff8800">
-                        <p>Upwork (Freelance)</p>
-                    </div>
-                </div>
-                <br>
-                <div class="education" style="--color:royalblue">
-                    <div class="tab"><h2>EDUCATION</h2></div>
-                    <div class="tabcontent" style="--color_p:#8c8cff">
-                        <p>Computer Science (Caucasus University)</p>
-                    </div>
-                </div>
+        <div class="col-2" id="profile">
+            <img src="pictures/avatar.png" alt="avatar" id="avatar">
+            <div id="links">
+                <a href="https://github.com/gio-makasa">
+                    <img src="pictures/github.png" alt="github">
+                    <p>Github</p>
+                </a>
+                <a href="https://dribbble.com/gio-makasa">
+                    <img src="pictures/dribbble.png" alt="dribbble">
+                    <p>Dribbble</p>
+                </a>
             </div>
-            <!-- HOME section ends-->
-
-            
-            <!-- Games section starts-->
-            <div class="sections hide" id="games">
-                <div class="quotes" ng-controller="quotes">
-                    <h2 id="q">{{q}}</h2>
-                    <h3 id="a">{{a}}</h3>
-                </div>
-                <div class="frames">
-                    <div class="frame">
-                        <div class="front">
-                            <h2>TIC TAC TOE</h2>
-                        </div>
-                        <div class="back">
-                            <a href="games/TicTacToe.html">
-                                <img src="pictures/tictactoe.PNG" alt="tictactoe">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="frames">
-                    <div class="frame">
-                        <div class="front">
-                            <h2>Flip a coin</h2>
-                        </div>
-                        <div class="back">
-                            <a href="games/flip-coin.html">
-                                <img src="pictures/flip-coin.PNG" alt="flip-coin">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="frames">
-                    <div class="frame">
-                        <div class="front">
-                            <h2>დომინო</h2>
-                        </div>
-                        <div class="back">
-                            <a href="games/domino.html">
-                                <img src="pictures/domino.PNG" alt="domino">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="frames">
-                    <div class="frame">
-                        <div class="front">
-                            <h2>ფორტუნა</h2>
-                        </div>
-                        <div class="back">
-                            <a href="games/fortuna.html">
-                                <img src="pictures/fortuna.PNG" alt="fortuna">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="frames">
-                    <div class="frame">
-                        <div class="front">
-                            <h2>BLACKJACK</h2>
-                        </div>
-                        <div class="back">
-                            <a href="games/blackjack.html">
-                                <img src="pictures/blackjack.PNG" alt="BLACKJACK">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="frames">
-                    <div class="frame">
-                        <div class="front">
-                            <h2>RACE</h2>
-                        </div>
-                        <div class="back">
-                            <a href="games/race.html">
-                                <img src="pictures/race.png" alt="RACE">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="frames">
-                    <div class="frame">
-                        <div class="front">
-                            <h2>Sonic</h2>
-                        </div>
-                        <div class="back">
-                            <a href="games/sonic.html">
-                                <img src="pictures/sonic.png" alt="Sonic">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="frames">
-                    <div class="frame">
-                        <div class="front">
-                            <h2>Tic Tac Toe (ReactJS)</h2>
-                        </div>
-                        <div class="back">
-                            <a href="https://makasa-tic-tac-toe.netlify.app">
-                                <img src="pictures/tictactoeReact.png" alt="tictactoe">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Games section ends-->
-            
-
-            <!-- projects section starts-->
-            <div class="sections hide" id="projects">
-                <div class="frames">
-                    <div class="frame">
-                        <div class="front">
-                            <h2>Clock</h2>
-                        </div>
-                        <div class="back">
-                            <a href="projects/Clock/clock.html">
-                                <img src="pictures\clock.png" alt="clock">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="frames">
-                    <div class="frame">
-                        <div class="front">
-                            <h2>Shop</h2>
-                        </div>
-                        <div class="back">
-                            <a href="projects/Shop/shop.html">
-                                <img src="pictures/onlineshop.png" alt="onlineshop">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="frames">
-                    <div class="frame">
-                        <div class="front">
-                            <h2>Movies</h2>
-                        </div>
-                        <div class="back">
-                            <a href="projects/Movies/movies.html">
-                                <img src="pictures/movies.png" alt="movies">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="frames">
-                    <div class="frame">
-                        <div class="front">
-                            <h2>Tours (Georgia)</h2>
-                        </div>
-                        <div class="back">
-                            <a href="projects/Tours_Georgia/index.html">
-                                <img src="pictures/tours.png" alt="tours">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="frames">
-                    <div class="frame">
-                        <div class="front">
-                            <h2>Lost_Found</h2>
-                        </div>
-                        <div class="back">
-                            <a href="projects/Lost_Found/index.html">
-                                <img src="pictures/lost_found.png" alt="lost_found">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="frames">
-                    <div class="frame">
-                        <div class="front">
-                            <h2>Countdown</h2>
-                        </div>
-                        <div class="back">
-                            <a href="projects/Countdown/Countdown.html">
-                                <img src="pictures/countdown.png" alt="Countdown">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="frames">
-                    <div class="frame">
-                        <div class="front">
-                            <h2>Quiz</h2>
-                        </div>
-                        <div class="back">
-                            <a href="projects/Quiz/quiz.html">
-                                <img src="pictures/quiz.png" alt="Quiz">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="frames">
-                    <div class="frame">
-                        <div class="front">
-                            <h2>Notes</h2>
-                        </div>
-                        <div class="back">
-                            <a href="projects/Notes/notes.html">
-                                <img src="pictures/note.png" alt="Notes">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="frames">
-                    <div class="frame">
-                        <div class="front">
-                            <h2>ToDo</h2>
-                        </div>
-                        <div class="back">
-                            <a href="projects/ToDo/ToDo.html">
-                                <img src="pictures/ToDo.png" alt="ToDo">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="frames">
-                    <div class="frame">
-                        <div class="front">
-                            <h2>Password Generator</h2>
-                        </div>
-                        <div class="back">
-                            <a href="projects/PassGenerator/passgenerator.html">
-                                <img src="pictures/PassGenerator.png" alt="PassGenerator">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="frames">
-                    <div class="frame">
-                        <div class="front">
-                            <h2>Recipe</h2>
-                        </div>
-                        <div class="back">
-                            <a href="projects/Recipe/recipe.html">
-                                <img src="pictures/recipe.png" alt="Recipe">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="frames">
-                    <div class="frame">
-                        <div class="front">
-                            <h2>Movies_2</h2>
-                        </div>
-                        <div class="back">
-                            <a href="projects/movies_2/movies.html">
-                                <img src="pictures/movies2.png" alt="Movies">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="frames">
-                    <div class="frame">
-                        <div class="front">
-                            <h2>Shopping List (AngularJS)</h2>
-                        </div>
-                        <div class="back">
-                            <a href="projects/Shopping_list/Shopping_list.html">
-                                <img src="pictures/Shoping_list.png" alt="shopping_list">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="frames">
-                    <div class="frame">
-                        <div class="front">
-                            <h2>City Tours (ReactJS)</h2>
-                        </div>
-                        <div class="back">
-                            <a href="https://makasa-city-tours.netlify.app">
-                                <img src="pictures/city-tours.png" alt="city_tours">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="frames">
-                    <div class="frame">
-                        <div class="front">
-                            <h2>REDBERRY</h2>
-                        </div>
-                        <div class="back">
-                            <a href="https://makasa-redberry.netlify.app">
-                                <img src="pictures/redberry.png" alt="redberry">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="frames">
-                    <div class="frame">
-                        <div class="front">
-                            <h2>Europebet</h2>
-                        </div>
-                        <div class="back">
-                            <a href="projects/Europebet/index.html">
-                                <img src="pictures/europebet.png" alt="europebet">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- projects section ends-->
         </div>
-
-        <button onclick="topScroll()" id="topbutton" class="glow" title="Go to top">&#8593</button>
-        <div id="footer">
-            <hr>
-            <div class="social">
-                <a href="https://github.com/gio-makasa" target="_blank" rel="noopener noreferrer">
-                    <img src="pictures/github.png" alt="github" title="Github">
-                </a>
-                <a href="https://dribbble.com/gio-makasa" target="_blank" rel="noopener noreferrer">
-                    <img src="pictures/dribbble.png" alt="dribbble" title="Dribbble">
-                </a>
+        <div class="col-5" id="about">
+            <div id="changer">
+				ENG
+				<label class="switch">
+					<input type="checkbox">
+					<span class="slider round" id="switch_lang"></span>
+				</label>
+				KA
+			</div>
+            <div lang="en">
+                I am student at the Faculty of Computer Science at Caucasus University. In terms of Web Development, I have solid knowledge and a little experience 
+                in HTML, CSS(Saas), JavaScript(JQuery), I also have basic knowledge in React and PHP (currently I'm going through phyton). At the university level, 
+                I have experience with SQL, I can work with data in a relational database management system (RDBMS), create small databases and write procedures 
+                (I am currently studying database administration). I have extensive experience and knowledge in Microsoft Office applications: Excel, Word, PowerPoint. 
+                I have basic knowledge in algorithms and data structures. I am detail-oriented, quick learner and analytical thinker, organized and highly responsible.
+            </div>
+            <div lang="ka">
+                ამჟამად ვარ კავკასიის უნივერსიტეტში მესამე კურსის სტუდენტი კომპიუტერული მეცნიერების ფაკულტეტზე. Web Development-ის მხრივ მაქვს მყარი ცოდნა და მცირე 
+                გამოცდილება HTML, CSS(Saas), JavaScript(JQuery)-ში, ასევე მცირე შეხება მქონია React-თან და საბაზისო ცოდნა მაქ PHP-ში(ამჟამად გავდივარ phyton-ს). 
+                უნივერსიტეტის დონეზე მქონია შეხება SQL-თან, შემიძლია რელაციურ მონაცემთა ბაზების მართვის სისტემაში(RDBMS) მონაცემებთან მუშაობა, მცირე ზომის ბაზების 
+                შექმნა და პროცედურების გაწერა(ამჟამად ვსწავლობ მონაცემთა ბაზების ადმინისტრირებას). დიდი გამოცდილება და ცოდნა მაქ Microsoft Office-ის აპლიკაციებში 
+                Excel, Word, PowerPoint. საბაზისო ცოდნა მაქვს ალგორითმებსა და მონაცემთა სტრუქტურებში. ვარ დეტალებზე ორიენტირებული, სწრაფად სწავლის უნარისა და 
+                ანალიტიკური აზროვნების მქონე, ორგანიზებულობითა და მაღალი პასუხისმგებლობის გრძნობით.
+            </div>
+        </div>
+        <div class="col-4" id="info">
+            <table>
+                <tr>
+                    <td>B.Date:</td>
+                    <td>30-nov-2001</td>
+                </tr>
+                <tr>
+                    <td>City:</td>
+                    <td>Tbilisi, Georgia</td>
+                </tr>
+                <tr>
+                    <td>Phone:</td>
+                    <td>(+995) 571 70 66 32</td>
+                </tr>
+                <tr>
+                    <td>E-mail:</td>
+                    <td><a href="mailto:giorgimakasarashvili@gmail.com">giorgimakasarashvili@gmail.com</a></td>
+                </tr>
+            </table>
+            <div id="education">
+                <h3>EDUCATION:</h3>
+                <h5>Caucasus University (2020-present)</h5>
+                <h6>Computer Science</h6>
             </div>
         </div>
     </div>
+
+    <div class="col-12 separator" id="hardskillssep">
+        <h1>SKILLS</h1>
+    </div>
+    <div id="hardskills"></div>
+
+    <div class="col-12" id="quotes">
+        <h2 id="q">{{q}}</h2>
+        <h3 id="a">{{a}}</h3>
+    </div>
+    <div class="col-12" id="softskills"></div>
+
+    <div class="col-12 separator" id="gamessep">
+        <h1>GAMES</h1>
+    </div>
+
+    <!-- Games section starts -->
+    <div class="col-12" id="games"></div>
+    <!-- Games section ends -->
+
+    <div class="col-12 separator" id="projectssep">
+        <h1>PROJECTS</h1>
+    </div>
+
+    <!-- Project section starts-->
+    <div class="col-12" id="projects"></div>
+    <!-- Project section ends-->
 </body>
 </html>

@@ -1,95 +1,134 @@
-// scroll to top button
-var mybutton = document.getElementById("topbutton");
-window.onscroll = function() {appearButton()};
-
-function appearButton(){
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
-        mybutton.style.display = "block";
-        } else {
-            mybutton.style.display = "none";
-        }
-}
-
-function topScroll(){
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-}
-
-//hard_soft skills switcher
-const hard = document.getElementById('hard_skills');
-const soft = document.getElementById('soft_skills');
-const changer = document.getElementById('switcher');
-
-changer.addEventListener('click', () =>{
-    if(changer.checked){
-        soft.style.display = 'flex';
-        hard.style.display = 'none';
-    } else {
-        soft.style.display = 'none';
-        hard.style.display = 'flex';
-    }
+$('[lang="ka"]').hide();
+$('#switch_lang').click(function(){
+	$('[lang="en"]').toggle();
+	$('[lang="ka"]').toggle();
 });
 
-//get skills from JSON
-const myhardskills = JSON.parse(hardskills);
-const mysoftskills = JSON.parse(softskills);
 
-myhardskills.forEach(skill => {
-    const star = document.createElement('i');
-    star.className += 'fa-solid fa-star';
-    star.style.color = 'blue';
+//adding hard skills
+const hardskill = JSON.parse(hardskills);
+var id = 0;
+hardskill.forEach(element => {
+	let skill = `
+		<div class="border" style="--clr1:${element.clr1}; --clr2:${element.clr2}">
+            <div class="frame">
+                <h2 class="title">${element.s}</h2>
+                <div class="circle" style="--clr:${element.clr1};">
+                    <svg>
+                        <circle cx="70" cy="70" r="70"></circle>
+                        <circle cx="70" cy="70" r="70" id="${id}"></circle>
+                    </svg>
+                    <div class="level">${element.l}%</div>
+                </div>
+            </div>
+        </div>
+`;
 
-    const level = document.createElement('span');
-    level.className += 'level';
-    for(let i = 0; i < skill.l; i++){
-        level.appendChild(star.cloneNode(true));
-    }
+$('#hardskills').append(skill);
 
-    star.style.color = 'white';
-    for(let i = 0; i < 5 - skill.l; i++){
-        level.appendChild(star.cloneNode(true));
-    }
-    var skill_p = document.createElement('p');
-    skill_p.className += 'skill';
-    skill_p.innerText = skill.s;
-    skill_p.appendChild(level);
-    hard.appendChild(skill_p);
+$('#'+id).css("strokeDashoffset", 440 - (440 * element.l)/100);
+id++;
 });
 
-mysoftskills.forEach(skill => {
-    soft.innerHTML += `<p>${skill}</p>`;
+
+//adding soft skills
+const softskill = JSON.parse(softskills);
+softskill.forEach(element => {
+    let skill = `
+    <p>${element}
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    </p>
+    `
+
+    $('#softskills').append(skill);
 });
 
-//switch between tabs
-const navList = document.querySelectorAll('.navbartabs');
-const sections = document.querySelectorAll('.sections');
 
-//get quotes from JSON
+//adding quote
 const myquote = JSON.parse(quote);
+var R = Math.floor(Math.random()*myquote.length);
 
-navList.forEach(nav => {
-    nav.addEventListener('click', () => {
-        navList.forEach(nav => {
-            nav.classList.remove('active');
-        });
+$('#q').html(`"${myquote[R].q}"`);
+$('#a').html(`- ${myquote[R].a}`);
 
-        sections.forEach(section => {
-            if(section.id == nav.innerHTML){
-                section.classList.remove('hide');
-            } else {
-                section.classList.add('hide');
-            }
-        });
+//Games and Projects
+const mygames = JSON.parse(games);
+const myprojects = JSON.parse(projects);
 
-        nav.classList.add('active');
-        
-        /*change quotes starts*/
-        if(nav.innerHTML == 'games'){
-            var R = Math.floor(Math.random()*myquote.length);
-            
-            document.getElementById("q").innerHTML = `"${myquote[R].q}"`;
-            document.getElementById("a").innerHTML = `- ${myquote[R].a}`;
-        }
-        /*change quotes ends*/
-    })
+mygames.forEach(game => {
+    let c1 = Math.floor(Math.random()*255);
+    let c2 = Math.floor(Math.random()*255);
+    let c3 = Math.floor(Math.random()*255);
+    let clr = `rgb(${c1},${c2},${c3})`;
+
+    let $div =`
+    <div class="frames" style="--clr:${clr}">
+        <div class="frame">
+            <div class="front">
+                <h2>${game.t}</h2>
+            </div>
+            <div class="back">
+                <a href="${game.l}">
+                    <img src="${game.p}" alt="${game.t}">
+                </a>
+            </div>
+        </div>
+    </div>
+    `;
+
+    $('#games').append($div);
 });
+
+myprojects.forEach(project => {
+    let c1 = Math.floor(Math.random()*255);
+    let c2 = Math.floor(Math.random()*255);
+    let c3 = Math.floor(Math.random()*255);
+    let clr = `rgb(${c1},${c2},${c3})`;
+
+    let $div =`
+    <div class="frames" style="--clr:${clr}">
+        <div class="frame">
+            <div class="front">
+                <h2>${project.t}</h2>
+            </div>
+            <div class="back">
+                <a href="${project.l}">
+                    <img src="${project.p}" alt="${project.t}">
+                </a>
+            </div>
+        </div>
+    </div>
+    `;
+
+    $('#projects').append($div);
+});
+
+//right line
+let check_point = $('.nav-link');
+
+for(let i of check_point){
+  i = i.href.split('#')[1];
+  let distance = Math.round($('#'+i).position().top / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100);
+  $(`[href='#${i}']`).css("top", distance+"%");
+}
+
+window.onscroll = () => {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+
+  for(let i of check_point){
+    i = i.href.split('#')[1];
+    let distance = Math.round($('#'+i).position().top / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100);
+    if(scrolled >= distance){
+        $(`[href='#${i}']`).css("background-color", "red");
+    } else {
+        $(`[href='#${i}']`).css("background-color", "rgba(80, 0, 0, 0.8)");
+    }
+  }
+
+  $('#myBar').css('height',scrolled+'%');
+}

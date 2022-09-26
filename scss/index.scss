@@ -1,0 +1,490 @@
+*{
+    box-sizing: border-box;
+    color: white;
+    font-family: cursive;
+}
+
+[class*="col-"] {
+    float: left;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+body,html{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+#main{
+    background-image: url('pictures/galaxy_main.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    width: 100%;
+    min-height: 100%;
+    #name{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        margin-bottom: 50px;
+        h1{
+            position: relative;
+            width: fit-content;
+            padding: 10px 20px;
+            cursor: default;
+        }
+        h1::before {
+            content: '';
+            position: absolute;
+            width: 3rem;
+            height: 3rem;
+            top: 0;
+            left: 0;
+            border-top: 10px solid blue;
+            border-left: 10px solid blue;
+        }
+        h1::after {
+            content: '';
+            position: absolute;
+            width: 3rem;
+            height: 3rem;
+            bottom: 0;
+            right: 0;
+            border-bottom: 10px solid blue;
+            border-right: 10px solid blue;
+        }
+        h1:hover {
+            background: blue;
+            border-radius: 5px;
+            box-shadow: 0 0 5px blue, 0 0 25px blue, 0 0 50px blue, 0 0 100px blue;
+        }
+    }
+    #profile{
+        #avatar{
+            width: 100%;
+            border-radius: 50%;
+        }
+        #links{
+            a{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                text-decoration: none;
+                padding-left: 20%;
+                img{
+                    width: 40px;
+                    border-radius: 50%;
+                    margin: 10px;
+                }
+                p{
+                    color: white;
+                    font-size: 1.5rem;
+                    margin: 0;
+                }
+            }
+        }
+    }
+    #about{
+        position: relative;
+        padding: 0 1%;
+        #changer{
+            float: right;
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+            .switch {
+                position: relative;
+                display: inline-block;
+                width: 60px;
+                height: 34px;
+                input { 
+                    opacity: 0;
+                    width: 0;
+                    height: 0;
+                }
+                .slider {
+                    position: absolute;
+                    cursor: pointer;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: rgba(0, 0, 255, 0.6);
+                    transition: .4s;
+                }
+                .slider:before {
+                    position: absolute;
+                    content: "";
+                    height: 26px;
+                    width: 26px;
+                    left: 4px;
+                    bottom: 4px;
+                    background-color: white;
+                    transition: .4s;
+                }
+                input:checked + .slider:before {
+                    transform: translateX(26px);
+                }
+                .slider.round {
+                    border-radius: 34px;
+                }
+                .slider.round:before {
+                    border-radius: 50%;
+                }
+            }
+        }
+        div:not(:first-child){
+            clear: both;
+            display: block;
+            min-height: max-content;
+            color: black;
+            border: 2px black dashed;
+            border-radius: 20px;
+            background-color: rgba(200, 200, 200, 0.6);
+            padding: 20px;
+        }
+    }
+    #info{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 1.5rem;
+        padding: 0 10px;
+        height: 100%;
+        table{
+            margin: 20px 0;
+        }
+        #education{
+            background-color: rgb(104, 90, 255);
+            border-radius: 12px;
+            padding: 10px;
+            margin-top: 50px;
+            *{
+                margin: 10px;
+            }
+        }
+    }
+}
+
+.separator{
+    margin: 0;
+    padding: 0;
+    background: url('pictures/galaxy_separator.jpg');
+    background-repeat: no-repeat;
+    background-position: top;
+    h1{
+        margin: 0;
+        padding: 50px;
+        text-align: center;
+        font-size: 4rem;
+        text-shadow: 0 0 20px black, 0 0 30px blue, 0 0 40px blue, 0 0 50px blue;
+    }
+}
+
+#hardskills{
+    background-image: url('pictures/galaxy_skills.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    clear: both;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    .border{
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 20px 0;
+        background-image: linear-gradient(to bottom right, var(--clr1), var(--clr2));
+        .frame{
+            background-image: linear-gradient(to bottom right, black, grey);
+            width: 190px;            
+            height: fit-content;
+            margin: 10px 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .title{
+                margin: 0;
+                margin-bottom: 20px;
+                width: fit-content;
+                font-size: medium;
+            }
+            .circle{
+                position: relative;
+                width: 150px;
+                height: 150px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                svg{
+                    position: relative;
+                    width: 150px;
+                    height: 150px;
+                    transform: rotate(270deg);
+                    circle{
+                        width: 100%;
+                        height: 100%;
+                        fill: transparent;
+                        stroke: black;
+                        stroke-width: 5;
+                        transform: translate(5px,5px);
+                    }
+                    circle:nth-child(2){
+                        stroke: var(--clr1);
+                        filter: drop-shadow(0 0 2px black);
+                        stroke-dasharray: 440;
+                    }
+                }
+                .level{
+                    position: absolute;
+                    text-align: center;
+                    top: 30%;
+                    font-weight: 500;
+                    font-size: 2.5em;
+                }
+            }
+        }
+    }
+}
+
+#quotes{
+    background-image: url('pictures/galaxy_quote.jpg');
+    background-position: top;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2%;
+    height: fit-content;
+    #q,#a{
+        text-align: center;
+    }
+    #q{
+        order: 1;
+    }
+    #a{
+        font-style: italic;
+        order: 2;
+    }
+}
+#quotes::after{
+    content: '';
+    width: 100%;
+    order: 1;
+}
+
+#softskills{
+    background-image: url('pictures/galaxy_soft.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    p{
+        position: relative;
+        overflow: hidden;
+        padding: 3rem;
+        background-image: linear-gradient(to bottom right, rgba(72, 72, 72, 0.5), black);
+        font-weight: bold;
+        span{
+            position: absolute;
+            display: block;
+        }
+        span:nth-child(1) {
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #03e9f4);
+            animation: btn-anim1 1s linear infinite;
+        }
+        span:nth-child(2) {
+            top: -100%;
+            right: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(180deg, transparent, #03e9f4);
+            animation: btn-anim2 1s linear infinite;
+            animation-delay: .25s
+        }
+        span:nth-child(3) {
+            bottom: 0;
+            right: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(270deg, transparent, #03e9f4);
+            animation: btn-anim3 1s linear infinite;
+            animation-delay: .5s
+        }
+        span:nth-child(4) {
+            bottom: -100%;
+            left: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(360deg, transparent, #03e9f4);
+            animation: btn-anim4 1s linear infinite;
+            animation-delay: .75s
+        }
+    }
+    @keyframes btn-anim1 {
+      0% {
+        left: -100%;
+      }
+      50%,100% {
+        left: 100%;
+      }
+    }
+    @keyframes btn-anim2 {
+      0% {
+        top: -100%;
+      }
+      50%,100% {
+        top: 100%;
+      }
+    }
+    @keyframes btn-anim3 {
+      0% {
+        right: -100%;
+      }
+      50%,100% {
+        right: 100%;
+      }
+    }
+    @keyframes btn-anim4 {
+      0% {
+        bottom: -100%;
+      }
+      50%,100% {
+        bottom: 100%;
+      }
+    }
+}
+
+#games, #projects{
+    background-image: url('pictures/galaxy_games.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    .frames{
+        margin: 20px;
+        background-color: rgba(32, 32, 32, 0.9);
+        border: solid 5px var(--clr);
+        border-style: ridge;
+        box-shadow: 0 0 50px var(--clr);
+        width: 20%;
+        height: 250px;
+        cursor: pointer;
+        .frame{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+            .front, .back{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+            }
+            .front{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                h2{
+                    text-align: center;
+                    color: white;
+                    text-shadow: 0 0 10px blue, 0 0 20px rgb(64, 64, 255);
+                }
+            }
+            .back{
+                transform: rotateY(180deg);
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    .frames:hover .frame{
+        transform: rotateY(180deg);
+    }
+}
+
+.progress-container{
+    position: fixed;
+    top: 50%;
+    right: 0;
+    width: 5px;
+    height: 90%;
+    margin-right: 5px;
+    background: rgba(80, 0, 0, 0.8);
+    transform: translateY(-50%);
+    overflow: visible;
+    .progress-bar{
+        height: 0;
+        background: red;
+        width: 5px;
+    }
+    .nav-link{
+        display: block;
+        position: absolute;
+        right: -5px;
+        width: fit-content;
+        height: fit-content;
+        border-radius: 20rem;
+        background-color: rgba(80, 0, 0, 0.8);
+        text-decoration: none;
+        transform: translateY(-100%);
+        i{
+            display: block;
+        }
+    }
+    .nav-link:first-of-type{
+        background-color: red;
+    }
+    .tooltip{
+        .tooltiptext{
+            visibility: hidden;
+            width: 100px;
+            background-color: rgba(255, 0, 0, 0.5);
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 2;
+            top: -5px;
+            right: 105%;
+        }
+    }
+    .tooltip:hover .tooltiptext{
+        visibility: visible;
+    }
+}
