@@ -15,8 +15,8 @@ hardskill.forEach(element => {
                 <h2 class="title">${element.s}</h2>
                 <div class="circle" style="--clr:${element.clr1};">
                     <svg>
-                        <circle cx="70" cy="70" r="70"></circle>
-                        <circle cx="70" cy="70" r="70" id="${id}"></circle>
+                        <circle cx="50%" cy="50%" r="40%"></circle>
+                        <circle cx="50%" cy="50%" r="40%" id="${id}"></circle>
                     </svg>
                     <div class="level">${element.l}%</div>
                 </div>

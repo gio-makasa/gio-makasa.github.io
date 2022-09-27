@@ -29,6 +29,7 @@ body,html{
 body::-webkit-scrollbar {
     display: none;
 }
+
 #main{
     background-image: url('pictures/galaxy_main.jpg');
     background-position: center;
@@ -88,15 +89,15 @@ body::-webkit-scrollbar {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
+                justify-content: center;
                 text-decoration: none;
-                padding-left: 20%;
                 img{
                     width: 40px;
                     border-radius: 50%;
                     margin: 10px;
                 }
                 p{
-                    color: white;
+                    color: black;
                     font-size: 1.5rem;
                     margin: 0;
                 }
@@ -172,6 +173,10 @@ body::-webkit-scrollbar {
         height: 100%;
         table{
             margin: 20px 0;
+            *{
+                font-weight: bold;
+                color: black;
+            }
         }
         #education{
             background-color: rgb(104, 90, 255);
@@ -212,42 +217,38 @@ body::-webkit-scrollbar {
     .border{
         border-radius: 10px;
         overflow: hidden;
+        width: 190px;
         margin: 20px 0;
         background-image: linear-gradient(to bottom right, var(--clr1), var(--clr2));
         .frame{
             background-image: linear-gradient(to bottom right, black, grey);
-            width: 190px;            
-            height: fit-content;
+            width: 100%;
             margin: 10px 0;
-            padding: 20px;
+            padding: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
             .title{
                 margin: 0;
-                margin-bottom: 20px;
                 width: fit-content;
                 font-size: medium;
             }
             .circle{
                 position: relative;
-                width: 150px;
-                height: 150px;
+                width: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                margin: 5%;
                 svg{
                     position: relative;
-                    width: 150px;
-                    height: 150px;
-                    transform: rotate(270deg);
+                    width: fit-content;
+                    transform: rotate(-90deg);
                     circle{
-                        width: 100%;
-                        height: 100%;
+                        width: fit-content;
                         fill: transparent;
                         stroke: black;
                         stroke-width: 5;
-                        transform: translate(5px,5px);
                     }
                     circle:nth-child(2){
                         stroke: var(--clr1);
@@ -389,16 +390,16 @@ body::-webkit-scrollbar {
     background-attachment: fixed;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     .frames{
-        margin: 20px;
         background-color: rgba(32, 32, 32, 0.9);
         border: solid 5px var(--clr);
         border-style: ridge;
         box-shadow: 0 0 50px var(--clr);
-        width: 20%;
+        width: 21%;
         height: 250px;
+        margin: 2rem 0;
         cursor: pointer;
         .frame{
             position: relative;
@@ -486,5 +487,61 @@ body::-webkit-scrollbar {
     }
     .tooltip:hover .tooltiptext{
         visibility: visible;
+    }
+}
+
+@media screen and (max-width:600px) {
+    [class*="col-"] {
+        width: 100%;
+    }
+    #main{
+        #name{
+            font-size: 0.9rem;
+        }
+        #profile{
+            #avatar{
+                padding: 50px;
+            }
+        }
+        #info{
+            font-size: 1rem;
+        }
+    }
+
+    .separator{
+        h1{
+            font-size: 3rem;
+        }
+    }
+
+    #hardskills{
+        .border{
+            width: 45%;
+        }
+    }
+
+    #quotes{
+        *{
+            border-radius: 20px;
+            background-color: rgba(255, 255, 255, 0.3);
+            color: black;
+        }
+    }
+
+    #softskills{
+        p{
+            padding: 1rem;
+        }
+    }
+
+    #games, #projects{
+        .frames{
+            width: 45%;
+            height: 150px;
+        }
+    }
+
+    .progress-container{
+        display: none;
     }
 }
