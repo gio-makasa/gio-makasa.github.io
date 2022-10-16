@@ -45,7 +45,7 @@ body::-webkit-scrollbar {
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         margin-bottom: 50px;
         h1{
             position: relative;
@@ -80,8 +80,11 @@ body::-webkit-scrollbar {
         }
     }
     #profile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         #avatar{
-            width: 100%;
+            width: 80%;
             border-radius: 50%;
         }
         #links{
@@ -97,7 +100,7 @@ body::-webkit-scrollbar {
                     margin: 10px;
                 }
                 p{
-                    color: black;
+                    color: white;
                     font-size: 1.5rem;
                     margin: 0;
                 }
@@ -175,16 +178,24 @@ body::-webkit-scrollbar {
             margin: 20px 0;
             *{
                 font-weight: bold;
-                color: black;
             }
         }
-        #education{
-            background-color: rgb(104, 90, 255);
-            border-radius: 12px;
-            padding: 10px;
-            margin-top: 50px;
-            *{
-                margin: 10px;
+    }
+    #education_experience{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 50px;
+        background-color: rgba(0,0,0,0.7);
+        #experience, #education{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h2{
+                hr{
+                    margin: 0;
+                    border-color: blue;
+                    box-shadow: 0 0 5px blue;
+                }
             }
         }
     }
@@ -445,12 +456,13 @@ body::-webkit-scrollbar {
     width: 5px;
     height: 90%;
     margin-right: 5px;
-    background: rgba(80, 0, 0, 0.8);
+    background: rgba(0, 0, 80, 0.8);
     transform: translateY(-50%);
     overflow: visible;
+    z-index: 20;
     .progress-bar{
         height: 0;
-        background: red;
+        background: blue;
         width: 5px;
     }
     .nav-link{
@@ -460,7 +472,7 @@ body::-webkit-scrollbar {
         width: fit-content;
         height: fit-content;
         border-radius: 20rem;
-        background-color: rgba(80, 0, 0, 0.8);
+        background-color: rgba(0, 0, 80, 0.8);
         text-decoration: none;
         transform: translateY(-100%);
         i{
@@ -468,13 +480,13 @@ body::-webkit-scrollbar {
         }
     }
     .nav-link:first-of-type{
-        background-color: red;
+        background-color: blue;
     }
     .tooltip{
         .tooltiptext{
             visibility: hidden;
             width: 100px;
-            background-color: rgba(255, 0, 0, 0.5);
+            background-color: rgba(0, 0, 255, 0.5);
             color: #fff;
             text-align: center;
             border-radius: 6px;

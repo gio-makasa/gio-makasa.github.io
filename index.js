@@ -15,8 +15,8 @@ hardskill.forEach(element => {
                 <h2 class="title">${element.s}</h2>
                 <div class="circle" style="--clr:${element.clr1};">
                     <svg>
-                        <circle cx="50%" cy="50%" r="40%"></circle>
-                        <circle cx="50%" cy="50%" r="40%" id="${id}"></circle>
+                        <circle cx="50%" cy="50%" r="70"></circle>
+                        <circle cx="50%" cy="50%" r="70" id="${id}"></circle>
                     </svg>
                     <div class="level">${element.l}%</div>
                 </div>
@@ -124,9 +124,9 @@ window.onscroll = () => {
     i = i.href.split('#')[1];
     let distance = Math.round($('#'+i).position().top / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100);
     if(scrolled >= distance){
-        $(`[href='#${i}']`).css("background-color", "red");
+        $(`[href='#${i}']`).css("background-color", "blue");
     } else {
-        $(`[href='#${i}']`).css("background-color", "rgba(80, 0, 0, 0.8)");
+        $(`[href='#${i}']`).css("background-color", "rgba(0, 0, 80, 0.5)");
     }
   }
 
