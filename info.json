@@ -36,13 +36,11 @@ softskills = `["Leadership","Collaboration/Teamwork","Time Management","Problem 
 
 games = `[{"t":"TIC TAC TOE","l":"games/TicTacToe.html","p":"pictures/tictactoe.png"},{"t":"Flip a coin","l":"games/flip-coin.html","p":"pictures/flip-coin.png"},
 {"t":"დომინო","l":"games/domino.html","p":"pictures/domino.png"},{"t":"ფორტუნა","l":"games/fortuna.html","p":"pictures/fortuna.png"},
-{"t":"BLACKJACK","l":"games/blackjack.html","p":"pictures/blackjack.png"}
+{"t":"BLACKJACK","l":"games/blackjack.html","p":"pictures/blackjack.png"},
+{"t":"RACE","l":"games/race.html","p":"pictures/race.png"},
+{"t":"Sonic","l":"games/sonic.html","p":"pictures/sonic.png"},
+{"t":"TIC TAC TOE (ReactJS)","l":"https://makasa-tic-tac-toe.netlify.app","p":"pictures/tictactoeReact.png"}
 ]`;
-
-
-// {"t":"RACE","l":"games/race.html","p":"pictures/race.png"},
-// {"t":"Sonic","l":"games/sonic.html","p":"pictures/sonic.png"},
-// {"t":"TIC TAC TOE (ReactJS)","l":"https://makasa-tic-tac-toe.netlify.app","p":"pictures/tictactoeReact.png"}
 
 projects = `[{"t":"Clock","l":"projects/Clock/clock.html","p":"pictures/clock.png"},{"t":"Shop","l":"projects/Shop/shop.html","p":"pictures/onlineshop.png"},
 {"t":"Movies","l":"projects/Movies/movies.html","p":"pictures/movies.png"},{"t":"Tours (Georgia)","l":"projects/Tours_Georgia/index.html","p":"pictures/tours.png"},
