@@ -30,86 +30,60 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-#main{
-    background-image: url('pictures/galaxy_main.jpg');
+#cover{
+    background-image: url("pictures/blue/galaxy_cover.jpg");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    align-content: flex-start;
-    width: 100%;
-    min-height: 100%;
-    #name{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 1.2rem;
-        margin-bottom: 50px;
-        h1{
-            position: relative;
-            width: fit-content;
-            padding: 10px 20px;
-            cursor: default;
-        }
-        h1::before {
-            content: '';
-            position: absolute;
-            width: 3rem;
-            height: 3rem;
-            top: 0;
-            left: 0;
-            border-top: 10px solid blue;
-            border-left: 10px solid blue;
-        }
-        h1::after {
-            content: '';
-            position: absolute;
-            width: 3rem;
-            height: 3rem;
-            bottom: 0;
-            right: 0;
-            border-bottom: 10px solid blue;
-            border-right: 10px solid blue;
-        }
-        h1:hover {
-            background: blue;
-            border-radius: 5px;
-            box-shadow: 0 0 5px blue, 0 0 25px blue, 0 0 50px blue, 0 0 100px blue;
-        }
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    color: white;
+    h1{
+        text-align: center;
+        font-size: 3rem;
+        text-shadow: 0 0 5px blue, 0 0 30px white;
     }
+    h2{
+        font-size: 2rem;
+    }
+}
+
+#about{
+    background-image: url('pictures/galaxy_main.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 2rem;
+    height: 100vh;
+    position: relative;
     #profile{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        #avatar{
-            width: 80%;
-            border-radius: 50%;
+        table{
+            margin: 20px 0;
+            font-size: 1.5rem;
+            *{
+                font-weight: bold;
+                padding: 10px;
+            }
+            a{
+                text-shadow: 0 0 10px blue;
+            }
         }
         #links{
             a{
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: center;
-                text-decoration: none;
                 img{
                     width: 40px;
                     border-radius: 50%;
-                    margin: 10px;
-                }
-                p{
-                    color: white;
-                    font-size: 1.5rem;
-                    margin: 0;
+                    margin-right: 10px;
                 }
             }
         }
     }
-    #about{
+    #info{
         position: relative;
-        padding: 0 1%;
+        float: right !important;
         #changer{
             float: right;
             display: flex;
@@ -167,37 +141,12 @@ body::-webkit-scrollbar {
             padding: 20px;
         }
     }
-    #info{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        font-size: 1.5rem;
-        padding: 0 10px;
-        height: 100%;
-        table{
-            margin: 20px 0;
-            *{
-                font-weight: bold;
-            }
-        }
-    }
-    #education_experience{
-        display: flex;
-        justify-content: space-evenly;
-        margin-top: 50px;
-        background-color: rgba(0,0,0,0.7);
-        #experience, #education{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            h2{
-                hr{
-                    margin: 0;
-                    border-color: blue;
-                    box-shadow: 0 0 5px blue;
-                }
-            }
-        }
+    #experience_education{
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.3);
+        margin-top: 3rem;
+        height: 40%;
+        bottom: 0;
     }
 }
 
@@ -231,6 +180,7 @@ body::-webkit-scrollbar {
         width: 190px;
         margin: 20px 0;
         background-image: linear-gradient(to bottom right, var(--clr1), var(--clr2));
+        box-shadow: 0 0 10px blue, 0 0 20px white;
         .frame{
             background-image: linear-gradient(to bottom right, black, grey);
             width: 100%;
@@ -240,7 +190,6 @@ body::-webkit-scrollbar {
             flex-direction: column;
             align-items: center;
             .title{
-                margin: 0;
                 width: fit-content;
                 font-size: medium;
             }
@@ -408,7 +357,7 @@ body::-webkit-scrollbar {
         border: solid 5px var(--clr);
         border-style: ridge;
         box-shadow: 0 0 50px var(--clr);
-        width: 21%;
+        width: 19%;
         height: 250px;
         margin: 2rem 0;
         cursor: pointer;
@@ -453,28 +402,22 @@ body::-webkit-scrollbar {
     position: fixed;
     top: 50%;
     right: 0;
-    width: 5px;
-    height: 90%;
-    margin-right: 5px;
-    background: rgba(0, 0, 80, 0.8);
+    width: 20px;
+    height: 100%;
+    background: rgba(0, 0, 80, 0.7);
     transform: translateY(-50%);
     overflow: visible;
     z-index: 20;
     .progress-bar{
         height: 0;
         background: blue;
-        width: 5px;
     }
     .nav-link{
         display: block;
         position: absolute;
-        right: -5px;
-        width: fit-content;
-        height: fit-content;
-        border-radius: 20rem;
-        background-color: rgba(0, 0, 80, 0.8);
+        background-color: rgba(0, 0, 80, 0.7);
         text-decoration: none;
-        transform: translateY(-100%);
+        text-align: center;
         i{
             display: block;
         }
@@ -506,17 +449,14 @@ body::-webkit-scrollbar {
     [class*="col-"] {
         width: 100%;
     }
-    #main{
-        #name{
-            font-size: 0.9rem;
-        }
+    #about{
         #profile{
-            #avatar{
-                padding: 50px;
+            table{
+                font-size: 1rem;
             }
         }
-        #info{
-            font-size: 1rem;
+        #info > *{
+            font-size: smaller;
         }
     }
 

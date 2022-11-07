@@ -67,119 +67,85 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-#main {
-  background-image: url("pictures/galaxy_main.jpg");
+#cover {
+  background-image: url("pictures/blue/galaxy_cover.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: flex-start;
-  width: 100%;
-  min-height: 100%;
-}
-
-#main #name {
-  display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
-  margin-bottom: 50px;
-}
-
-#main #name h1 {
-  position: relative;
-  width: fit-content;
-  padding: 10px 20px;
-  cursor: default;
-}
-
-#main #name h1::before {
-  content: '';
-  position: absolute;
-  width: 3rem;
-  height: 3rem;
-  top: 0;
-  left: 0;
-  border-top: 10px solid blue;
-  border-left: 10px solid blue;
-}
-
-#main #name h1::after {
-  content: '';
-  position: absolute;
-  width: 3rem;
-  height: 3rem;
-  bottom: 0;
-  right: 0;
-  border-bottom: 10px solid blue;
-  border-right: 10px solid blue;
-}
-
-#main #name h1:hover {
-  background: blue;
-  border-radius: 5px;
-  box-shadow: 0 0 5px blue, 0 0 25px blue, 0 0 50px blue, 0 0 100px blue;
-}
-
-#main #profile {
-  display: flex;
   flex-direction: column;
-  align-items: center;
+  height: 100%;
+  color: white;
 }
 
-#main #profile #avatar {
-  width: 80%;
-  border-radius: 50%;
+#cover h1 {
+  text-align: center;
+  font-size: 3rem;
+  text-shadow: 0 0 5px blue, 0 0 30px white;
 }
 
-#main #profile #links a {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
+#cover h2 {
+  font-size: 2rem;
 }
 
-#main #profile #links a img {
+#about {
+  background-image: url("pictures/galaxy_main.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 2rem;
+  height: 100vh;
+  position: relative;
+}
+
+#about #profile table {
+  margin: 20px 0;
+  font-size: 1.5rem;
+}
+
+#about #profile table * {
+  font-weight: bold;
+  padding: 10px;
+}
+
+#about #profile table a {
+  text-shadow: 0 0 10px blue;
+}
+
+#about #profile #links a img {
   width: 40px;
   border-radius: 50%;
-  margin: 10px;
+  margin-right: 10px;
 }
 
-#main #profile #links a p {
-  color: white;
-  font-size: 1.5rem;
-  margin: 0;
-}
-
-#main #about {
+#about #info {
   position: relative;
-  padding: 0 1%;
+  float: right !important;
 }
 
-#main #about #changer {
+#about #info #changer {
   float: right;
   display: flex;
   align-items: center;
   margin-right: 10px;
 }
 
-#main #about #changer .switch {
+#about #info #changer .switch {
   position: relative;
   display: inline-block;
   width: 60px;
   height: 34px;
 }
 
-#main #about #changer .switch input {
+#about #info #changer .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-#main #about #changer .switch .slider {
+#about #info #changer .switch .slider {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -190,7 +156,7 @@ body::-webkit-scrollbar {
   transition: .4s;
 }
 
-#main #about #changer .switch .slider:before {
+#about #info #changer .switch .slider:before {
   position: absolute;
   content: "";
   height: 26px;
@@ -201,19 +167,19 @@ body::-webkit-scrollbar {
   transition: .4s;
 }
 
-#main #about #changer .switch input:checked + .slider:before {
+#about #info #changer .switch input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-#main #about #changer .switch .slider.round {
+#about #info #changer .switch .slider.round {
   border-radius: 34px;
 }
 
-#main #about #changer .switch .slider.round:before {
+#about #info #changer .switch .slider.round:before {
   border-radius: 50%;
 }
 
-#main #about div:not(:first-child) {
+#about #info div:not(:first-child) {
   clear: both;
   display: block;
   min-height: max-content;
@@ -224,40 +190,12 @@ body::-webkit-scrollbar {
   padding: 20px;
 }
 
-#main #info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  font-size: 1.5rem;
-  padding: 0 10px;
-  height: 100%;
-}
-
-#main #info table {
-  margin: 20px 0;
-}
-
-#main #info table * {
-  font-weight: bold;
-}
-
-#main #education_experience {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 50px;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-#main #education_experience #experience, #main #education_experience #education {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#main #education_experience #experience h2 hr, #main #education_experience #education h2 hr {
-  margin: 0;
-  border-color: blue;
-  box-shadow: 0 0 5px blue;
+#about #experience_education {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin-top: 3rem;
+  height: 40%;
+  bottom: 0;
 }
 
 .separator {
@@ -293,6 +231,7 @@ body::-webkit-scrollbar {
   width: 190px;
   margin: 20px 0;
   background-image: linear-gradient(to bottom right, var(--clr1), var(--clr2));
+  box-shadow: 0 0 10px blue, 0 0 20px white;
 }
 
 #hardskills .border .frame {
@@ -306,7 +245,6 @@ body::-webkit-scrollbar {
 }
 
 #hardskills .border .frame .title {
-  margin: 0;
   width: fit-content;
   font-size: medium;
 }
@@ -492,7 +430,7 @@ body::-webkit-scrollbar {
   border: solid 5px var(--clr);
   border-style: ridge;
   box-shadow: 0 0 50px var(--clr);
-  width: 21%;
+  width: 19%;
   height: 250px;
   margin: 2rem 0;
   cursor: pointer;
@@ -543,10 +481,9 @@ body::-webkit-scrollbar {
   position: fixed;
   top: 50%;
   right: 0;
-  width: 5px;
-  height: 90%;
-  margin-right: 5px;
-  background: rgba(0, 0, 80, 0.8);
+  width: 20px;
+  height: 100%;
+  background: rgba(0, 0, 80, 0.7);
   transform: translateY(-50%);
   overflow: visible;
   z-index: 20;
@@ -555,19 +492,14 @@ body::-webkit-scrollbar {
 .progress-container .progress-bar {
   height: 0;
   background: blue;
-  width: 5px;
 }
 
 .progress-container .nav-link {
   display: block;
   position: absolute;
-  right: -5px;
-  width: fit-content;
-  height: fit-content;
-  border-radius: 20rem;
-  background-color: rgba(0, 0, 80, 0.8);
+  background-color: rgba(0, 0, 80, 0.7);
   text-decoration: none;
-  transform: translateY(-100%);
+  text-align: center;
 }
 
 .progress-container .nav-link i {
@@ -600,14 +532,11 @@ body::-webkit-scrollbar {
   [class*="col-"] {
     width: 100%;
   }
-  #main #name {
-    font-size: 0.9rem;
-  }
-  #main #profile #avatar {
-    padding: 50px;
-  }
-  #main #info {
+  #about #profile table {
     font-size: 1rem;
+  }
+  #about #info > * {
+    font-size: smaller;
   }
   .separator h1 {
     font-size: 3rem;

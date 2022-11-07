@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
     <link rel="stylesheet" href="index.css">
     <script src="index.js" defer></script>
@@ -15,61 +14,25 @@
 <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="10">
     <div class="progress-container">
         <div class="progress-bar" id="myBar"></div>
-        <a class="nav-link tooltip" href="#main"><i class="fa-solid fa-house"></i><span class="tooltiptext">Home</span></a>
+        <a class="nav-link tooltip" href="#cover"><i class="fa-solid fa-house"></i><span class="tooltiptext">Home</span></a>
+        <a class="nav-link tooltip" href="#about"><i class="fa-solid fa-address-card"></i><span class="tooltiptext">About</span></a>
         <a class="nav-link tooltip" href="#hardskillssep"><i class="fa-solid fa-brain"></i><span class="tooltiptext">Hard Skills</span></a>
         <a class="nav-link tooltip" href="#softskills"><i class="fa-solid fa-brain"></i><span class="tooltiptext">Soft Skills</span></a>
         <a class="nav-link tooltip" href="#gamessep"><i class="fa-solid fa-gamepad"></i><span class="tooltiptext">Games</span></a>
         <a class="nav-link tooltip" href="#projectssep"><i class="fa-solid fa-diagram-project"></i><span class="tooltiptext">Projects</span></a>
     </div>
 
-    <div class="col-12" id="main">
-        <div class="col-12" id="name">
-            <h1>George Makasarashvili</h1>
-        </div>
+    <div id="cover">
+        <h1>George Makasarashvili</h1>
+        <h2>Front-end Developer</h2>
+    </div>
+
+    <div class="col-12 separator" id="aboutsep">
+        <h1>ABOUT</h1>
+    </div>
+
+    <div class="col-12" id="about">
         <div class="col-2" id="profile">
-            <img src="pictures/avatar.png" alt="avatar" id="avatar">
-            <div id="links">
-                <a href="https://github.com/gio-makasa">
-                    <img src="pictures/github.png" alt="github">
-                    <p>Github</p>
-                </a>
-                <a href="https://dribbble.com/gio-makasa">
-                    <img src="pictures/dribbble.png" alt="dribbble">
-                    <p>Dribbble</p>
-                </a>
-            </div>
-        </div>
-        <div class="col-5" id="about">
-            <div id="changer">
-				ENG
-				<label class="switch">
-					<input type="checkbox">
-					<span class="slider round" id="switch_lang"></span>
-				</label>
-				KA
-			</div>
-            <div lang="en">
-                I am student at the Faculty of Computer Science at Caucasus University. In terms of Web Development, I have solid
-                knowledge and a little experience in HTML, CSS (Saas), JavaScript (JQuery), I also have basic knowledge in React, PHP and
-                Python. At the university, I have experience with SQL, I can work with data in a relational database management system
-                (RDBMS), create small databases and write procedures (I am currently studying database administration). I have
-                extensive experience and knowledge in Microsoft Office applications: Excel, Word, PowerPoint. I have basic knowledge
-                in algorithms and data structures.
-                I am detail-oriented, quick learner, analytical thinker and organized with a high sense of responsibility
-            </div>
-            <div lang="ka">
-                ამჟამად ვარ კავკასიის უნივერსიტეტში მესამე კურსის სტუდენტი კომპიუტერული მეცნიერების
-                ფაკულტეტზე. Web Development-ის მხრივ მაქვს მყარი ცოდნა და გამოცდილება HTML, CSS (Saas),
-                JavaScript (JQuery)-ში, ასევე მცირე შეხება მქონია React-თან და საბაზისო ცოდნა მაქ PHP-სა და python-ში.
-                უნივერსიტეტის დონეზე მქონია შეხება SQL-თან, შემიძლია რელაციურ მონაცემთა ბაზების მართვის
-                სისტემაში (RDBMS) მონაცემებთან მუშაობა, მცირე ზომის ბაზების შექმნა და პროცედურების გაწერა. დიდი
-                გამოცდილება და ცოდნა მაქ Microsoft Office-ის აპლიკაციებში Excel, Word, PowerPoint. საბაზისო ცოდნა
-                მაქვს ალგორითმებსა და მონაცემთა სტრუქტურებში.
-                ვარ დეტალებზე ორიენტირებული, სწრაფად სწავლის უნარისა და ანალიტიკური აზროვნების მქონე,
-                ორგანიზებულობითა და მაღალი პასუხისმგებლობის გრძნობით.
-            </div>
-        </div>
-        <div class="col-4" id="info">
             <table>
                 <tr>
                     <td>B.Date:</td>
@@ -88,16 +51,48 @@
                     <td><a href="mailto:giorgimakasarashvili@gmail.com">giorgimakasarashvili@gmail.com</a></td>
                 </tr>
             </table>
-        </div>
-        <div class="col-12" id="education_experience">
-            <div id="education">
-                <h2>EDUCATION:<hr></h2>
-                <h4>Caucasus University * Computer Science (2020-present)</h4>
+            <div id="links">
+                <a href="https://github.com/gio-makasa">
+                    <img src="pictures/github.png" alt="github">
+                </a>
+                <a href="https://dribbble.com/gio-makasa">
+                    <img src="pictures/dribbble.png" alt="dribbble">
+                </a>
             </div>
-            <div id="experience">
-                <h2>EXPERIENCE:<hr></h2>
-                <h3>Upwork * Front-end Developer (2021-)</h3>
-                <h3>Fiverr * Front-end Developer (2021-)</h3>
+        </div>
+        <div class="col-6" id="info">
+            <div id="changer">
+				ENG
+				<label class="switch">
+					<input type="checkbox">
+					<span class="slider round" id="switch_lang"></span>
+				</label>
+				KA
+			</div>
+            <div lang="en">
+                I am student at the Faculty of Computer Science at Caucasus University. In terms of Web Development, I have solid
+                knowledge and a little experience in HTML, CSS(Sass), JavaScript(JQuery), I also have basic knowledge in React, PHP and
+                Python. At the university, I have experience with SQL, I can work with data in a relational database management system
+                (RDBMS), create small databases and write procedures (I am currently studying database administration). I have
+                extensive experience and knowledge in Microsoft Office applications: Excel, Word, PowerPoint. I have basic knowledge
+                in algorithms and data structures.
+                I am detail-oriented, quick learner, analytical thinker and organized with a high sense of responsibility.
+            </div>
+            <div lang="ka">
+                ამჟამად ვარ კავკასიის უნივერსიტეტში მესამე კურსის სტუდენტი კომპიუტერული მეცნიერების
+                ფაკულტეტზე. Web Development-ის მხრივ მაქვს მყარი ცოდნა და გამოცდილება HTML, CSS(Sass),
+                JavaScript(JQuery)-ში, ასევე მცირე შეხება მქონია React-თან და საბაზისო ცოდნა მაქ PHP-სა და python-ში.
+                უნივერსიტეტის დონეზე მქონია შეხება SQL-თან, შემიძლია რელაციურ მონაცემთა ბაზების მართვის
+                სისტემაში(RDBMS) მონაცემებთან მუშაობა, ბაზების შექმნა და პროცედურების გაწერა. დიდი
+                გამოცდილება და ცოდნა მაქ Microsoft Office-ის აპლიკაციებში Excel, Word, PowerPoint. საბაზისო ცოდნა
+                მაქვს C++, ალგორითმებსა და მონაცემთა სტრუქტურებში.
+                ვარ დეტალებზე ორიენტირებული, სწრაფად სწავლის უნარისა და ანალიტიკური აზროვნების მქონე,
+                ორგანიზებულობითა და მაღალი პასუხისმგებლობის გრძნობით.
+            </div>
+        </div>
+        <div class="col-12" id="experience_education">
+            <div class="col-12" id="education">
+                Caucasus University * Computer Science (2020 - present)
             </div>
         </div>
     </div>
@@ -119,16 +114,12 @@
         <h1>GAMES</h1>
     </div>
 
-    <!-- Games section starts -->
     <div class="col-12" id="games"></div>
-    <!-- Games section ends -->
 
     <div class="col-12 separator" id="projectssep">
         <h1>PROJECTS</h1>
     </div>
 
-    <!-- Project section starts-->
     <div class="col-12" id="projects"></div>
-    <!-- Project section ends-->
 </body>
 </html>
