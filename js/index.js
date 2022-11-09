@@ -1,8 +1,8 @@
-$('[lang="ka"]').hide();
-$('#switch_lang').click(function(){
-	$('[lang="en"]').toggle();
-	$('[lang="ka"]').toggle();
-});
+// $('[lang="ka"]').hide();
+// $('#switch_lang').click(function(){
+// 	$('[lang="en"]').toggle();
+// 	$('[lang="ka"]').toggle();
+// });
 
 
 //adding hard skills
@@ -47,16 +47,15 @@ softskill.forEach(element => {
 });
 
 
-//adding quote
-const myquote = JSON.parse(quote);
-var R = Math.floor(Math.random()*myquote.length);
+// //adding quote
+// const myquote = JSON.parse(quote);
+// var R = Math.floor(Math.random()*myquote.length);
 
-$('#q').html(`"${myquote[R].q}"`);
-$('#a').html(`- ${myquote[R].a}`);
+// $('#q').html(`"${myquote[R].q}"`);
+// $('#a').html(`- ${myquote[R].a}`);
 
 //Games and Projects
 const mygames = JSON.parse(games);
-const myprojects = JSON.parse(projects);
 
 mygames.forEach(game => {
     let c1 = Math.floor(Math.random()*255);
@@ -65,8 +64,8 @@ mygames.forEach(game => {
     let clr = `rgb(${c1},${c2},${c3})`;
 
     let $div =`
-    <div class="frames" style="--clr:${clr}">
-        <div class="frame">
+    <div class="frames padd-15" style="--clr:${clr}">
+        <div class="sides">
             <div class="front">
                 <h2>${game.t}</h2>
             </div>
@@ -82,6 +81,8 @@ mygames.forEach(game => {
     $('#games').append($div);
 });
 
+const myprojects = JSON.parse(projects);
+
 myprojects.forEach(project => {
     let c1 = Math.floor(Math.random()*255);
     let c2 = Math.floor(Math.random()*255);
@@ -89,8 +90,8 @@ myprojects.forEach(project => {
     let clr = `rgb(${c1},${c2},${c3})`;
 
     let $div =`
-    <div class="frames" style="--clr:${clr}">
-        <div class="frame">
+    <div class="frames padd-15" style="--clr:${clr}">
+        <div class="sides">
             <div class="front">
                 <h2>${project.t}</h2>
             </div>
@@ -106,29 +107,29 @@ myprojects.forEach(project => {
     $('#projects').append($div);
 });
 
-//right line
-let check_point = $('.nav-link');
+// //right line
+// let check_point = $('.nav-link');
 
-for(let i of check_point){
-  i = i.href.split('#')[1];
-  let distance = Math.round($('#'+i).position().top / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100);
-  $(`[href='#${i}']`).css("top", distance+"%");
-}
+// for(let i of check_point){
+//   i = i.href.split('#')[1];
+//   let distance = Math.round($('#'+i).position().top / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100);
+//   $(`[href='#${i}']`).css("top", distance+"%");
+// }
 
-window.onscroll = () => {
-  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  var scrolled = (winScroll / height) * 100;
+// window.onscroll = () => {
+//   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+//   var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+//   var scrolled = (winScroll / height) * 100;
 
-  for(let i of check_point){
-    i = i.href.split('#')[1];
-    let distance = Math.round($('#'+i).position().top / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100);
-    if(scrolled >= distance){
-        $(`[href='#${i}']`).css("background-color", "blue");
-    } else {
-        $(`[href='#${i}']`).css("background-color", "rgba(0, 0, 80, 0.5)");
-    }
-  }
+//   for(let i of check_point){
+//     i = i.href.split('#')[1];
+//     let distance = Math.round($('#'+i).position().top / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100);
+//     if(scrolled >= distance){
+//         $(`[href='#${i}']`).css("background-color", "blue");
+//     } else {
+//         $(`[href='#${i}']`).css("background-color", "rgba(0, 0, 80, 0.5)");
+//     }
+//   }
 
-  $('#myBar').css('height',scrolled+'%');
-}
+//   $('#myBar').css('height',scrolled+'%');
+// }

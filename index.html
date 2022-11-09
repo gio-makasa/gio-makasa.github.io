@@ -1,125 +1,250 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-    <link rel="stylesheet" href="index.css">
-    <script src="index.js" defer></script>
-    <script src="info.json"></script>
+    <script src="js/index.js" defer></script>
+    <script src="js/info.json"></script>
+    <script src="js/style-switcher.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/skins/color-1.css">
+    <link rel="stylesheet" href="css/style-switcher.css">
+    <link rel="stylesheet" href="css/skins/color-1.css" class="alternate-style" title="color-1" disabled>
+    <link rel="stylesheet" href="css/skins/color-2.css" class="alternate-style" title="color-2" disabled>
+    <link rel="stylesheet" href="css/skins/color-3.css" class="alternate-style" title="color-3" disabled>
+    <link rel="stylesheet" href="css/skins/color-4.css" class="alternate-style" title="color-4" disabled>
+    <link rel="stylesheet" href="css/skins/color-5.css" class="alternate-style" title="color-5" disabled>
     <title>Page</title>
 </head>
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="10">
-    <div class="progress-container">
-        <div class="progress-bar" id="myBar"></div>
-        <a class="nav-link tooltip" href="#cover"><i class="fa-solid fa-house"></i><span class="tooltiptext">Home</span></a>
-        <a class="nav-link tooltip" href="#about"><i class="fa-solid fa-address-card"></i><span class="tooltiptext">About</span></a>
-        <a class="nav-link tooltip" href="#hardskillssep"><i class="fa-solid fa-brain"></i><span class="tooltiptext">Hard Skills</span></a>
-        <a class="nav-link tooltip" href="#softskills"><i class="fa-solid fa-brain"></i><span class="tooltiptext">Soft Skills</span></a>
-        <a class="nav-link tooltip" href="#gamessep"><i class="fa-solid fa-gamepad"></i><span class="tooltiptext">Games</span></a>
-        <a class="nav-link tooltip" href="#projectssep"><i class="fa-solid fa-diagram-project"></i><span class="tooltiptext">Projects</span></a>
-    </div>
+<body>
+    <div id="main-container">
+        <div id="aside">
+            <div id="logo">
+                <a href="#"><span>M</span>akasa</a>
+            </div>
+            <div id="nav-toggler">
+                <span></span>
+            </div>
+            <ul class="nav">
+                <li><a href="#home"><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="#about"><i class="fa fa-user"></i> About</a></li>
+                <li><a href="#services"><i class="fa fa-list"></i> Skills</a></li>
+                <li><a href="#portfolio"><i class="fa fa-briefcase"></i> Portfolio</a></li>
+            </ul>
+        </div>
 
-    <div id="cover">
-        <h1>George Makasarashvili</h1>
-        <h2>Front-end Developer</h2>
-    </div>
+        <div id="main-content">
+            <section class="home section" id="home">
+                <div class="container">
+                    <div class="row">
+                        <div class="padd-15" id="home-info">
+                            <h3 id="hello">Hi, My name is <span id="name">George Makasarashvili</span></h3>
+                            <h3 id="my-profession">I am <span id="typing">Web Developer</span></h3>
+                            <p>
+                                I am student at the Faculty of Computer Science at Caucasus University. In terms of Web Development, I have solid
+                                knowledge and a little experience in HTML, CSS(Sass), JavaScript (JQuery), I also have basic knowledge in React, PHP and
+                                Python. At the university, I have experience with SQL, I can work with data in a relational database management system
+                                (RDBMS), create small databases and write procedures (I am currently studying database administration). I have
+                                extensive experience and knowledge in Microsoft Office applications: Excel, Word, PowerPoint. I have basic knowledge
+                                in C++, algorithms and data structures.
+                                I am detail-oriented, quick learner, analytical thinker and organized with a high sense of responsibility.
+                            </p>
+                        </div>
+                        <div class="padd-15" id="home-img">
+                            <img src="pictures/avatar.png" alt="avatar">
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    <div class="col-12 separator" id="aboutsep">
-        <h1>ABOUT</h1>
-    </div>
+            <section class="about section" id="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title padd-15">
+                            <h2>About Me</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="about-content padd-15">
+                            <div class="row">
+                                <div class="about-text padd-15">
+                                    <h3>I am George Makasarashvili and <span>Web Developer</span></h3>
+                                    <p>I am student at the Faculty of Computer Science at Caucasus University. In terms of Web Development, I have solid
+                                        knowledge and a little experience in HTML, CSS(Sass), JavaScript (JQuery), I also have basic knowledge in React, PHP and
+                                        Python. At the university, I have experience with SQL, I can work with data in a relational database management system
+                                        (RDBMS), create small databases and write procedures (I am currently studying database administration). I have
+                                        extensive experience and knowledge in Microsoft Office applications: Excel, Word, PowerPoint. I have basic knowledge
+                                        in C++, algorithms and data structures.
+                                        I am detail-oriented, quick learner, analytical thinker and organized with a high sense of responsibility.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="personal-info padd-15">
+                                    <div class="row">
+                                        <div class="info-item padd-15">
+                                            <p>Birthday : <span>30 Nov 2001</span></p>
+                                        </div>
+                                        <div class="info-item padd-15">
+                                            <p>Age : <span>20</span></p>
+                                        </div>
+                                        <div class="info-item padd-15">
+                                            <p>Website : <span>gio-makasa.github.io</span></p>
+                                        </div>
+                                        <div class="info-item padd-15">
+                                            <p>Email : <span>giorgimakasarashvili@gmail.com</span></p>
+                                        </div>
+                                        <div class="info-item padd-15">
+                                            <p>Degree : <span>Computer Science</span></p>
+                                        </div>
+                                        <div class="info-item padd-15">
+                                            <p>Phone : <span>+995 571 70 66 32</span></p>
+                                        </div>
+                                        <div class="info-item padd-15">
+                                            <p>City : <span>Tbilisi (Georgia)</span></p>
+                                        </div>
+                                        <div class="info-item padd-15">
+                                            <p>Freelance : <span>Available</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="education padd-15">
+                                    <h3 class="title">Education</h3>
+                                    <div class="row">
+                                        <div class="timeline-box padd-15">
+                                            <div class="timeline shadow-dark">
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> 2020
+                                                    </h3>
+                                                    <h4 class="timeline-title">HTML, CSS, JavaScript</h4>
+                                                    <p class="timeline-text">W3schools.com and freecodecamp.com</p>
+                                                </div>
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> 2020 - Present
+                                                    </h3>
+                                                    <h4 class="timeline-title">Computer Science</h4>
+                                                    <p class="timeline-text">Computer Science faculty at Caucasus University.</p>
+                                                </div>
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> 2021
+                                                    </h3>
+                                                    <h4 class="timeline-title">React.JS</h4>
+                                                    <p class="timeline-text">W3schools.com</p>
+                                                </div>
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> 2022
+                                                    </h3>
+                                                    <h4 class="timeline-title">Vue.JS</h4>
+                                                    <p class="timeline-text">Vue - The Complete Guide (incl. Router & Composition API) - udemy.com</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="experience padd-15">
+                                    <h3 class="title">Experience</h3>
+                                    <div class="row">
+                                        <div class="timeline-box padd-15">
+                                            <div class="timeline shadow-dark">
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> 2022
+                                                    </h3>
+                                                    <h4 class="timeline-title">Front-end developer</h4>
+                                                    <p class="timeline-text">Freelancer - Fiverr</p>
+                                                </div>
+                                                <div class="timeline-item">
+                                                    <div class="circle-dot"></div>
+                                                    <h3 class="timeline-date">
+                                                        <i class="fa fa-calendar"></i> 2022
+                                                    </h3>
+                                                    <h4 class="timeline-title">Front-end developer</h4>
+                                                    <p class="timeline-text">Freelancer - Upwork</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    <div class="col-12" id="about">
-        <div class="col-2" id="profile">
-            <table>
-                <tr>
-                    <td>B.Date:</td>
-                    <td>30-nov-2001</td>
-                </tr>
-                <tr>
-                    <td>City:</td>
-                    <td>Tbilisi, Georgia</td>
-                </tr>
-                <tr>
-                    <td>Phone:</td>
-                    <td>(+995) 571 70 66 32</td>
-                </tr>
-                <tr>
-                    <td>E-mail:</td>
-                    <td><a href="mailto:giorgimakasarashvili@gmail.com">giorgimakasarashvili@gmail.com</a></td>
-                </tr>
-            </table>
-            <div id="links">
-                <a href="https://github.com/gio-makasa">
-                    <img src="pictures/github.png" alt="github">
-                </a>
-                <a href="https://dribbble.com/gio-makasa">
-                    <img src="pictures/dribbble.png" alt="dribbble">
-                </a>
+            <section class="skills section" id="services">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title padd-15">
+                            <h2>Skills</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="skills-heading padd-15">
+                            <h2>Hardskills:</h2>
+                        </div>
+                        <div id="hardskills"></div>
+
+                        <div class="skills-heading padd-15">
+                            <h2>Softskills:</h2>
+                        </div>
+                        <div id="softskills"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="portfolio section" id="portfolio">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title padd-15">
+                            <h2>Portfolio</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="portfolio-heading padd-15">
+                            <h2>My games:</h2>
+                        </div>
+                    </div>
+                    <div class="row" id="games"></div>
+
+                    <div class="row">
+                        <div class="portfolio-heading padd-15">
+                            <h2>My projects:</h2>
+                        </div>
+                    </div>
+                    <div class="row" id="projects"></div>
+                </div>
+            </section>
+        </div>
+        <div class="style-switcher">
+            <div class="style-switcher-toggler s-icon">
+                <i class="fas fa-cog fa-spin"></i>
+            </div>
+            <div class="day-night s-icon">
+                <i class="fa fa-moon"></i>
+            </div>
+            <h4>Theme color</h4>
+            <div class="colors">
+                <span class="color-1" onclick="setactivestyle('color-1')"></span>
+                <span class="color-2" onclick="setactivestyle('color-2')"></span>
+                <span class="color-3" onclick="setactivestyle('color-3')"></span>
+                <span class="color-4" onclick="setactivestyle('color-4')"></span>
+                <span class="color-5" onclick="setactivestyle('color-5')"></span>
             </div>
         </div>
-        <div class="col-6" id="info">
-            <div id="changer">
-				ENG
-				<label class="switch">
-					<input type="checkbox">
-					<span class="slider round" id="switch_lang"></span>
-				</label>
-				KA
-			</div>
-            <div lang="en">
-                I am student at the Faculty of Computer Science at Caucasus University. In terms of Web Development, I have solid
-                knowledge and a little experience in HTML, CSS(Sass), JavaScript(JQuery), I also have basic knowledge in React, PHP and
-                Python. At the university, I have experience with SQL, I can work with data in a relational database management system
-                (RDBMS), create small databases and write procedures (I am currently studying database administration). I have
-                extensive experience and knowledge in Microsoft Office applications: Excel, Word, PowerPoint. I have basic knowledge
-                in algorithms and data structures.
-                I am detail-oriented, quick learner, analytical thinker and organized with a high sense of responsibility.
-            </div>
-            <div lang="ka">
-                ამჟამად ვარ კავკასიის უნივერსიტეტში მესამე კურსის სტუდენტი კომპიუტერული მეცნიერების
-                ფაკულტეტზე. Web Development-ის მხრივ მაქვს მყარი ცოდნა და გამოცდილება HTML, CSS(Sass),
-                JavaScript(JQuery)-ში, ასევე მცირე შეხება მქონია React-თან და საბაზისო ცოდნა მაქ PHP-სა და python-ში.
-                უნივერსიტეტის დონეზე მქონია შეხება SQL-თან, შემიძლია რელაციურ მონაცემთა ბაზების მართვის
-                სისტემაში(RDBMS) მონაცემებთან მუშაობა, ბაზების შექმნა და პროცედურების გაწერა. დიდი
-                გამოცდილება და ცოდნა მაქ Microsoft Office-ის აპლიკაციებში Excel, Word, PowerPoint. საბაზისო ცოდნა
-                მაქვს C++, ალგორითმებსა და მონაცემთა სტრუქტურებში.
-                ვარ დეტალებზე ორიენტირებული, სწრაფად სწავლის უნარისა და ანალიტიკური აზროვნების მქონე,
-                ორგანიზებულობითა და მაღალი პასუხისმგებლობის გრძნობით.
-            </div>
-        </div>
-        <div class="col-12" id="experience_education">
-            <div class="col-12" id="education">
-                Caucasus University * Computer Science (2020 - present)
-            </div>
-        </div>
     </div>
-
-    <div class="col-12 separator" id="hardskillssep">
-        <h1>SKILLS</h1>
-    </div>
-    
-    <div id="hardskills"></div>
-
-    <div class="col-12" id="quotes">
-        <h2 id="q">{{q}}</h2>
-        <h3 id="a">{{a}}</h3>
-    </div>
-
-    <div class="col-12" id="softskills"></div>
-
-    <div class="col-12 separator" id="gamessep">
-        <h1>GAMES</h1>
-    </div>
-
-    <div class="col-12" id="games"></div>
-
-    <div class="col-12 separator" id="projectssep">
-        <h1>PROJECTS</h1>
-    </div>
-
-    <div class="col-12" id="projects"></div>
 </body>
 </html>
