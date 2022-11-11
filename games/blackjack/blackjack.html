@@ -14,13 +14,13 @@
 
 		<section id="table">
 			<article id="pc">
-				<img src="pictures/deck/blank.gif">
-				<img src="pictures/deck/blank.gif">
+				<img src="../pictures/deck/blank.gif">
+				<img src="../pictures/deck/blank.gif">
 			</article>
 
 			<article id="me">
-				<img src="pictures/deck/blank.gif">
-				<img src="pictures/deck/blank.gif">
+				<img src="../pictures/deck/blank.gif">
+				<img src="../pictures/deck/blank.gif">
 			</article>
 		</section>
 
@@ -126,15 +126,15 @@
 
     function bet(){
         R = Math.floor(Math.random() * 52);
-        document.getElementById("pc").children[0].src="pictures/deck/"+ kartebi[R] +".png";
+        document.getElementById("pc").children[0].src="../pictures/deck/"+ kartebi[R] +".png";
         score_pc += score(R);
 
         R = Math.floor(Math.random() * 52);
-        document.getElementById("me").children[0].src="pictures/deck/"+ kartebi[R] +".png";
+        document.getElementById("me").children[0].src="../pictures/deck/"+ kartebi[R] +".png";
         score_me += score(R);
 
         R = Math.floor(Math.random() * 52);
-        document.getElementById("me").children[1].src="pictures/deck/"+ kartebi[R] +".png";
+        document.getElementById("me").children[1].src="../pictures/deck/"+ kartebi[R] +".png";
         score_me += score(R);
 
         document.getElementById("bet").disabled = true;
@@ -152,7 +152,7 @@
         let new_card = document.createElement("img");
 		R = Math.floor(Math.random() * 52);
         document.getElementById("me").appendChild(new_card);
-        document.getElementById("me").lastChild.src="pictures/deck/"+ kartebi[R] +".png";
+        document.getElementById("me").lastChild.src="../pictures/deck/"+ kartebi[R] +".png";
 
         score_me += score(R);
         checker();
@@ -160,7 +160,7 @@
 
 	function keep(){
 		R = Math.floor(Math.random() * 52);
-        document.getElementById("pc").children[1].src="pictures/deck/"+ kartebi[R] +".png";
+        document.getElementById("pc").children[1].src="../pictures/deck/"+ kartebi[R] +".png";
 
         score_pc += score(R);
 
@@ -168,7 +168,7 @@
             let new_card = document.createElement("img");
             R = Math.floor(Math.random() * 52);
             document.getElementById("pc").appendChild(new_card);
-            document.getElementById("pc").lastChild.src="pictures/deck/"+ kartebi[R] +".png";
+            document.getElementById("pc").lastChild.src="../pictures/deck/"+ kartebi[R] +".png";
             score_pc += score(R);
 		}
 

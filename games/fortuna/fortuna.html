@@ -17,11 +17,11 @@
 		</pre>
 		<section>
 			<article>
-				<img src="pictures/deck/blank.gif">
-				<img src="pictures/deck/blank.gif">
-				<img src="pictures/deck/blank.gif">
-				<img src="pictures/deck/blank.gif">
-				<img src="pictures/deck/blank.gif">
+				<img src="../pictures/deck/blank.gif">
+				<img src="../pictures/deck/blank.gif">
+				<img src="../pictures/deck/blank.gif">
+				<img src="../pictures/deck/blank.gif">
+				<img src="../pictures/deck/blank.gif">
 			</article>
 			<div class="buttons">
 				<button onclick="change()" id="chng">CHANGE</button>
@@ -53,10 +53,10 @@
 	let R = Math.floor(Math.random() * 36);  // R -  Random pirveli karti
 	let pirveli_karti = score(R);
 	let I = 0; // I - images counter
-	document.images[I].src="pictures/deck/"+ kartebi[R] +".png";
+	document.images[I].src="../pictures/deck/"+ kartebi[R] +".png";
 	function change(){
 		let z = Math.floor(Math.random() * 36);
-		document.images[I].src="pictures/deck/"+ kartebi[z] +".png";
+		document.images[I].src="../pictures/deck/"+ kartebi[z] +".png";
 		document.getElementById("chng").disabled = true;
 		document.getElementById("chng").style.opacity = "0.5" ;
 		pirveli_karti = score(z);
@@ -64,7 +64,7 @@
 	function Up(){
 		I++;
 		let z = Math.floor(Math.random() * 36);
-		document.images[I].src="pictures/deck/"+ kartebi[z] +".png";
+		document.images[I].src="../pictures/deck/"+ kartebi[z] +".png";
 		let maRali = score(z);
 		if(maRali > pirveli_karti){
 		  document.getElementById("result").innerHTML =  "არის მაღალი!!!";
@@ -88,7 +88,7 @@
 	function Down(){
 		I++;
 		let z = Math.floor(Math.random() * 36);
-		document.images[I].src="pictures/deck/"+ kartebi[z] +".png";
+		document.images[I].src="../pictures/deck/"+ kartebi[z] +".png";
 		let dabali = score(z);
 		if(dabali < pirveli_karti){
 		  document.getElementById("result").innerHTML =  "არის დაბალი!!!";

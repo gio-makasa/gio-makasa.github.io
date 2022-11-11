@@ -14,11 +14,11 @@
     var myObstacles = [];
     var myScore;
     var jump = true;
-    const sonics = ["pictures/sonic_back.png","pictures/sonic_mid.png","pictures/sonic_front.png"];
+    const sonics = ["../pictures/sonic_back.png","../pictures/sonic_mid.png","../pictures/sonic_front.png"];
 
     function startGame() {
         myGameArea.start();
-        myGamePiece = new component(50, 50, "pictures/sonic_front.png", 10, 220, "image");
+        myGamePiece = new component(50, 50, "../pictures/sonic_front.png", 10, 220, "image");
         myScore = new component("30px", "Consolas", "black", 30, 30, "text");
     }
     
@@ -152,7 +152,7 @@
         }
         myGamePiece.speedX = 0;
         myGamePiece.speedY = 0;
-        if (myGameArea.key && jump && myGameArea.key == 32 || myGameArea.key == 38) {accelerate(-15); myGamePiece.image.src = "pictures/sonic_back.png";}
+        if (myGameArea.key && jump && myGameArea.key == 32 || myGameArea.key == 38) {accelerate(-15); myGamePiece.image.src = "../pictures/sonic_back.png";}
         else {accelerate(5); moving();}
         myScore.text = "SCORE: " + myGameArea.frameNo;
         myScore.update();

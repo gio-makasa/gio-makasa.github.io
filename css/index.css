@@ -321,6 +321,14 @@ body.dark {
   bottom: -40px;
 }
 
+#main-content .home #quotes {
+  text-align: center;
+  flex-direction: column;
+  flex: 0 0 100%;
+  max-width: 100%;
+  font-size: 28px;
+}
+
 #main-content .about .about-content {
   flex: 0 0 100%;
   max-width: 100%;

@@ -14,8 +14,8 @@
             <span>PC</span>
         </div>
         <div class="sides">
-            <img src="pictures/domino/.png" alt="domino">
-            <img src="pictures/domino/.png" alt="domino">
+            <img src="../pictures/domino/.png" alt="domino">
+            <img src="../pictures/domino/.png" alt="domino">
         </div>
         <span id="Name_coil" style="font-weight: bold; font-size: 30px;"></span>
         <div class="stat">
@@ -64,10 +64,13 @@
     coil[25] = new domino("5-5.png", "დუ ბეში", 10);
     coil[26] = new domino("5-6.png", "შაში ბეში", 11);
     coil[27] = new domino("6-6.png", "დუ შაში", 12);
-    document.images[0].src = "pictures/domino/" + coil[R_me].URL_img;
+
+    document.images[0].src = "../pictures/domino/" + coil[R_me].URL_img;
     document.getElementById("Name_coil").innerHTML = coil[R_me].Name + " : " + coil[R_pc].Name;
-    document.images[1].src = "pictures/domino/" + coil[R_pc].URL_img;
+
+    document.images[1].src = "../pictures/domino/" + coil[R_pc].URL_img;
     document.getElementById("rezult").innerHTML = coil[R_me].qula + " - " + coil[R_pc].qula;
+
     if(coil[R_me].qula > coil[R_pc].qula)
     {
         document.getElementById("mogeba_wageba").innerHTML = "მოიგეთ";

@@ -318,6 +318,14 @@ body.dark {
             right: -20px;
             bottom: -40px;
         }
+
+        #quotes{
+            text-align: center;
+            flex-direction: column;
+            flex: 0 0 100%;
+            max-width: 100%;
+            font-size: 28px;
+        }
     }
 
     .about {

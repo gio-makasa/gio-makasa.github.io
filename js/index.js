@@ -1,10 +1,3 @@
-// $('[lang="ka"]').hide();
-// $('#switch_lang').click(function(){
-// 	$('[lang="en"]').toggle();
-// 	$('[lang="ka"]').toggle();
-// });
-
-
 //adding hard skills
 const hardskill = JSON.parse(hardskills);
 var id = 0;
@@ -48,11 +41,11 @@ softskill.forEach(element => {
 
 
 // //adding quote
-// const myquote = JSON.parse(quote);
-// var R = Math.floor(Math.random()*myquote.length);
+const myquote = JSON.parse(quote);
+var R = Math.floor(Math.random()*myquote.length);
 
-// $('#q').html(`"${myquote[R].q}"`);
-// $('#a').html(`- ${myquote[R].a}`);
+$('#q').html(`"${myquote[R].q}"`);
+$('#a').html(`- ${myquote[R].a}`);
 
 //Games and Projects
 const mygames = JSON.parse(games);
@@ -90,7 +83,7 @@ myprojects.forEach(project => {
     let clr = `rgb(${c1},${c2},${c3})`;
 
     let $div =`
-    <div class="frames padd-15" style="--clr:${clr}">
+    <div class="frames padd-15" onclick="" style="--clr:${clr}">
         <div class="sides">
             <div class="front">
                 <h2>${project.t}</h2>
@@ -106,30 +99,3 @@ myprojects.forEach(project => {
 
     $('#projects').append($div);
 });
-
-// //right line
-// let check_point = $('.nav-link');
-
-// for(let i of check_point){
-//   i = i.href.split('#')[1];
-//   let distance = Math.round($('#'+i).position().top / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100);
-//   $(`[href='#${i}']`).css("top", distance+"%");
-// }
-
-// window.onscroll = () => {
-//   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-//   var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-//   var scrolled = (winScroll / height) * 100;
-
-//   for(let i of check_point){
-//     i = i.href.split('#')[1];
-//     let distance = Math.round($('#'+i).position().top / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100);
-//     if(scrolled >= distance){
-//         $(`[href='#${i}']`).css("background-color", "blue");
-//     } else {
-//         $(`[href='#${i}']`).css("background-color", "rgba(0, 0, 80, 0.5)");
-//     }
-//   }
-
-//   $('#myBar').css('height',scrolled+'%');
-// }

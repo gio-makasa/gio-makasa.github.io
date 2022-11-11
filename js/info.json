@@ -17,7 +17,8 @@ quote = `[
     {"q":"We are not our best intentions. We are what we do.","a":"Amy Dickinson"},
     {"q":"It always seems impossible until it's done.","a":"Nelson Mandela"},
     {"q":"It does not matter how slowly you go as long as you do not stop.","a":"Confucius"},
-    {"q":"All our dreams can come true, if we have the courage to pursue them.","a":"Walt Disney"}
+    {"q":"All our dreams can come true, if we have the courage to pursue them.","a":"Walt Disney"},
+    {"q":"There is nothing impossible to they who will try.","a":"Alexander the Great"}
 ]`;
 
 hardskills = `[
@@ -34,12 +35,12 @@ hardskills = `[
 
 softskills = `["Leadership","Collaboration/Teamwork","Time Management","Problem Solving","Critical thinking","Self Motivated","Responsibility","Flexibility/Adaptability","Accountability"]`;
 
-games = `[{"t":"Flip a coin","l":"games/flip-coin.html","p":"pictures/flip-coin.png"},
-{"t":"დომინო","l":"games/domino.html","p":"pictures/domino.png"}, {"t":"ფორტუნა","l":"games/fortuna.html","p":"pictures/fortuna.png"},
-{"t":"BLACKJACK","l":"games/blackjack.html","p":"pictures/blackjack.png"}, {"t":"RACE","l":"games/race.html","p":"pictures/race.png"},
-{"t":"Sonic","l":"games/sonic.html","p":"pictures/sonic.png"}, {"t":"TIC TAC TOE (ReactJS)","l":"https://makasa-tic-tac-toe.netlify.app","p":"pictures/tictactoeReact.png"},
-{"t":"TIC TAC TOE","l":"games/TicTacToe.html","p":"pictures/tictactoe.png"}
-]`;
+games=`[{"t":"TIC TAC TOE","l":"games/tictactoe/TicTacToe.html","p":"pictures/tictactoe.png"}, {"t":"Flip a coin","l":"games/flip-coin/flip-coin.html","p":"pictures/flip-coin.png"}, 
+{"t":"Domino","l":"games/domino/domino.html","p":"pictures/domino.png"}, {"t":"Fortune","l":"games/fortuna/fortuna.html","p":"pictures/fortuna.png"}, 
+{"t":"BLACKJACK","l":"games/blackjack/blackjack.html","p":"pictures/blackjack.png"}, {"t":"RACE","l":"games/race/race.html","p":"pictures/race.png"}, 
+{"t":"Sonic","l":"games/sonic/sonic.html","p":"pictures/sonic.png"}, {"t":"TIC TAC TOE (ReactJS)","l":"https://makasa-tic-tac-toe.netlify.app","p":"pictures/tictactoeReact.png"}, 
+{"t":"Monster Slayer (Vue.js)","l":"games/monster-slayer/index.html","p":"pictures/monster-slayer.png"}]`;
+
 
 projects = `[{"t":"Clock","l":"projects/Clock/clock.html","p":"pictures/clock.png"},{"t":"Shop","l":"projects/Shop/shop.html","p":"pictures/onlineshop.png"},
 {"t":"Movies","l":"projects/Movies/movies.html","p":"pictures/movies.png"},{"t":"Tours (Georgia)","l":"projects/Tours_Georgia/index.html","p":"pictures/tours.png"},

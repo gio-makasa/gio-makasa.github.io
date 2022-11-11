@@ -25,8 +25,8 @@
 
     function startGame() {
         myGameArea.start();
-        myGamePiece = new component(50, 90, "pictures/red_car.png", 40, 350, "image");
-        myBackground = new component(250, 450, "pictures/road.png", 0, 0, "background");
+        myGamePiece = new component(50, 90, "../pictures/red_car.png", 40, 350, "image");
+        myBackground = new component(250, 450, "../pictures/road.png", 0, 0, "background");
         myScore = new component("30px", "Consolas", "white", 10, 30, "text");
     }
 
@@ -126,7 +126,7 @@
         if (myGameArea.frameNo == 1 || myObstacles[myObstacles.length - 1].y == 120) {
             let r = Math.floor(Math.random() * 2);
             r ? x = 40 : x = 150;
-            myObstacles.push(new component(50, 90, "pictures/blue_car.png", x, -90, "image"));
+            myObstacles.push(new component(50, 90, "../pictures/blue_car.png", x, -90, "image"));
         }
         for (i = 0; i < myObstacles.length; i++) {
             myObstacles[i].y += speed;
