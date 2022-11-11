@@ -1,3 +1,10 @@
+// //adding quote
+const myquote = JSON.parse(quote);
+var R = Math.floor(Math.random()*myquote.length);
+
+$('#q').html(`"${myquote[R].q}"`);
+$('#a').html(`- ${myquote[R].a}`);
+
 //adding hard skills
 const hardskill = JSON.parse(hardskills);
 var id = 0;
@@ -39,14 +46,6 @@ softskill.forEach(element => {
     $('#softskills').append(skill);
 });
 
-
-// //adding quote
-const myquote = JSON.parse(quote);
-var R = Math.floor(Math.random()*myquote.length);
-
-$('#q').html(`"${myquote[R].q}"`);
-$('#a').html(`- ${myquote[R].a}`);
-
 //Games and Projects
 const mygames = JSON.parse(games);
 
@@ -71,6 +70,7 @@ mygames.forEach(game => {
     </div>
     `;
 
+    console.log(game.p)
     $('#games').append($div);
 });
 

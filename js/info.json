@@ -35,7 +35,7 @@ hardskills = `[
 
 softskills = `["Leadership","Collaboration/Teamwork","Time Management","Problem Solving","Critical thinking","Self Motivated","Responsibility","Flexibility/Adaptability","Accountability"]`;
 
-games=`[{"t":"TIC TAC TOE","l":"games/tictactoe/TicTacToe.html","p":"pictures/tictactoe.png"}, {"t":"Flip a coin","l":"games/flip-coin/flip-coin.html","p":"pictures/flip-coin.png"}, 
+games=`[{"t":"TIC TAC TOE","l":"games/tictactoe/TicTacToe.html","p":"/pictures/tictactoe.png"}, {"t":"Flip a coin","l":"games/flip-coin/flip-coin.html","p":"/pictures/flip-coin.png"}, 
 {"t":"Domino","l":"games/domino/domino.html","p":"pictures/domino.png"}, {"t":"Fortune","l":"games/fortuna/fortuna.html","p":"pictures/fortuna.png"}, 
 {"t":"BLACKJACK","l":"games/blackjack/blackjack.html","p":"pictures/blackjack.png"}, {"t":"RACE","l":"games/race/race.html","p":"pictures/race.png"}, 
 {"t":"Sonic","l":"games/sonic/sonic.html","p":"pictures/sonic.png"}, {"t":"TIC TAC TOE (ReactJS)","l":"https://makasa-tic-tac-toe.netlify.app","p":"pictures/tictactoeReact.png"}, 
@@ -47,7 +47,7 @@ projects = `[{"t":"Clock","l":"projects/Clock/clock.html","p":"pictures/clock.pn
 {"t":"Lost_Found","l":"projects/Lost_Found/index.html","p":"pictures/lost_found.png"},{"t":"Countdown","l":"projects/Countdown/Countdown.html","p":"pictures/countdown.png"},
 {"t":"Quiz","l":"projects/Quiz/quiz.html","p":"pictures/quiz.png"},{"t":"Notes","l":"projects/Notes/notes.html","p":"pictures/note.png"},
 {"t":"ToDo","l":"projects/ToDo/ToDo.html","p":"pictures/ToDo.png"},{"t":"Password Generator","l":"projects/PassGenerator/passgenerator.html","p":"pictures/PassGenerator.png"},
-{"t":"Recipe","l":"projects/Recipe/recipe.html","p":"pictures/recipe.png"},{"t":"Movies_2","l":"projects/movies_2/movies.html","p":"pictures/movies2.png"},
+{"t":"Recipe","l":"projects/Recipe/recipe.html","p":"pictures/recipe.png"},{"t":"Movies_2","l":"projects/Movies2/movies.html","p":"pictures/movies2.png"},
 {"t":"Shopping List (AngularJS)","l":"projects/Shopping_list/Shopping_list.html","p":"pictures/Shoping_list.png"},{"t":"City Tours (ReactJS)","l":"https://makasa-city-tours.netlify.app","p":"pictures/city-tours.png"},
 {"t":"REDBERRY","l":"https://makasa-redberry.netlify.app","p":"pictures/redberry.png"},{"t":"Europebet","l":"projects/Europebet/index.html","p":"pictures/europebet.png"},
 {"t":"Form","l":"projects/Alliance/index.html","p":"pictures/alliance.png"}]`;

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +8,12 @@
     <link rel="stylesheet" href="TicTacToe.css">
     <title>TicTacToe</title>
 </head>
+
 <body>
     <div id="head">
         <h1>TIC TAC TOE</h1>
         <div>
-        <pre id="print">
+            <pre id="print">
         </pre>
         </div>
         <h2 id="X" class="high">PLAYER 1 -- X</h2>
@@ -32,17 +34,18 @@
         <input type="text" onclick="myfunc(this);" readonly>
         <br><br><br>
         <button id="but" onclick="reset()">RESET</button>
-     </div>
+    </div>
 </body>
 <script>
     var XO = 'X';
-        function myfunc(idi){
-            idi.value=XO;
-            idi.disabled = true;
-            checker();
-            if(XO == 'X') XO = 'O'; else XO = 'X';
-        }
-    function checker(){
+    function myfunc(idi) {
+        idi.value = XO;
+        idi.disabled = true;
+        checker();
+        if (XO == 'X') XO = 'O'; else XO = 'X';
+    }
+
+    function checker() {
         document.getElementById("X").classList.toggle("high");
         document.getElementById("O").classList.toggle("high");
         document.getElementById("X").classList.toggle("low");
@@ -50,50 +53,54 @@
 
         var list = document.getElementsByTagName("input");
         var t = 0;
-        if(list[0].value == list[1].value && list[0].value == list[2].value && list[0].value != '' ){
+        if (list[0].value == list[1].value && list[0].value == list[2].value && list[0].value != '') {
             document.getElementById('print').innerHTML = `winner ${XO}`;
-            for(let i in list) list[i].disabled = true;
+            for (let i in list) list[i].disabled = true;
         }
-        else if(list[3].value == list[4].value && list[3].value == list[5].value && list[3].value != '' ){
+        else if (list[3].value == list[4].value && list[3].value == list[5].value && list[3].value != '') {
             document.getElementById('print').innerHTML = `winner ${XO}`;
-            for(let i in list) list[i].disabled = true;
+            for (let i in list) list[i].disabled = true;
         }
-        else if(list[6].value == list[7].value && list[6].value == list[8].value && list[6].value != '' ){
+        else if (list[6].value == list[7].value && list[6].value == list[8].value && list[6].value != '') {
             document.getElementById('print').innerHTML = `winner ${XO}`;
-            for(let i in list) list[i].disabled = true;
+            for (let i in list) list[i].disabled = true;
         }
-        else if(list[0].value == list[3].value && list[0].value == list[6].value && list[0].value != '' ){
+        else if (list[0].value == list[3].value && list[0].value == list[6].value && list[0].value != '') {
             document.getElementById('print').innerHTML = `winner ${XO}`;
-            for(let i in list) list[i].disabled = true;
+            for (let i in list) list[i].disabled = true;
         }
-        else if(list[1].value == list[4].value && list[1].value == list[7].value && list[1].value != '' ){
+        else if (list[1].value == list[4].value && list[1].value == list[7].value && list[1].value != '') {
             document.getElementById('print').innerHTML = `winner ${XO}`;
-            for(let i in list) list[i].disabled = true;
+            for (let i in list) list[i].disabled = true;
         }
-        else if(list[2].value == list[5].value && list[2].value == list[8].value && list[2].value != '' ){
+        else if (list[2].value == list[5].value && list[2].value == list[8].value && list[2].value != '') {
             document.getElementById('print').innerHTML = `winner ${XO}`;
-            for(let i in list) list[i].disabled = true;
+            for (let i in list) list[i].disabled = true;
         }
-        else if(list[0].value == list[4].value && list[0].value == list[8].value && list[0].value != '' ){
+        else if (list[0].value == list[4].value && list[0].value == list[8].value && list[0].value != '') {
             document.getElementById('print').innerHTML = `winner ${XO}`;
-            for(let i in list) list[i].disabled = true;
+            for (let i in list) list[i].disabled = true;
         }
-        else if(list[2].value == list[4].value && list[2].value == list[6].value && list[2].value != '' ){
+        else if (list[2].value == list[4].value && list[2].value == list[6].value && list[2].value != '') {
             document.getElementById('print').innerHTML = `winner ${XO}`;
-            for(let i in list) list[i].disabled = true;
+            for (let i in list) list[i].disabled = true;
         }
-        else{
-            for(let i in list) if(list[i].disabled == false) t = 1;
-            if(!t) document.getElementById('print').innerHTML = `TIE`;
+        else {
+            for (let i in list) {
+                if (list[i].disabled == true) { t++; }
+            }
+            if (t == 9) document.getElementById('print').innerHTML = `TIE`;
         }
     }
-    function reset(){
+
+    function reset() {
         var list = document.getElementsByTagName("input");
-        for(let i in list){
+        for (let i in list) {
             list[i].disabled = false;
             list[i].value = '';
             document.getElementById("print").innerHTML = '\n';
         }
     }
 </script>
+
 </html>
