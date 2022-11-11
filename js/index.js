@@ -15,8 +15,8 @@ hardskill.forEach(element => {
                 <h2 class="title">${element.s}</h2>
                 <div class="circle" style="--clr:${element.clr1};">
                     <svg>
-                        <circle cx="50%" cy="50%" r="70"></circle>
-                        <circle cx="50%" cy="50%" r="70" id="${id}"></circle>
+                        <circle cx="50%" cy="50%" r="50"></circle>
+                        <circle cx="50%" cy="50%" r="50" id="${id}"></circle>
                     </svg>
                     <div class="level">${element.l}%</div>
                 </div>
@@ -26,7 +26,7 @@ hardskill.forEach(element => {
 
 $('#hardskills').append(skill);
 
-$('#'+id).css("strokeDashoffset", 440 - (440 * element.l)/100);
+$('#'+id).css("strokeDashoffset", 314 - (314 * element.l)/100);
 id++;
 });
 
@@ -64,7 +64,7 @@ mygames.forEach(game => {
     let clr = `rgb(${c1},${c2},${c3})`;
 
     let $div =`
-    <div class="frames padd-15" style="--clr:${clr}">
+    <div class="frames padd-15" onclick="" style="--clr:${clr}">
         <div class="sides">
             <div class="front">
                 <h2>${game.t}</h2>

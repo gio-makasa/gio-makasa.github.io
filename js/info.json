@@ -26,7 +26,7 @@ hardskills = `[
 {"s":"TypeScript","l":85,"clr1":"#3178c6","clr2":"#083061"},{"s":"JQuery","l":90,"clr1":"#0868ac","clr2":"#131b28"},        {"s":"JSON","l":90,"clr1":"#969696","clr2":"#222222"},
 {"s":"AJAX","l":85,"clr1":"#2284c6","clr2":"#4a98ce"},      {"s":"React.js","l":60,"clr1":"#61d9fc","clr2":"#2b2c30"},      {"s":"AngularJS","l":55,"clr1":"red","clr2":"white"},
 {"s":"Python","l":80,"clr1":"yellow","clr2":"blue"},        {"s":"PHP","l":40,"clr1":"#4f5b93","clr2":"white"},
-{"s":"C++","l":40,"clr1":"#0868ac","clr2":"white"},         {"s":"Git (Github)","l":85,"clr1":"#e84e31","clr2":"#3c2b00"},
+{"s":"C++","l":55,"clr1":"#0868ac","clr2":"white"},         {"s":"Git (Github)","l":85,"clr1":"#e84e31","clr2":"#3c2b00"},
 {"s":"SQL","l":75,"clr1":"gold","clr2":"blue"},             {"s":"UI/UX Design","l":65,"clr1":"green","clr2":"black"},      {"s":"Figma","l":70,"clr1":"#f24e1e","clr2":"#ff7262"},
 {"s":"English (B2)","l":70,"clr1":"red","clr2":"blue"},     {"s":"Microsoft apps","l":95,"clr1":"#f25022","clr2":"#ffb900"},{"s":"Algorithms","l":55,"clr1":"yellow","clr2":"green"},
 {"s":"Data structures","l":55,"clr1":"white","clr2":"blue"},{"s":"Agile Methodology","l":45,"clr1":"blue","clr2":"orange"}
@@ -34,12 +34,11 @@ hardskills = `[
 
 softskills = `["Leadership","Collaboration/Teamwork","Time Management","Problem Solving","Critical thinking","Self Motivated","Responsibility","Flexibility/Adaptability","Accountability"]`;
 
-games = `[{"t":"TIC TAC TOE","l":"games/TicTacToe.html","p":"pictures/tictactoe.png"},{"t":"Flip a coin","l":"games/flip-coin.html","p":"pictures/flip-coin.png"},
-{"t":"დომინო","l":"games/domino.html","p":"pictures/domino.png"},{"t":"ფორტუნა","l":"games/fortuna.html","p":"pictures/fortuna.png"},
-{"t":"BLACKJACK","l":"games/blackjack.html","p":"pictures/blackjack.png"},
-{"t":"RACE","l":"games/race.html","p":"pictures/race.png"},
-{"t":"Sonic","l":"games/sonic.html","p":"pictures/sonic.png"},
-{"t":"TIC TAC TOE (ReactJS)","l":"https://makasa-tic-tac-toe.netlify.app","p":"pictures/tictactoeReact.png"}
+games = `[{"t":"Flip a coin","l":"games/flip-coin.html","p":"pictures/flip-coin.png"},
+{"t":"დომინო","l":"games/domino.html","p":"pictures/domino.png"}, {"t":"ფორტუნა","l":"games/fortuna.html","p":"pictures/fortuna.png"},
+{"t":"BLACKJACK","l":"games/blackjack.html","p":"pictures/blackjack.png"}, {"t":"RACE","l":"games/race.html","p":"pictures/race.png"},
+{"t":"Sonic","l":"games/sonic.html","p":"pictures/sonic.png"}, {"t":"TIC TAC TOE (ReactJS)","l":"https://makasa-tic-tac-toe.netlify.app","p":"pictures/tictactoeReact.png"},
+{"t":"TIC TAC TOE","l":"games/TicTacToe.html","p":"pictures/tictactoe.png"}
 ]`;
 
 projects = `[{"t":"Clock","l":"projects/Clock/clock.html","p":"pictures/clock.png"},{"t":"Shop","l":"projects/Shop/shop.html","p":"pictures/onlineshop.png"},
