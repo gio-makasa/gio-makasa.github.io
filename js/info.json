@@ -25,7 +25,8 @@ hardskills = `[
 {"s":"HTML","l":95,"clr1":"#762900","clr2":"orange"},       {"s":"CSS","l":95,"clr1":"blue","clr2":"green"},                {"s":"Sass","l":95,"clr1":"pink","clr2":"purple"},
 {"s":"Bootstrap 5","l":90,"clr1":"purple","clr2":"#4000ff"},{"s":"W3.css","l":85,"clr1":"#00ff78","clr2":"green"},          {"s":"JavaScript","l":90,"clr1":"#ff4900","clr2":"yellow"},
 {"s":"TypeScript","l":85,"clr1":"#3178c6","clr2":"#083061"},{"s":"JQuery","l":90,"clr1":"#0868ac","clr2":"#131b28"},        {"s":"JSON","l":90,"clr1":"#969696","clr2":"#222222"},
-{"s":"AJAX","l":85,"clr1":"#2284c6","clr2":"#4a98ce"},      {"s":"React.js","l":60,"clr1":"#61d9fc","clr2":"#2b2c30"},      {"s":"AngularJS","l":55,"clr1":"red","clr2":"white"},
+{"s":"AJAX","l":85,"clr1":"#2284c6","clr2":"#4a98ce"},      {"s":"Vue.js","l":80,"clr1":"green","clr2":"black"},      {"s":"React.js","l":60,"clr1":"#61d9fc","clr2":"#2b2c30"},
+{"s":"AngularJS","l":55,"clr1":"red","clr2":"white"},
 {"s":"Python","l":80,"clr1":"yellow","clr2":"blue"},        {"s":"PHP","l":40,"clr1":"#4f5b93","clr2":"white"},
 {"s":"C++","l":55,"clr1":"#0868ac","clr2":"white"},         {"s":"Git (Github)","l":85,"clr1":"#e84e31","clr2":"#3c2b00"},
 {"s":"SQL","l":75,"clr1":"gold","clr2":"blue"},             {"s":"UI/UX Design","l":65,"clr1":"green","clr2":"black"},      {"s":"Figma","l":70,"clr1":"#f24e1e","clr2":"#ff7262"},
@@ -50,4 +51,4 @@ projects = `[{"t":"Clock","l":"projects/Clock/clock.html","p":"pictures/clock.pn
 {"t":"Recipe","l":"projects/Recipe/recipe.html","p":"pictures/recipe.png"},{"t":"Movies_2","l":"projects/Movies2/movies.html","p":"pictures/movies2.png"},
 {"t":"Shopping List (AngularJS)","l":"projects/Shopping_list/Shopping_list.html","p":"pictures/Shoping_list.png"},{"t":"City Tours (ReactJS)","l":"https://makasa-city-tours.netlify.app","p":"pictures/city-tours.png"},
 {"t":"REDBERRY","l":"https://makasa-redberry.netlify.app","p":"pictures/redberry.png"},{"t":"Europebet","l":"projects/Europebet/index.html","p":"pictures/europebet.png"},
-{"t":"Form","l":"projects/Alliance/index.html","p":"pictures/alliance.png"}]`;
+{"t":"Form","l":"projects/Alliance/index.html","p":"pictures/alliance.png"}, {"t":"Golden Bunny","l":"https://makasa-golden-bunny.netlify.app","p":"pictures/golden-bunny.png"}]`;
