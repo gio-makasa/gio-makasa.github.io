@@ -10,3 +10,5 @@ JQUERY:
 
 ballet:
 @import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Dancing+Script&display=swap');
+
+movie DB API KEY: 04c35731a5ee918f014970082a0088b1

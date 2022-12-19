@@ -1,5 +1,5 @@
 // //adding quote
-const myquote = JSON.parse(quote);
+const myquote = JSON.parse(quotes);
 var R = Math.floor(Math.random()*myquote.length);
 
 $('#q').html(`"${myquote[R].q}"`);
@@ -70,7 +70,6 @@ mygames.forEach(game => {
     </div>
     `;
 
-    console.log(game.p)
     $('#games').append($div);
 });
 
