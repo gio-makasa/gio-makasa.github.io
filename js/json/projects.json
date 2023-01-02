@@ -1,0 +1,97 @@
+[
+    {
+        "t": "Clock",
+        "l": "projects/Clock/clock.html",
+        "p": "pictures/clock.png"
+    },
+    {
+        "t": "Shop",
+        "l": "projects/Shop/shop.html",
+        "p": "pictures/onlineshop.png"
+    },
+    {
+        "t": "Movies",
+        "l": "projects/Movies/movies.html",
+        "p": "pictures/movies.png"
+    },
+    {
+        "t": "Tours (Georgia)",
+        "l": "projects/Tours_Georgia/index.html",
+        "p": "pictures/tours.png"
+    },
+    {
+        "t": "Lost_Found",
+        "l": "projects/Lost_Found/index.html",
+        "p": "pictures/lost_found.png"
+    },
+    {
+        "t": "Countdown",
+        "l": "projects/Countdown/Countdown.html",
+        "p": "pictures/countdown.png"
+    },
+    {
+        "t": "Quiz",
+        "l": "projects/Quiz/quiz.html",
+        "p": "pictures/quiz.png"
+    },
+    {
+        "t": "Notes",
+        "l": "projects/Notes/notes.html",
+        "p": "pictures/note.png"
+    },
+    {
+        "t": "ToDo",
+        "l": "projects/ToDo/ToDo.html",
+        "p": "pictures/ToDo.png"
+    },
+    {
+        "t": "Password Generator",
+        "l": "projects/PassGenerator/passgenerator.html",
+        "p": "pictures/PassGenerator.png"
+    },
+    {
+        "t": "Recipe",
+        "l": "projects/Recipe/recipe.html",
+        "p": "pictures/recipe.png"
+    },
+    {
+        "t": "Movies_2",
+        "l": "projects/Movies2/movies.html",
+        "p": "pictures/movies2.png"
+    },
+    {
+        "t": "Shopping List (AngularJS)",
+        "l": "projects/Shopping_list/Shopping_list.html",
+        "p": "pictures/Shoping_list.png"
+    },
+    {
+        "t": "City Tours (ReactJS)",
+        "l": "https://makasa-city-tours.netlify.app",
+        "p": "pictures/city-tours.png"
+    },
+    {
+        "t": "REDBERRY",
+        "l": "https://makasa-redberry.netlify.app",
+        "p": "pictures/redberry.png"
+    },
+    {
+        "t": "Europebet",
+        "l": "projects/Europebet/index.html",
+        "p": "pictures/europebet.png"
+    },
+    {
+        "t": "Form",
+        "l": "projects/Alliance/index.html",
+        "p": "pictures/alliance.png"
+    },
+    {
+        "t": "Golden Bunny",
+        "l": "https://makasa-golden-bunny.netlify.app",
+        "p": "pictures/golden-bunny.png"
+    },
+    {
+        "t": "Movie App",
+        "l": "https://makasa-movie-app.netlify.app",
+        "p": "pictures/movie-app.png"
+    }
+]

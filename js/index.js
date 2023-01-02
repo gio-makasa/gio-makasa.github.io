@@ -1,12 +1,15 @@
-// //adding quote
-const myquote = JSON.parse(quotes);
-var R = Math.floor(Math.random()*myquote.length);
+import myquote from "./json/quotes.json" assert {type: 'json'};
+import hardskill from "./json/hardskills.json" assert {type: 'json'};
+import softskill from "./json/softskills.json" assert {type: 'json'};
+import mygames from "./json/games.json" assert {type: 'json'};
+import myprojects from "./json/projects.json" assert {type: 'json'};
 
+//adding quote
+var R = Math.floor(Math.random()*myquote.length);
 $('#q').html(`"${myquote[R].q}"`);
 $('#a').html(`- ${myquote[R].a}`);
 
 //adding hard skills
-const hardskill = JSON.parse(hardskills);
 var id = 0;
 hardskill.forEach(element => {
 	let skill = `
@@ -30,9 +33,7 @@ $('#'+id).css("strokeDashoffset", 314 - (314 * element.l)/100);
 id++;
 });
 
-
 //adding soft skills
-const softskill = JSON.parse(softskills);
 softskill.forEach(element => {
     let skill = `
     <p>${element}
@@ -46,9 +47,7 @@ softskill.forEach(element => {
     $('#softskills').append(skill);
 });
 
-//Games and Projects
-const mygames = JSON.parse(games);
-
+//adding Games
 mygames.forEach(game => {
     let c1 = Math.floor(Math.random()*255);
     let c2 = Math.floor(Math.random()*255);
@@ -73,8 +72,7 @@ mygames.forEach(game => {
     $('#games').append($div);
 });
 
-const myprojects = JSON.parse(projects);
-
+//adding Projects
 myprojects.forEach(project => {
     let c1 = Math.floor(Math.random()*255);
     let c2 = Math.floor(Math.random()*255);
