@@ -558,55 +558,11 @@ body.dark {
   background-image: linear-gradient(to bottom right, var(--clr1), var(--clr2));
 }
 
-#main-content .skills #hardskills .border .frame {
-  background-image: linear-gradient(to bottom right, black, grey);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 90%;
-  margin: 5% 0 5% 0;
-}
-
-#main-content .skills #hardskills .border .frame .title {
-  width: fit-content;
+#main-content .skills #hardskills .border .title {
+  width: 100%;
+  padding: 1rem;
   font-size: medium;
   text-align: center;
-}
-
-#main-content .skills #hardskills .border .frame .circle {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-}
-
-#main-content .skills #hardskills .border .frame .circle svg {
-  position: relative;
-  width: fit-content;
-  transform: rotate(-90deg);
-}
-
-#main-content .skills #hardskills .border .frame .circle svg circle {
-  width: fit-content;
-  fill: transparent;
-  stroke: black;
-  stroke-width: 5;
-}
-
-#main-content .skills #hardskills .border .frame .circle svg circle:nth-child(2) {
-  stroke: var(--clr1);
-  filter: drop-shadow(0 0 2px black);
-  stroke-dasharray: 314;
-}
-
-#main-content .skills #hardskills .border .frame .circle .level {
-  position: absolute;
-  text-align: center;
-  top: 30%;
-  font-weight: 500;
-  font-size: 2.5em;
 }
 
 #main-content .skills #softskills {
@@ -673,7 +629,8 @@ body.dark {
   0% {
     left: -100%;
   }
-  50%, 100% {
+  50%,
+  100% {
     left: 100%;
   }
 }
@@ -682,7 +639,8 @@ body.dark {
   0% {
     top: -100%;
   }
-  50%, 100% {
+  50%,
+  100% {
     top: 100%;
   }
 }
@@ -691,7 +649,8 @@ body.dark {
   0% {
     right: -100%;
   }
-  50%, 100% {
+  50%,
+  100% {
     right: 100%;
   }
 }
@@ -700,7 +659,8 @@ body.dark {
   0% {
     bottom: -100%;
   }
-  50%, 100% {
+  50%,
+  100% {
     bottom: 100%;
   }
 }
@@ -720,7 +680,8 @@ body.dark {
   font-weight: 500;
 }
 
-#main-content .portfolio #games .frames, #main-content .portfolio #projects .frames {
+#main-content .portfolio #games .frames,
+#main-content .portfolio #projects .frames {
   flex: 0 0 25%;
   max-width: 25%;
   margin-bottom: 30px;
@@ -728,7 +689,8 @@ body.dark {
   margin: 2rem 0;
 }
 
-#main-content .portfolio #games .frames .sides, #main-content .portfolio #projects .frames .sides {
+#main-content .portfolio #games .frames .sides,
+#main-content .portfolio #projects .frames .sides {
   background-color: #393939;
   border: solid 5px var(--clr);
   border-style: ridge;
@@ -741,7 +703,10 @@ body.dark {
   transform-style: preserve-3d;
 }
 
-#main-content .portfolio #games .frames .sides .front, #main-content .portfolio #games .frames .sides .back, #main-content .portfolio #projects .frames .sides .front, #main-content .portfolio #projects .frames .sides .back {
+#main-content .portfolio #games .frames .sides .front,
+#main-content .portfolio #games .frames .sides .back,
+#main-content .portfolio #projects .frames .sides .front,
+#main-content .portfolio #projects .frames .sides .back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -749,28 +714,33 @@ body.dark {
   backface-visibility: hidden;
 }
 
-#main-content .portfolio #games .frames .sides .front, #main-content .portfolio #projects .frames .sides .front {
+#main-content .portfolio #games .frames .sides .front,
+#main-content .portfolio #projects .frames .sides .front {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#main-content .portfolio #games .frames .sides .front h2, #main-content .portfolio #projects .frames .sides .front h2 {
+#main-content .portfolio #games .frames .sides .front h2,
+#main-content .portfolio #projects .frames .sides .front h2 {
   text-align: center;
   color: white;
   text-shadow: 0 0 10px blue, 0 0 20px #4040ff;
 }
 
-#main-content .portfolio #games .frames .sides .back, #main-content .portfolio #projects .frames .sides .back {
+#main-content .portfolio #games .frames .sides .back,
+#main-content .portfolio #projects .frames .sides .back {
   transform: rotateY(180deg);
 }
 
-#main-content .portfolio #games .frames .sides .back img, #main-content .portfolio #projects .frames .sides .back img {
+#main-content .portfolio #games .frames .sides .back img,
+#main-content .portfolio #projects .frames .sides .back img {
   width: 100%;
   height: 100%;
 }
 
-#main-content .portfolio #games .frames:hover .sides, #main-content .portfolio #projects .frames:hover .sides {
+#main-content .portfolio #games .frames:hover .sides,
+#main-content .portfolio #projects .frames:hover .sides {
   transform: rotateY(180deg);
 }
 

@@ -14,16 +14,7 @@ var id = 0;
 hardskill.forEach(element => {
 	let skill = `
 		<div class="border" style="--clr1:${element.clr1}; --clr2:${element.clr2}">
-            <div class="frame">
-                <h2 class="title">${element.s}</h2>
-                <div class="circle" style="--clr:${element.clr1};">
-                    <svg>
-                        <circle cx="50%" cy="50%" r="50"></circle>
-                        <circle cx="50%" cy="50%" r="50" id="${id}"></circle>
-                    </svg>
-                    <div class="level">${element.l}%</div>
-                </div>
-            </div>
+            <h2 class="title">${element.s}</h2>
         </div>
 `;
 

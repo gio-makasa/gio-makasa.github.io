@@ -19,6 +19,7 @@ body {
     line-height: 1.5;
     font-size: 16px;
 }
+
 body.dark {
     --bg-black-900: #151515;
     --bg-black-100: #222222;
@@ -319,7 +320,7 @@ body.dark {
             bottom: -40px;
         }
 
-        #quotes{
+        #quotes {
             text-align: center;
             flex-direction: column;
             flex: 0 0 100%;
@@ -532,80 +533,49 @@ body.dark {
                 font-weight: 500;
             }
         }
-        #hardskills{
+
+        #hardskills {
             clear: both;
             display: flex;
             justify-content: space-evenly;
             flex-wrap: wrap;
             color: white;
-            .border{
+
+            .border {
                 border-radius: 10px;
                 overflow: hidden;
                 width: 15%;
                 margin: 20px 0;
                 background-image: linear-gradient(to bottom right, var(--clr1), var(--clr2));
-                .frame{
-                    background-image: linear-gradient(to bottom right, black, grey);
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    height: 90%;
-                    margin: 5% 0 5% 0;
-                    .title{
-                        width: fit-content;
-                        font-size: medium;
-                        text-align: center;
-                    }
-                    .circle{
-                        position: relative;
-                        width: 100%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        margin: auto;
-                        svg{
-                            position: relative;
-                            width: fit-content;
-                            transform: rotate(-90deg);
-                            circle{
-                                width: fit-content;
-                                fill: transparent;
-                                stroke: black;
-                                stroke-width: 5;
-                            }
-                            circle:nth-child(2){
-                                stroke: var(--clr1);
-                                filter: drop-shadow(0 0 2px black);
-                                stroke-dasharray: 314;
-                            }
-                        }
-                        .level{
-                            position: absolute;
-                            text-align: center;
-                            top: 30%;
-                            font-weight: 500;
-                            font-size: 2.5em;
-                        }
-                    }
+
+                .title {
+                    width: 100%;
+                    padding: 1rem;
+                    font-size: medium;
+                    text-align: center;
                 }
             }
         }
-        #softskills{
+
+        #softskills {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-evenly;
             color: white;
-            p{
+
+            p {
                 position: relative;
                 overflow: hidden;
                 padding: 2rem;
                 margin-bottom: 30px;
                 background-image: linear-gradient(to bottom right, rgba(72, 72, 72, 0.5), black);
                 font-weight: bold;
-                span{
+
+                span {
                     position: absolute;
                     display: block;
                 }
+
                 span:nth-child(1) {
                     top: 0;
                     left: -100%;
@@ -614,6 +584,7 @@ body.dark {
                     background: linear-gradient(90deg, transparent, #03e9f4);
                     animation: btn-anim1 1s linear infinite;
                 }
+
                 span:nth-child(2) {
                     top: -100%;
                     right: 0;
@@ -623,6 +594,7 @@ body.dark {
                     animation: btn-anim2 1s linear infinite;
                     animation-delay: .25s
                 }
+
                 span:nth-child(3) {
                     bottom: 0;
                     right: -100%;
@@ -632,6 +604,7 @@ body.dark {
                     animation: btn-anim3 1s linear infinite;
                     animation-delay: .5s
                 }
+
                 span:nth-child(4) {
                     bottom: -100%;
                     left: 0;
@@ -642,37 +615,49 @@ body.dark {
                     animation-delay: .75s
                 }
             }
+
             @keyframes btn-anim1 {
-              0% {
-                left: -100%;
-              }
-              50%,100% {
-                left: 100%;
-              }
+                0% {
+                    left: -100%;
+                }
+
+                50%,
+                100% {
+                    left: 100%;
+                }
             }
+
             @keyframes btn-anim2 {
-              0% {
-                top: -100%;
-              }
-              50%,100% {
-                top: 100%;
-              }
+                0% {
+                    top: -100%;
+                }
+
+                50%,
+                100% {
+                    top: 100%;
+                }
             }
+
             @keyframes btn-anim3 {
-              0% {
-                right: -100%;
-              }
-              50%,100% {
-                right: 100%;
-              }
+                0% {
+                    right: -100%;
+                }
+
+                50%,
+                100% {
+                    right: 100%;
+                }
             }
+
             @keyframes btn-anim4 {
-              0% {
-                bottom: -100%;
-              }
-              50%,100% {
-                bottom: 100%;
-              }
+                0% {
+                    bottom: -100%;
+                }
+
+                50%,
+                100% {
+                    bottom: 100%;
+                }
             }
         }
     }
@@ -693,14 +678,16 @@ body.dark {
             }
         }
 
-        #games, #projects{
-            .frames{
+        #games,
+        #projects {
+            .frames {
                 flex: 0 0 25%;
                 max-width: 25%;
                 margin-bottom: 30px;
                 height: 200px;
                 margin: 2rem 0;
-                .sides{
+
+                .sides {
                     background-color: #393939;
                     border: solid 5px var(--clr);
                     border-style: ridge;
@@ -711,33 +698,40 @@ body.dark {
                     cursor: pointer;
                     transition: transform 0.8s;
                     transform-style: preserve-3d;
-                    .front, .back{
+
+                    .front,
+                    .back {
                         position: absolute;
                         width: 100%;
                         height: 100%;
                         -webkit-backface-visibility: hidden;
                         backface-visibility: hidden;
                     }
-                    .front{
+
+                    .front {
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        h2{
+
+                        h2 {
                             text-align: center;
                             color: white;
                             text-shadow: 0 0 10px blue, 0 0 20px rgb(64, 64, 255);
                         }
                     }
-                    .back{
+
+                    .back {
                         transform: rotateY(180deg);
-                        img{
+
+                        img {
                             width: 100%;
                             height: 100%;
                         }
                     }
                 }
             }
-            .frames:hover .sides{
+
+            .frames:hover .sides {
                 transform: rotateY(180deg);
             }
         }
@@ -790,9 +784,9 @@ body.dark {
             max-width: 50%;
         }
 
-        .skills{
-            #hardskills{
-                .border{
+        .skills {
+            #hardskills {
+                .border {
                     width: 18%;
                 }
             }
@@ -813,17 +807,19 @@ body.dark {
         }
 
         .about .about-content {
+
             .experience,
             .education,
             .skills,
-            .personal-info .info-item{
+            .personal-info .info-item {
                 flex: 0 0 100%;
                 max-width: 100%;
             }
         }
-        .skills{
-            #hardskills{
-                .border{
+
+        .skills {
+            #hardskills {
+                .border {
                     width: 120px;
                 }
             }
