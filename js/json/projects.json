@@ -93,5 +93,10 @@
         "t": "Movie App",
         "l": "https://makasa-movie-app.netlify.app",
         "p": "pictures/movie-app.png"
+    },
+    {
+        "t": "E207",
+        "l": "https://e207room.iliauni.edu.ge",
+        "p": "pictures"
     }
 ]
