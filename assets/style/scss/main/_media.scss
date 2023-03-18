@@ -1,0 +1,33 @@
+@media screen and (max-width: 1000px) {
+    header {
+        display: none;
+    }
+
+    section {
+        width: 100%;
+    }
+
+    #home {
+        #homeContainer {
+            grid-template-areas: 'info info info'
+                '. img .'
+                'quote quote quote';
+            gap: 0;
+        }
+    }
+
+    #aboutMe {
+        table {
+            display: none;
+        }
+
+        .education-experience {
+            flex-direction: column;
+
+            &::before,
+            &::after {
+                display: none;
+            }
+        }
+    }
+}

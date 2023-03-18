@@ -1,0 +1,55 @@
+header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: $backgroundColor;
+    z-index: 100;
+
+    nav {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: fit-content;
+
+        .tab {
+            border-left: 0.1rem solid $borderColor;
+            color: $mainColor;
+            background-color: $backgroundColor;
+            padding: 1rem 2rem;
+            text-transform: uppercase;
+            // transform: skewY(-10deg) rotateZ(10deg);
+            text-decoration: none;
+            cursor: pointer;
+
+            &:last-of-type {
+                border-right: 0.1rem solid $borderColor;
+            }
+        }
+    }
+
+    #cvbtn {
+        position: absolute;
+        right: 0;
+        background-color: $mainColor;
+        color: white;
+        align-self: center;
+        margin-right: 1rem;
+        padding: 0.8rem 1rem;
+        font-size: large;
+        border: none;
+        cursor: pointer;
+
+        // &::before {
+        //     @include cutCorner;
+        //     top: -0.5rem;
+        //     left: -0.5rem;
+        // }
+
+        // &::after {
+        //     @include cutCorner;
+        //     bottom: -0.5rem;
+        //     right: -0.5rem;
+        // }
+    }
+}
