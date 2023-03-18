@@ -1,0 +1,91 @@
+#liveProjects,
+#personalProjects,
+#games {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 11%;
+
+    .frames {
+        width: min(18rem, 100%);
+        margin: 2rem 0;
+        background-color: #393939;
+        border: solid 0.2rem var(--rgbcolor);
+        border-style: ridge;
+        box-shadow: 0 0 3rem var(--rgbcolor);
+
+        .cover {
+            position: relative;
+            width: 100%;
+            height: 12.5rem;
+            cursor: pointer;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+
+            .front,
+            .back {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+            }
+
+            .front {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                h2 {
+                    color: white;
+                    text-transform: capitalize;
+                    text-align: center;
+                    text-shadow: 0 0 10px $mainColor, 0 0 20px $mainColor;
+                }
+            }
+
+            .back {
+                transform: rotateY(180deg);
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        &:hover .cover {
+            transform: rotateY(180deg);
+        }
+    }
+
+    .techs {
+        display: flex;
+        padding: 0.5rem 0;
+
+        p {
+            color: $backgroundColor;
+            background: $pillColor;
+            text-transform: uppercase;
+            border-radius: 50rem;
+            padding: 0.1rem 1rem;
+            margin-left: 0.3rem;
+        }
+    }
+
+    &::before {
+        @include beforeSection;
+    }
+}
+
+#liveProjects::before {
+    content: 'Live projects:';
+}
+
+#personalProjects::before {
+    content: 'Personal projects:';
+}
+
+#games::before {
+    content: 'Games:';
+}

@@ -1,0 +1,22 @@
+@font-face {
+    font-family: "dancing";
+    src: url(../../fonts/DancingScript-VariableFont_wght.ttf) format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Patrick";
+    src: url(../../fonts/PatrickHand-Regular.ttf) format('truetype');
+    font-display: swap;
+}
+
+@import '../components/variables';
+@import '../components/reset';
+@import '../components/mixin';
+@import '../components/animations';
+@import '../components/header';
+@import '../components/home';
+@import '../components/about';
+@import '../components/skills';
+@import '../components/projects';
+@import '../main/media';

@@ -1,0 +1,18 @@
+@mixin cutCorner {
+    content: '';
+    position: absolute;
+    transform: rotateZ(45deg);
+    width: 1rem;
+    height: 1rem;
+    background-color: $backgroundColor;
+    pointer-events: none;
+}
+
+@mixin beforeSection {
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    font-size: xx-large;
+    color: $mainColor;
+    margin-bottom: 1rem;
+}
