@@ -1,0 +1,486 @@
+{
+    "fullname": "George Makasarashvili",
+    "avatarPhoto": "./assets/images/avatar.png",
+    "fields": [
+        "Front-end Developer"
+    ],
+    "shortInfo": "I am front-end Developer with 1 year of experience, most of my project are built using HTML, CSS(Scss/Sass) and JS, but couple of my personal projects are built using Vue.js(VUEX) and also I have little experience with React.",
+    "socialNetworks": {
+        "linkeden": "",
+        "github": "",
+        "codepen": ""
+    },
+    "aboutme": "I am a student now studying at Caucasus University (3rd year), major: Computer Science. In terms of Web Development, I have a solid knowledge and experience in HTML, CSS(Sass/Scss), JavaScript (JQuery), Vue.js. I have worked on real projects, also I have basic knowledge at React and Angular. In term of Backend, I know Python (Flask) and have basic knowledge at PHP. I have experience and knowledge at SQL, I can work with data in Relational Database Management System (RDBMS), create data bases and write procedures, also I have basic knowledge at C, C++, Racket, Algorithms and Data structures. I am detail-oriented, quick learner, analytical thinker and organized with a high sense of responsibility.",
+    "aboutDetails": {
+        "email": "giorgimakasarashvili@gmail.com",
+        "phone": "+995 571 70 66 32",
+        "birthday": "30-nov-2001",
+        "degree": "The Bachelor of Computer Science",
+        "city": "Tbilisi",
+        "age": 0
+    },
+    "education": [
+        {
+            "years": "2020-present",
+            "title": "Computer Science",
+            "info": "Caucasus University"
+        },
+        {
+            "years": "2022",
+            "title": "Vue",
+            "info": "The Complete Guide (incl. Router & Composition API) - udemy.com"
+        },
+        {
+            "years": "2022",
+            "title": "Introduction to Computer Science",
+            "info": "CS50 - cs50.harvard.edu"
+        },
+        {
+            "years": "2023",
+            "title": "Python Basics for Data Science",
+            "info": "courses.edx.org"
+        },
+        {
+            "years": "2023",
+            "title": "Analyzing Data with Python",
+            "info": "courses.edx.org"
+        },
+        {
+            "years": "2023",
+            "title": "Visualizing Data with Python",
+            "info": "courses.edx.org"
+        }
+    ],
+    "experience": [
+        {
+            "years": "2021-2022",
+            "title": "Front end developer",
+            "info": "Upwork - Freelancer, code editing and bug fixing"
+        },
+        {
+            "years": "2021-2022",
+            "title": "Front end developer",
+            "info": "Fiverr - Freelancer, code editing and bug fixing"
+        },
+        {
+            "years": "2022-2023",
+            "title": "Front end developer",
+            "info": "Unilab - creating web pages using HTML, CSS, JavaScript"
+        }
+    ],
+    "hardskills": [
+        {
+            "skill": "HTML",
+            "color1": "#762900",
+            "color2": "orange"
+        },
+        {
+            "skill": "CSS",
+            "color1": "blue",
+            "color2": "green"
+        },
+        {
+            "skill": "Sass/Scss",
+            "color1": "pink",
+            "color2": "purple"
+        },
+        {
+            "skill": "Bootstrap 5",
+            "color1": "purple",
+            "color2": "#4000ff"
+        },
+        {
+            "skill": "W3.css",
+            "color1": "#00ff78",
+            "color2": "green"
+        },
+        {
+            "skill": "JavaScript",
+            "color1": "#ff4900",
+            "color2": "#ffb900"
+        },
+        {
+            "skill": "TypeScript",
+            "color1": "#3178c6",
+            "color2": "#083061"
+        },
+        {
+            "skill": "JQuery",
+            "color1": "#0868ac",
+            "color2": "#131b28"
+        },
+        {
+            "skill": "JSON",
+            "color1": "#969696",
+            "color2": "#222222"
+        },
+        {
+            "skill": "AJAX",
+            "color1": "#2284c6",
+            "color2": "#4a98ce"
+        },
+        {
+            "skill": "Vue.js",
+            "color1": "green",
+            "color2": "black"
+        },
+        {
+            "skill": "React.js",
+            "color1": "#61d9fc",
+            "color2": "#2b2c30"
+        },
+        {
+            "skill": "AngularJS",
+            "color1": "red",
+            "color2": "white"
+        },
+        {
+            "skill": "Python",
+            "color1": "yellow",
+            "color2": "blue"
+        },
+        {
+            "skill": "Flask",
+            "color1": "blue",
+            "color2": "black"
+        },
+        {
+            "skill": "PHP",
+            "color1": "#4f5b93",
+            "color2": "white"
+        },
+        {
+            "skill": "C/C++",
+            "color1": "#0868ac",
+            "color2": "white"
+        },
+        {
+            "skill": "Git (Github)",
+            "color1": "#e84e31",
+            "color2": "#3c2b00"
+        },
+        {
+            "skill": "SQL",
+            "color1": "gold",
+            "color2": "blue"
+        },
+        {
+            "skill": "UI/UX Design",
+            "color1": "green",
+            "color2": "black"
+        },
+        {
+            "skill": "Figma",
+            "color1": "#f24e1e",
+            "color2": "#ff7262"
+        },
+        {
+            "skill": "English (B2)",
+            "color1": "red",
+            "color2": "blue"
+        },
+        {
+            "skill": "Microsoft apps",
+            "color1": "#f25022",
+            "color2": "#ffb900"
+        },
+        {
+            "skill": "Algorithms",
+            "color1": "yellow",
+            "color2": "green"
+        },
+        {
+            "skill": "Data structures",
+            "color1": "white",
+            "color2": "blue"
+        },
+        {
+            "skill": "Agile Methodology",
+            "color1": "blue",
+            "color2": "orange"
+        }
+    ],
+    "softskills": [
+        "Leadership",
+        "Collaboration/Teamwork",
+        "Time Management",
+        "Problem Solving",
+        "Critical thinking",
+        "Self Motivated",
+        "Responsibility",
+        "Flexibility/Adaptability",
+        "Accountability"
+    ],
+    "liveProjects": [
+        {
+            "t": "E207",
+            "l": "https://e207room.iliauni.edu.ge",
+            "p": "./assets/images/projects/e207.png",
+            "teches": [
+                "html",
+                "css",
+                "js"
+            ]
+        },
+        {
+            "t": "Una chatbot",
+            "l": "http://unabot.iliauni.edu.ge",
+            "p": "./assets/images/projects/una.png",
+            "teches": [
+                "html",
+                "css",
+                "js"
+            ]
+        }
+    ],
+    "personalProjects": [
+        {
+            "t": "Form",
+            "l": "./assets/experience/projects/Alliance/index.html",
+            "p": "./assets/images/projects/Alliance.png",
+            "teches": [
+                "html",
+                "css",
+                "js"
+            ]
+        },
+        {
+            "t": "Europebet",
+            "l": "./assets/experience/projects/Europebet/index.html",
+            "p": "./assets/images/projects/Europebet.png",
+            "teches": [
+                "html",
+                "css",
+                "js"
+            ]
+        },
+        {
+            "t": "Lost and found",
+            "l": "./assets/experience/projects/Lost_Found/index.html",
+            "p": "./assets/images/projects/Lost_Found.png",
+            "teches": [
+                "html",
+                "css",
+                "js"
+            ]
+        },
+        {
+            "t": "Movies",
+            "l": "./assets/experience/projects/Movies/index.html",
+            "p": "./assets/images/projects/Movies.png",
+            "teches": [
+                "html",
+                "css",
+                "js",
+                "api"
+            ]
+        },
+        {
+            "t": "Movies2",
+            "l": "./assets/experience/projects/Movies2/index.html",
+            "p": "./assets/images/projects/Movies2.png",
+            "teches": [
+                "html",
+                "css",
+                "js",
+                "api"
+            ]
+        },
+        {
+            "t": "Notes",
+            "l": "./assets/experience/projects/Notes/index.html",
+            "p": "./assets/images/projects/Notes.png",
+            "teches": [
+                "html",
+                "css",
+                "js"
+            ]
+        },
+        {
+            "t": "Quiz",
+            "l": "./assets/experience/projects/Quiz/index.html",
+            "p": "./assets/images/projects/Quiz.png",
+            "teches": [
+                "html",
+                "css",
+                "js"
+            ]
+        },
+        {
+            "t": "Recipe",
+            "l": "./assets/experience/projects/Recipe/index.html",
+            "p": "./assets/images/projects/Recipe.png",
+            "teches": [
+                "html",
+                "css",
+                "js",
+                "api"
+            ]
+        },
+        {
+            "t": "Shop",
+            "l": "./assets/experience/projects/Shop/index.html",
+            "p": "./assets/images/projects/onlineshop.png",
+            "teches": [
+                "html",
+                "css",
+                "js"
+            ]
+        },
+        {
+            "t": "Shopping list",
+            "l": "./assets/experience/projects/Shopping_list/index.html",
+            "p": "./assets/images/projects/Shopping_list.png",
+            "teches": [
+                "html",
+                "css",
+                "Angular.JS"
+            ]
+        },
+        {
+            "t": "ToDo",
+            "l": "./assets/experience/projects/ToDo/index.html",
+            "p": "./assets/images/projects/ToDo.png",
+            "teches": [
+                "html",
+                "css",
+                "js"
+            ]
+        },
+        {
+            "t": "Tourist",
+            "l": "./assets/experience/projects/Tourist_Landing_Page/index.html",
+            "p": "./assets/images/projects/tourist_landing_page.png",
+            "teches": [
+                "html",
+                "scss",
+                "js"
+            ]
+        },
+        {
+            "t": "Tours Georgia",
+            "l": "./assets/experience/projects/Tours_Georgia/index.html",
+            "p": "./assets/images/projects/tours.png",
+            "teches": [
+                "html",
+                "scss",
+                "js"
+            ]
+        },
+        {
+            "t": "City tours",
+            "l": "https://makasa-city-tours.netlify.app",
+            "p": "./assets/images/projects/city_tours.png",
+            "teches": [
+                "html",
+                "css",
+                "React.js"
+            ]
+        },
+        {
+            "t": "Form to get laptop",
+            "l": "https://makasa-redberry.netlify.app",
+            "p": "./assets/images/projects/Form_to_get_laptop.png",
+            "teches": [
+                "html",
+                "css",
+                "api",
+                "js"
+            ]
+        },
+        {
+            "t": "Golder bunny",
+            "l": "https://makasa-golden-bunny.netlify.app",
+            "p": "./assets/images/projects/golden_bunny.png",
+            "teches": [
+                "html",
+                "css",
+                "api",
+                "Vue"
+            ]
+        },
+        {
+            "t": "Movie app",
+            "l": "https://makasa-movie-app.netlify.app",
+            "p": "./assets/images/projects/movie_app.png",
+            "teches": [
+                "html",
+                "css",
+                "api",
+                "Vue"
+            ]
+        }
+    ],
+    "games": [
+        {
+            "t": "Flip coin",
+            "l": "./assets/experience/games/flip_coin/index.html",
+            "p": "./assets/images/projects/flip_coin.png",
+            "teches": [
+                "html",
+                "css",
+                "js"
+            ]
+        },
+        {
+            "t": "Blackjack",
+            "l": "./assets/experience/games/Blackjack/index.html",
+            "p": "./assets/images/projects/Blackjack.png",
+            "teches": [
+                "html",
+                "css",
+                "js"
+            ]
+        },
+        {
+            "t": "domino",
+            "l": "./assets/experience/games/domino/index.html",
+            "p": "./assets/images/projects/domino.png",
+            "teches": [
+                "html",
+                "css",
+                "js"
+            ]
+        },
+        {
+            "t": "fortune",
+            "l": "./assets/experience/games/fortune/index.html",
+            "p": "./assets/images/projects/fortuna.png",
+            "teches": [
+                "html",
+                "css",
+                "js"
+            ]
+        },
+        {
+            "t": "monster slayer",
+            "l": "./assets/experience/games/monster_slayer/index.html",
+            "p": "./assets/images/projects/monster_slayer.png",
+            "teches": [
+                "html",
+                "css",
+                "vue"
+            ]
+        },
+        {
+            "t": "race",
+            "l": "./assets/experience/games/race/index.html",
+            "p": "./assets/images/projects/race.png",
+            "teches": [
+                "html",
+                "css",
+                "js"
+            ]
+        },
+        {
+            "t": "sonic",
+            "l": "./assets/experience/games/sonic/index.html",
+            "p": "./assets/images/projects/sonic.png",
+            "teches": [
+                "html",
+                "css",
+                "js"
+            ]
+        }
+    ]
+}

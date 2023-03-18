@@ -1,0 +1,181 @@
+body{
+    background-color: rgb(0,70,15);
+}
+.frame{
+    background-color: rgb(20,20,20);
+    top: 0;
+    width: 40%;
+    height: 70%;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+pre{
+    text-align: center;
+    height: 10%;
+    color: white;
+}
+section{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 70%;
+}
+article{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+img{
+   width: 19%;
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    margin: 20px 40px;
+}
+.buttons button, #submit{
+    color: white;
+    font-weight: bold;
+    background-color: rgb(0,70,30);
+    border-style: none;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+#result{
+    font-size: 20px;
+    font-weight: bold;
+}
+#game_over{
+    margin: 3px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+#reset{
+    background-color: red;
+}
+.bets{
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+}
+.bets button{
+    background-color: #04AA6D;
+    border: 1px solid green;
+    color: white;
+    padding: 5px 20px;
+    cursor: pointer; 
+    float: left;
+}
+.bets button:not(:last-child){
+    border-right: none;
+}
+.bets button:first-child{
+    border-radius: 5px 0 0 0;
+}
+.bets button:hover{
+    background-color: #3e8e41;
+}
+.coins{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    background-color: #202020;
+    border-radius: 10px 10px 0 0;
+    border: solid 3px white;
+    border-bottom: none;
+    color: white;
+    width: 40%;
+    height: 25%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#pot{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    font-size: large;
+    width: 50px;
+    height: 30px;
+    margin: 5px 10px 15px 3px;
+}
+.circle{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle svg{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+}
+.circle svg circle{
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke: white;
+    stroke-width: 5;
+    transform: translate(5px,5px);
+}
+.circle svg circle:nth-child(2){
+    stroke: blue;
+    stroke-dasharray: 440;
+}
+@media screen and (max-width:600px) {
+    body{
+        padding: 0;
+        margin: 0;
+    }
+    .frame{
+        width: 100%;
+        border: none;
+        border-radius: 0;
+        height: fit-content;
+        margin: 0;
+    }
+    #table{
+        display: flex;
+        row-gap: 3px;
+    }
+    #game_over{
+        font-size: 20px;
+    }
+    .buttons{
+        flex-direction: column;
+        align-items: center;
+    }
+    .buttons button{
+        margin: 10px;
+        width: 80%;
+    }
+    .coins{
+        padding-top: 10%;
+        width: 100%;
+        border: none;
+        border-radius: 0;
+    }
+    .bets{
+        width: 100%;
+        justify-content: space-between;
+    }
+    .bets button:first-child{
+        border-radius: 0;
+    }
+    .bets button:not(:last-child){
+        border-right: 1px solid green;
+    }
+}

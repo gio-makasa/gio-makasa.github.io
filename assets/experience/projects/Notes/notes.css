@@ -1,0 +1,61 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: powderblue;
+    margin: 0;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#add{
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: greenyellow;
+    padding: 0.5rem;
+    font-size: 1rem;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+}
+
+.notes{
+    background-color: white;
+    margin: 20px;
+    width: 400px;
+    height: 400px;
+}
+
+.notes #tools{
+    background-color: rgb(2, 112, 7);
+    padding: 0.5rem;
+}
+
+.notes #tools button{
+    border: none;
+    background-color: transparent;
+    color: greenyellow;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.notes .main{
+    background-color: rgb(224, 224, 224);
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.notes textarea{
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+.notes .hidden{
+    display: none;
+}

@@ -1,0 +1,44 @@
+body {
+    background-color: #202020;
+}
+
+#container {
+    background-color: white;
+    width: 400px;
+    max-width: 100%;
+    border-radius: 18px;
+    position: absolute;
+    overflow: hidden;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#container h1,
+ul {
+    margin-left: 2rem;
+}
+
+#container ul {
+    list-style: none;
+    padding: 0;
+}
+
+#container>ul>li {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+}
+
+#container>button {
+    width: 100%;
+    border: none;
+    color: white;
+    font-weight: bold;
+    background-color: blue;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+#container>button:hover {
+    background-color: rgb(0, 0, 179);
+}

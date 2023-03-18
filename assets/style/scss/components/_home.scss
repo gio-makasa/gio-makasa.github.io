@@ -1,0 +1,65 @@
+#home {
+    #homeContainer {
+        display: grid;
+        grid-template-areas: 'info img'
+            'quote quote';
+        gap: 2rem;
+        font-size: larger;
+
+        #homeInfo {
+            grid-area: info;
+            padding: 0.5rem 1rem;
+            border-radius: 1rem;
+            border: 2px dashed $mainColor;
+            font-size: larger;
+
+            h2 {
+                color: $mainColor;
+                text-transform: capitalize;
+            }
+
+            #fullname {
+                color: $mainColor;
+                text-transform: capitalize;
+            }
+
+            #fields {
+                display: flex;
+                gap: 0.2rem;
+                padding: 0.7rem 0;
+                cursor: default;
+
+                p {
+                    color: $backgroundColor;
+                    background: $pillColor;
+                    width: fit-content;
+                    border-radius: 1rem;
+                    padding: 0.2rem 1rem;
+                    font-size: large;
+                }
+            }
+
+            #shortInfo {
+                font-family: 'Patrick';
+            }
+        }
+
+        img {
+            grid-area: img;
+            width: 18rem;
+            height: auto;
+            border: 0.3rem ridge $mainColor;
+        }
+
+        #quotes {
+            grid-area: quote;
+            text-align: center;
+            font-size: 2rem;
+            margin-top: 1rem;
+
+            #author {
+                color: $mainColor;
+            }
+        }
+    }
+}

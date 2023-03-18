@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="flip-coin.css">
+    <title>Flip a coin</title>
+</head>
+<body>
+    <div class="container">
+        <p class="top">UP TO 3</p>
+        <div class="coin" id="coin">
+            <div class="heads">
+                <img src="../pictures/head.png" alt="head">
+            </div>
+         
+            <div class="tails">
+               <img src="../pictures/tail.png" alt="tail">
+            </div>
+        </div>
+        <div class="stats">
+            <p id="ME">YOU: 0</p>
+            <p id="PC">PC: 0</p>
+        </div>
+        <div class="buttons">
+            <button id="flip-tail">Tail</button>
+            <button id="reset-button">Reset</button>
+            <button id="flip-head">Head</button>
+        </div>
+    </div>
+</body>
+<script>
+    let coin = document.querySelector(".coin");
+let flip_tail = document.querySelector("#flip-tail");
+let flip_head = document.querySelector("#flip-head");
+let resetBtn = document.querySelector("#reset-button");
+let me = 0;
+let pc = 0;
+let texti = '';
+let feri = '';
+//TAIL
+flip_tail.addEventListener("click", () => {
+let i = Math.floor(Math.random() * 2);
+coin.style.animation = "none";
+if(i){
+    setTimeout(function(){
+        coin.style.animation = "spin-heads 3s forwards";
+    }, 100);
+    pc++;
+    texti = 'Wrong';
+    feri = 'red';
+}
+else{
+    setTimeout(function(){
+        coin.style.animation = "spin-tails 3s forwards";
+    }, 100);
+    me++;
+    texti = 'Congrats!!!';
+    feri = 'rgb(0,255,0)';
+}
+setTimeout(updateStats, 3000);
+disableButton();
+document.querySelector("p").textContent = 'UP TO 3';
+document.querySelector("p").style.color = 'white';
+});
+//HEAD
+flip_head.addEventListener("click", () => {
+let i = Math.floor(Math.random() * 2);
+coin.style.animation = "none";
+if(i){
+    setTimeout(function(){
+        coin.style.animation = "spin-heads 3s forwards";
+    }, 100);
+    me++;
+    texti = 'Congrats!!!';
+    feri = 'rgb(0,255,0)';
+}
+else{
+    setTimeout(function(){
+        coin.style.animation = "spin-tails 3s forwards";
+    }, 100);
+    pc++;
+    texti = 'Wrong';
+    feri = 'red';
+}
+setTimeout(updateStats, 3000);
+disableButton();
+document.querySelector("p").textContent = 'UP TO 3';
+document.querySelector("p").style.color = 'white';
+});
+
+function updateStats(){
+document.querySelector("#ME").textContent = `YOU: ${me}`;
+document.querySelector("#PC").textContent = `PC: ${pc}`;
+if(me == 3){
+document.querySelector("p").textContent = 'YOU WON!!!';
+document.querySelector("p").style.color = 'gold';
+disableButton();
+} else if(pc == 3){
+document.querySelector("p").textContent = 'YOU LOST';
+document.querySelector("p").style.color = feri;
+disableButton();
+}else {
+document.querySelector("p").textContent = texti;
+document.querySelector("p").style.color = feri;
+}
+}
+function disableButton(){
+if(me == 3 || pc == 3){
+    flip_tail.disabled = true;
+    flip_head.disabled = true;
+} else {
+flip_tail.disabled = true;
+flip_head.disabled = true;
+setTimeout(function(){
+    flip_tail.disabled = false;
+    flip_head.disabled = false;
+},3000);
+}
+}
+resetBtn.addEventListener("click",() => {
+coin.style.animation = "none";
+flip_tail.disabled = false;
+flip_head.disabled = false;
+me = 0;
+pc = 0;
+texti = 'UP TO 3';
+feri = 'white';
+updateStats();
+});
+</script>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="domino.css">
+    <title>Domino</title>
+</head>
+<body>
+    <div class="frame">
+        <div class="top">
+            <span>YOU</span>
+            <span>PC</span>
+        </div>
+        <div class="sides">
+            <img src="../pictures/domino/.png" alt="domino">
+            <img src="../pictures/domino/.png" alt="domino">
+        </div>
+        <span id="Name_coil" style="font-weight: bold; font-size: 30px;"></span>
+        <div class="stat">
+            <p id="rezult" style="font-weight: bold; font-size: 30px;"></p>
+            <p id="mogeba_wageba" style="font-weight: bold; font-size: 30px;"></p>
+        </div>
+        <div>
+            <button id="reset" onclick="reset()">ხელახლა ცდა</button>
+        </div>
+    </div>
+</body>
+<script>
+    function domino(URL_img, Name, qula){
+        this.URL_img = URL_img;
+        this.Name    = Name;
+        this.qula    = qula;
+    }
+    var R_me = Math.floor(28 * Math.random());
+    var R_pc = Math.floor(28 * Math.random());
+    var coil = [];
+    coil[0] = new domino("0-0.png", "**", 0);
+    coil[1] = new domino("0-1.png", "იაქე *", 1);
+    coil[2] = new domino("0-2.png", "დუ *", 2);
+    coil[3] = new domino("0-3.png", "სე *", 3);
+    coil[4] = new domino("0-4.png", "ჩარი *", 4);
+    coil[5] = new domino("0-5.png", "ფანჯი *", 5);
+    coil[6] = new domino("0-6.png", "შაში *", 6);
+    coil[7] = new domino("1-1.png", "იაგანი", 2);
+    coil[8] = new domino("1-2.png", "დუ იაქე", 3);
+    coil[9] = new domino("1-3.png", "სე იაქე", 4);
+    coil[10] = new domino("1-4.png", "ჩარი იაქე", 5);
+    coil[11] = new domino("1-5.png", "ფანჯი იაქე", 6);
+    coil[12] = new domino("1-6.png", "შაში იაქე", 7);
+    coil[13] = new domino("2-2.png", "დუ ბარა", 4);
+    coil[14] = new domino("2-3.png", "სევაი დუ", 5);
+    coil[15] = new domino("2-4.png", "ჩარი დუ", 6);
+    coil[16] = new domino("2-5.png", "ფანჯი დუ", 7);
+    coil[17] = new domino("2-6.png", "შაში დუ", 8);
+    coil[18] = new domino("3-3.png", "დუ სე", 6);
+    coil[19] = new domino("3-4.png", "ჩარი სე", 7);
+    coil[20] = new domino("3-5.png", "ფანჯი სე", 8);
+    coil[21] = new domino("3-6.png", "შაში სე", 9);
+    coil[22] = new domino("4-4.png", "დორ ჩარი", 8);
+    coil[23] = new domino("4-5.png", "ბეშ ჩარი", 9);
+    coil[24] = new domino("4-6.png", "შაში ჩარი", 10);
+    coil[25] = new domino("5-5.png", "დუ ბეში", 10);
+    coil[26] = new domino("5-6.png", "შაში ბეში", 11);
+    coil[27] = new domino("6-6.png", "დუ შაში", 12);
+
+    document.images[0].src = "../pictures/domino/" + coil[R_me].URL_img;
+    document.getElementById("Name_coil").innerHTML = coil[R_me].Name + " : " + coil[R_pc].Name;
+
+    document.images[1].src = "../pictures/domino/" + coil[R_pc].URL_img;
+    document.getElementById("rezult").innerHTML = coil[R_me].qula + " - " + coil[R_pc].qula;
+
+    if(coil[R_me].qula > coil[R_pc].qula)
+    {
+        document.getElementById("mogeba_wageba").innerHTML = "მოიგეთ";
+        document.getElementById("mogeba_wageba").style.color = "green";
+    }
+    else
+    {
+        document.getElementById("mogeba_wageba").innerHTML = "წააგეთ";
+        document.getElementById("mogeba_wageba").style.color = "red";
+    }
+    function reset(){
+        location.reload();
+    }
+</script>
+</html>

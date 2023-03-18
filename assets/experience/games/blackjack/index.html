@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="blackjack.css">
+	<title>blackjack</title>
+</head>
+<body>
+	<div class="frame">
+		<pre id="game_over">BLACKJACK</pre>
+
+		<section id="table">
+			<article id="pc">
+				<img src="../pictures/deck/blank.gif">
+				<img src="../pictures/deck/blank.gif">
+			</article>
+
+			<article id="me">
+				<img src="../pictures/deck/blank.gif">
+				<img src="../pictures/deck/blank.gif">
+			</article>
+		</section>
+
+        <div class="buttons">
+            <button onclick="bet()" id="bet">BET</button>
+            <button onclick="add()" id="add">ADD</button>
+            <button onclick="keep()" id="keep">KEEP</button>
+            <button onclick="reloads()" id="reset">RESET</button>
+        </div>
+	</div>
+    <div class="coins">
+        <div class="bets">
+            <button value="1">1</button>
+            <button value="5">5</button>
+            <button value="20">20</button>
+            <button value="50">50</button>
+            <button value="100">100</button>
+        </div>
+        <div id="pot">
+            <form>
+                <label for="quantity">BET:</label>
+                <input type="text" id="quantity" value="10">
+            </form>
+            <button onclick="submit()" id="submit">submit</button>
+        </div>
+        <div class="circle">
+            <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70" id="liner"></circle>
+            </svg>
+            <div id="coins">coins: </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    var old_html = $("#table").html();
+    var liner = document.getElementById("liner");
+    var minus_count_pc = 0;
+    var minus_count_me = 0;
+
+    let R = 0;
+    let score_pc = 0;
+    let score_me = 0;
+    
+    let coin = 100;
+    let val = 0;
+    liner.style.strokeDashoffset = 440 - (440 * coin) / 1000;
+    document.getElementById("coins").innerHTML = `coins: ${coin}`;
+
+    document.getElementById("bet").disabled = true;
+	document.getElementById("bet").style.opacity = "0.5";
+    document.getElementById("add").disabled = true;
+	document.getElementById("add").style.opacity = "0.5";
+	document.getElementById("keep").disabled = true;
+	document.getElementById("keep").style.opacity = "0.5";
+	document.getElementById("reset").disabled = true;
+	document.getElementById("reset").style.opacity = "0.5";
+
+	let kartebi = ["2a","2g","2j","2k"
+				  ,"3a","3g","3j","3k"
+				  ,"4a","4g","4j","4k"
+				  ,"5a","5g","5j","5k"
+				  ,"6a","6g","6j","6k"
+				  ,"7a","7g","7j","7k"
+				  ,"8a","8g","8j","8k"
+				  ,"9a","9g","9j","9k"
+				  ,"10a","10g","10j","10k"
+				  ,"va","vg","vj","vk"
+				  ,"da","dg","dj","dk"
+				  ,"ka","kg","kj","kk"
+				  ,"ta","tg","tj","tk"
+    ];
+
+    var input = document.getElementById("quantity");
+
+    input.addEventListener("keypress", function(event) {
+        if (event.key === "Enter"){
+            event.preventDefault();
+            document.getElementById("submit").click();
+        }
+    });
+
+    function submit(){
+        val = document.getElementById("quantity").value;
+        if(val > 0 && val <= coin){
+            coin -= val;
+            document.getElementById("coins").innerHTML = `coins: ${coin}`;
+            document.getElementById("submit").disabled = true;
+            document.getElementById("submit").style.opacity = "0.5";
+            document.getElementById("bet").disabled = false;
+            document.getElementById("bet").style.opacity = "1";
+            reset();
+        } else if(val > coin){
+            val = coin;
+            document.getElementById("quantity").value = val;
+        } else if(val < 0){
+            val = 0;
+            document.getElementById("quantity").value = val;
+        }
+        liner.style.strokeDashoffset = 440 - (440 * coin) / 1000;
+    }
+
+    function bet(){
+        R = Math.floor(Math.random() * 52);
+        document.getElementById("pc").children[0].src="../pictures/deck/"+ kartebi[R] +".png";
+        score_pc += score(R);
+
+        R = Math.floor(Math.random() * 52);
+        document.getElementById("me").children[0].src="../pictures/deck/"+ kartebi[R] +".png";
+        score_me += score(R);
+
+        R = Math.floor(Math.random() * 52);
+        document.getElementById("me").children[1].src="../pictures/deck/"+ kartebi[R] +".png";
+        score_me += score(R);
+
+        document.getElementById("bet").disabled = true;
+		document.getElementById("bet").style.opacity = "0.5";
+
+        document.getElementById("add").disabled = false;
+        document.getElementById("add").style.opacity = "1";
+        document.getElementById("keep").disabled = false;
+        document.getElementById("keep").style.opacity = "1";
+
+        BJ();
+	}
+
+    function add(){
+        let new_card = document.createElement("img");
+		R = Math.floor(Math.random() * 52);
+        document.getElementById("me").appendChild(new_card);
+        document.getElementById("me").lastChild.src="../pictures/deck/"+ kartebi[R] +".png";
+
+        score_me += score(R);
+        checker();
+	}
+
+	function keep(){
+		R = Math.floor(Math.random() * 52);
+        document.getElementById("pc").children[1].src="../pictures/deck/"+ kartebi[R] +".png";
+
+        score_pc += score(R);
+
+		while(score_pc < 15){
+            let new_card = document.createElement("img");
+            R = Math.floor(Math.random() * 52);
+            document.getElementById("pc").appendChild(new_card);
+            document.getElementById("pc").lastChild.src="../pictures/deck/"+ kartebi[R] +".png";
+            score_pc += score(R);
+		}
+
+        checker();
+        score_checker();
+
+        document.getElementById("keep").disabled = true;
+		document.getElementById("keep").style.opacity = "0.5";
+		document.getElementById("add").disabled = true;
+		document.getElementById("add").style.opacity = "0.5";
+	}
+	
+	function score(Z){
+	let qula = 0;
+	if(kartebi[Z].substring(0,1) == "2"){
+	  qula = 2;
+	}
+	if(kartebi[Z].substring(0,1) == "3"){
+	  qula = 3;
+	}
+	if(kartebi[Z].substring(0,1) == "4"){
+	  qula = 4;
+	}
+	if(kartebi[Z].substring(0,1) == "5"){
+	  qula = 5;
+	}
+	if(kartebi[Z].substring(0,1) == "6"){
+	  qula = 6;
+	}
+	if(kartebi[Z].substring(0,1) == "7"){
+	  qula = 7;
+	}
+	if(kartebi[Z].substring(0,1) == "8"){
+	  qula = 8;
+	}
+	if(kartebi[Z].substring(0,1) == "9"){
+	  qula = 9;
+	}
+	if(kartebi[Z].substring(0,1) == "1"){
+	  qula = 10;
+	}
+	if(kartebi[Z].substring(0,1) == "v"){
+	  qula = 10;
+	}
+	if(kartebi[Z].substring(0,1) == "d"){
+	  qula = 10;
+	}
+	if(kartebi[Z].substring(0,1) == "k"){
+	  qula = 10;
+	}
+	if(kartebi[Z].substring(0,1) == "t"){
+	  qula = 11;
+	}
+	return qula;
+	}
+
+    function score_checker(){
+        if(score_me > score_pc && score_me <= 21){
+            document.getElementById("game_over").innerHTML = "თქვენ მოიგეთ";
+			document.getElementById("game_over").style.color = "green";
+            coin += 2 * val;
+            document.getElementById("coins").innerHTML = `coins: ${coin}`;
+            document.getElementById("submit").disabled = false;
+            document.getElementById("submit").style.opacity = "1";
+        }
+        if(score_me < score_pc && score_pc <= 21){
+            document.getElementById("game_over").innerHTML = "თქვენ წააგეთ";
+			document.getElementById("game_over").style.color = "red";
+            if(coin > 0){
+                document.getElementById("submit").disabled = false;
+                document.getElementById("submit").style.opacity = "1";
+            } else{
+                document.getElementById("reset").disabled = false;
+                document.getElementById("reset").style.opacity = "1";}
+        }
+        if(score_me == score_pc){
+            document.getElementById("game_over").innerHTML = "TIE";
+			document.getElementById("game_over").style.color = "yellow";
+            coin += 1 * val;
+            document.getElementById("coins").innerHTML = `coins: ${coin}`;
+            document.getElementById("submit").disabled = false;
+            document.getElementById("submit").style.opacity = "1";
+        }
+        if(coin < 1000){
+            liner.style.strokeDashoffset = 440 - (440 * coin) / 1000;
+        } else {
+            liner.style.strokeDashoffset = 440 - (440 * 1000) / 1000;
+        }
+        winner();
+    }
+	
+    function checker(){
+        if(score_pc > 21){
+            var t_count = 0;
+            for(let i = 0; i < document.getElementById("pc").childElementCount; i++){
+                let x = document.getElementById("pc").children[i].src;
+                if(x.slice(x.length-6,x.length-5) == 't')
+                t_count++;
+            }
+
+            if(t_count > minus_count_pc){
+                score_pc -= 10;
+                minus_count_pc++;
+            }
+            else {
+			document.getElementById("game_over").innerHTML = "თქვენ მოიგეთ";
+			document.getElementById("game_over").style.color = "green";
+            coin += 2 * val;
+            document.getElementById("coins").innerHTML = `coins: ${coin}`;
+            document.getElementById("submit").disabled = false;
+            document.getElementById("submit").style.opacity = "1";
+            }
+		}
+		if(score_me > 21){
+            var t_count = 0;
+            for(let i = 0; i < document.getElementById("me").childElementCount; i++){
+                let x = document.getElementById("me").children[i].src;
+                if(x.slice(x.length-6,x.length-5) == 't')
+                t_count++;
+            }
+
+            if(t_count > minus_count_me){
+                score_me -= 10;
+                minus_count_me++;
+            }
+            else {
+			document.getElementById("game_over").innerHTML = "თქვენ წააგეთ";
+			document.getElementById("game_over").style.color = "red";
+			document.getElementById("add").disabled = true;
+			document.getElementById("add").style.opacity = "0.5";
+			document.getElementById("keep").disabled = true;
+			document.getElementById("keep").style.opacity = "0.5";
+            if(coin > 0){
+                document.getElementById("submit").disabled = false;
+                document.getElementById("submit").style.opacity = "1";
+            } else{
+                document.getElementById("reset").disabled = false;
+                document.getElementById("reset").style.opacity = "1";}
+            }
+		}
+        if(coin < 1000){
+            liner.style.strokeDashoffset = 440 - (440 * coin) / 1000;
+        } else {
+            liner.style.strokeDashoffset = 440 - (440 * 1000) / 1000;
+        }
+        winner();
+	}
+
+    function BJ(){
+        if(score_me == 21){
+            document.getElementById("game_over").innerHTML = "BLACKJACK";
+            document.getElementById("game_over").style.color = "green";
+
+            document.getElementById("add").disabled = true;
+	    	document.getElementById("add").style.opacity = "0.5";
+	    	document.getElementById("keep").disabled = true;
+	    	document.getElementById("keep").style.opacity = "0.5";
+
+            coin += 2.5 * val;
+            document.getElementById("coins").innerHTML = `coins: ${coin}`;
+            document.getElementById("submit").disabled = false;
+            document.getElementById("submit").style.opacity = "1";
+
+            liner.style.strokeDashoffset = 440 - (440 * coin) / 1000;
+            winner();
+        }
+    }
+
+    function reset(){
+        $("#table").html(old_html);
+        minus_count_pc = 0;
+        minus_count_me = 0;
+        
+        R = 0;
+        score_pc = 0;
+        score_me = 0;
+
+        document.getElementById("game_over").innerHTML = "BLACKJACK";
+		document.getElementById("game_over").style.color = "white";
+    }
+
+    function reloads(){
+        location.reload();
+    }
+
+    function winner(){
+        if(coin >= 1000){
+            document.getElementById("game_over").innerHTML = "გილოცავ, გაიმარჯვე!!!";
+			document.getElementById("game_over").style.color = "yellow";
+            document.getElementById("submit").disabled = true;
+            document.getElementById("submit").style.opacity = "0.5";
+            document.getElementById("reset").disabled = false;
+            document.getElementById("reset").style.opacity = "1";
+        }
+    }
+
+    $(".bets button").click(function(){
+        $("#quantity").val($("#quantity").val()*1+1*$(this).val());
+    });
+
+</script>
+</html>

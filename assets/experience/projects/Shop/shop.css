@@ -1,0 +1,200 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+[class*="col-"]{
+  float: left;
+  padding: 1px;
+}
+.col-0 {width: 0;}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+#topnav{
+  height: 50px;
+  background-color: rgba(51, 51, 51, 0.5);
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+}
+#logo,#sidelogo{
+  height: 50px;
+  padding: 0;
+}
+#sidelogo{
+  width: 100%;
+}
+#navigationbtn,#profilebtn{
+  border: none;
+  background-color: rgba(0, 0, 179, 0.788);
+  color: white;
+  margin: 0;
+  height: 100%;
+}
+#profilebtn{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#cartbtn{
+  border: none;
+  margin: 0;
+  height: 100%;
+  background-color: transparent;
+  color: white;
+  width: fit-content;
+  padding: 0 1em;
+}
+.cartlist{
+  position: relative;
+  display: inline-block;
+}
+.cartlist .cartlistcontent{
+  visibility: hidden;
+  width: 10em;
+  background-color: #555;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: -5em;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.cartlist:hover .cartlistcontent{
+  visibility: visible;
+  opacity: 1;
+}
+.addcart{
+  float: right;
+}
+.d-flex{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.sidenav,#side{
+  height: 100%;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+#side{
+  background-color: transparent;
+}
+.sidenav a{
+  text-decoration: none;
+  font-size: 20px;
+  color: rgb(197, 197, 197);
+  display: block;
+  transition: 0.3s;
+  padding: 0.3em 1em;
+}
+.sidenav a:hover{
+  color: rgb(137, 137, 255);
+}
+.mainmenu, .submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.mainmenu a {
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  color: white;
+}
+.mainmenu li:hover .submenu {
+  display: block;
+  max-height: 200px;
+}
+.submenu {
+  overflow: hidden;
+  max-height: 0;
+  transition: all 0.5s ease-out;
+}
+.submenu li a{
+  font-size: small;
+}
+.sections{
+  border: solid 2px var(--clr);
+  border-radius: 8px;
+  margin: 2em 4.16%;
+}
+.title{
+  margin: 0.5em;
+}
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 1em;
+  justify-content: space-around;
+}
+#hscroll{
+  overflow: auto;
+  white-space: nowrap;
+}
+footer{
+  background-color: royalblue;
+}
+#footmenu{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.footcards{
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  padding: 1em 2em;
+  border: solid black 1px;
+  border-radius: 8px 0;
+}
+#copyright{
+  text-align: center;
+}
+@media only screen and (max-width: 600px){
+  #navigationbtn, #profilebtn{
+    width: 16.66%;
+  }
+  #navigationbtn span, #profilebtn span{
+    display: none;
+  }
+  #extra{
+    display: none;
+  }
+  .card{
+    width: 10em !important;
+    height: fit-content;
+  }
+  .d-flex{
+    width: 41.66%;
+  }
+  .d-flex > button{
+    display: none;
+  }
+}
