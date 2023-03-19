@@ -330,7 +330,7 @@
         {
             "t": "To Do",
             "l": "https://makasa-todo.netlify.app",
-            "p": "./assets/images/projects/todo.png",
+            "p": "./assets/images/projects/to_do.png",
             "teches": [
                 "html",
                 "css",
