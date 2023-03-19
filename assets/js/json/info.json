@@ -215,7 +215,7 @@
         {
             "t": "E207",
             "l": "https://e207room.iliauni.edu.ge",
-            "p": "./assets/images/projects/e207.png",
+            "p": "./assets/images/projects/E207.png",
             "teches": [
                 "html",
                 "css",
@@ -237,7 +237,7 @@
         {
             "t": "Form",
             "l": "./assets/experience/projects/Alliance/index.html",
-            "p": "./assets/images/projects/Alliance.png",
+            "p": "./assets/images/projects/alliance.png",
             "teches": [
                 "html",
                 "css",
@@ -247,7 +247,7 @@
         {
             "t": "Europebet",
             "l": "./assets/experience/projects/Europebet/index.html",
-            "p": "./assets/images/projects/Europebet.png",
+            "p": "./assets/images/projects/europebet.png",
             "teches": [
                 "html",
                 "css",
@@ -257,7 +257,7 @@
         {
             "t": "Lost and found",
             "l": "./assets/experience/projects/Lost_Found/index.html",
-            "p": "./assets/images/projects/Lost_Found.png",
+            "p": "./assets/images/projects/lost_found.png",
             "teches": [
                 "html",
                 "css",
@@ -267,7 +267,7 @@
         {
             "t": "Movies",
             "l": "./assets/experience/projects/Movies/index.html",
-            "p": "./assets/images/projects/Movies.png",
+            "p": "./assets/images/projects/movies.png",
             "teches": [
                 "html",
                 "css",
@@ -278,7 +278,7 @@
         {
             "t": "Movies2",
             "l": "./assets/experience/projects/Movies2/index.html",
-            "p": "./assets/images/projects/Movies2.png",
+            "p": "./assets/images/projects/movies2.png",
             "teches": [
                 "html",
                 "css",
@@ -289,7 +289,7 @@
         {
             "t": "Notes",
             "l": "./assets/experience/projects/Notes/index.html",
-            "p": "./assets/images/projects/Notes.png",
+            "p": "./assets/images/projects/notes.png",
             "teches": [
                 "html",
                 "css",
@@ -299,7 +299,7 @@
         {
             "t": "Quiz",
             "l": "./assets/experience/projects/Quiz/index.html",
-            "p": "./assets/images/projects/Quiz.png",
+            "p": "./assets/images/projects/quiz.png",
             "teches": [
                 "html",
                 "css",
@@ -309,7 +309,7 @@
         {
             "t": "Recipe",
             "l": "./assets/experience/projects/Recipe/index.html",
-            "p": "./assets/images/projects/Recipe.png",
+            "p": "./assets/images/projects/recipe.png",
             "teches": [
                 "html",
                 "css",
@@ -424,7 +424,7 @@
         },
         {
             "t": "Blackjack",
-            "l": "./assets/experience/games/Blackjack/index.html",
+            "l": "./assets/experience/games/blackjack/index.html",
             "p": "./assets/images/projects/Blackjack.png",
             "teches": [
                 "html",
