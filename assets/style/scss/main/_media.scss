@@ -13,10 +13,19 @@
                 '. img .'
                 'quote quote quote';
             gap: 0;
+            row-gap: 1rem;
+
+            #quotes {
+                padding: 0.1rem;
+            }
         }
     }
 
     #aboutMe {
+        #aboutMeInfo {
+            padding: 0.1rem;
+        }
+
         table {
             display: none;
         }
