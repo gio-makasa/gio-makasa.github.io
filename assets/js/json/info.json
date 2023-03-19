@@ -425,7 +425,7 @@
         {
             "t": "Blackjack",
             "l": "./assets/experience/games/blackjack/index.html",
-            "p": "./assets/images/projects/Blackjack.png",
+            "p": "./assets/images/projects/blackjack.png",
             "teches": [
                 "html",
                 "css",
