@@ -328,6 +328,16 @@
             ]
         },
         {
+            "t": "To Do",
+            "l": "https://makasa-todo.netlify.app",
+            "p": "./assets/images/projects/todo.png",
+            "teches": [
+                "html",
+                "css",
+                "TypeScript"
+            ]
+        },
+        {
             "t": "Shopping list",
             "l": "./assets/experience/projects/Shopping_list/index.html",
             "p": "./assets/images/projects/Shopping_list.png",
@@ -335,16 +345,6 @@
                 "html",
                 "css",
                 "Angular.JS"
-            ]
-        },
-        {
-            "t": "ToDo",
-            "l": "./assets/experience/projects/ToDo/index.html",
-            "p": "./assets/images/projects/ToDo.png",
-            "teches": [
-                "html",
-                "css",
-                "js"
             ]
         },
         {
