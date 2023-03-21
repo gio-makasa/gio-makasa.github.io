@@ -1,0 +1,40 @@
+#startUp {
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fadein 2s linear forwards, fadeout 2s 3.5s linear forwards;
+
+    #startupMobile {
+        display: none;
+    }
+
+    svg {
+        g {
+            path {
+                stroke-dasharray: 100000;
+                stroke-dashoffset: 100000;
+                animation: startup-anim 10s linear forwards;
+                visibility: hidden;
+            }
+
+            path:nth-child(2) {
+                animation-delay: 1.7s;
+            }
+
+            path:nth-child(3),
+            path:nth-child(4) {
+                animation-delay: 2s;
+            }
+
+            path:nth-child(5) {
+                animation-delay: 2.3s;
+            }
+
+            path:nth-child(6) {
+                animation-delay: 3s;
+            }
+        }
+    }
+}

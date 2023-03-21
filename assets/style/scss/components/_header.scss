@@ -4,7 +4,8 @@ header {
     display: flex;
     justify-content: center;
     background-color: $backgroundColor;
-    z-index: 100;
+    z-index: 50;
+    animation: fadein 2s linear forwards;
 
     nav {
         position: relative;
@@ -31,7 +32,7 @@ header {
     #cvbtn {
         display: none;
 
-        
+
         position: absolute;
         right: 0;
         background-color: $mainColor;

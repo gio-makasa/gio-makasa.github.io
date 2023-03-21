@@ -6,6 +6,9 @@ async function getData(url) {
 const info = await getData('./assets/js/json/info.json');
 const quotes = await getData('./assets/js/json/quotes.json');
 
+const startup = document.querySelector('#startUp');
+const header = document.querySelector('header');
+const main = document.querySelector('main');
 const fullname = document.querySelector('#fullname');
 const avatar = document.querySelector('#avatar');
 const shortInfo = document.querySelector('#shortInfo');
@@ -22,6 +25,11 @@ const skills = document.querySelector('#skills');
 const liveProjects = document.querySelector('#liveProjects');
 const personalProjects = document.querySelector('#personalProjects');
 const games = document.querySelector('#games');
+
+setTimeout(() => {
+    header.classList.remove('hide');
+    main.classList.remove('hide');
+}, 3700);
 
 getHomeInfo();
 getAboutInfo();

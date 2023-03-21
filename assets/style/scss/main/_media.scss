@@ -40,3 +40,26 @@
         }
     }
 }
+
+@media screen and (max-width: 500px) {
+    #startUp {
+        width: 100%;
+        overflow: hidden;
+        left: 50%;
+
+        #startupDesktop {
+            display: none;
+        }
+
+        #startupMobile {
+            display: block;
+            width: 100%;
+
+            svg {
+                display: flex;
+                justify-content: center;
+                scale: 0.7;
+            }
+        }
+    }
+}

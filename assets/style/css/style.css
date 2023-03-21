@@ -19,6 +19,10 @@
 
 body {
   background-color: rgb(240, 240, 255);
+  scrollbar-width: 0;
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 
 section {
@@ -40,6 +44,64 @@ section:not(:first-child) {
   padding-top: 10rem;
 }
 
+.hide {
+  display: none;
+}
+
+main {
+  -webkit-animation: fadein 2s linear forwards;
+          animation: fadein 2s linear forwards;
+}
+
+@-webkit-keyframes startup-anim {
+  to {
+    visibility: visible;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes startup-anim {
+  to {
+    visibility: visible;
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes fadeout {
+  from {
+    opacity: 1;
+    display: block;
+  }
+  to {
+    display: none;
+    opacity: 0;
+  }
+}
+@keyframes fadeout {
+  from {
+    opacity: 1;
+    display: block;
+  }
+  to {
+    display: none;
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @-webkit-keyframes softskill-anim1 {
   0% {
     left: -100%;
@@ -48,7 +110,6 @@ section:not(:first-child) {
     left: 100%;
   }
 }
-
 @keyframes softskill-anim1 {
   0% {
     left: -100%;
@@ -105,6 +166,44 @@ section:not(:first-child) {
     bottom: 100%;
   }
 }
+#startUp {
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation: fadein 2s linear forwards, fadeout 2s 3.5s linear forwards;
+          animation: fadein 2s linear forwards, fadeout 2s 3.5s linear forwards;
+}
+#startUp #startupMobile {
+  display: none;
+}
+#startUp svg g path {
+  stroke-dasharray: 100000;
+  stroke-dashoffset: 100000;
+  -webkit-animation: startup-anim 10s linear forwards;
+          animation: startup-anim 10s linear forwards;
+  visibility: hidden;
+}
+#startUp svg g path:nth-child(2) {
+  -webkit-animation-delay: 1.7s;
+          animation-delay: 1.7s;
+}
+#startUp svg g path:nth-child(3),
+#startUp svg g path:nth-child(4) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+#startUp svg g path:nth-child(5) {
+  -webkit-animation-delay: 2.3s;
+          animation-delay: 2.3s;
+}
+#startUp svg g path:nth-child(6) {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
 header {
   position: fixed;
   width: 100%;
@@ -115,7 +214,9 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: rgb(240, 240, 255);
-  z-index: 100;
+  z-index: 50;
+  -webkit-animation: fadein 2s linear forwards;
+          animation: fadein 2s linear forwards;
 }
 header nav {
   position: relative;
@@ -606,5 +707,28 @@ header #cvbtn {
   }
   #aboutMe .education-experience::before, #aboutMe .education-experience::after {
     display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  #startUp {
+    width: 100%;
+    overflow: hidden;
+    left: 50%;
+  }
+  #startUp #startupDesktop {
+    display: none;
+  }
+  #startUp #startupMobile {
+    display: block;
+    width: 100%;
+  }
+  #startUp #startupMobile svg {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    scale: 0.7;
   }
 }

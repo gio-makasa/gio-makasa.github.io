@@ -8,6 +8,11 @@
 
 body {
     background-color: $backgroundColor;
+    scrollbar-width: 0;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 section {
@@ -21,4 +26,12 @@ section {
 
 section:not(:first-child) {
     padding-top: 10rem;
+}
+
+.hide {
+    display: none;
+}
+
+main {
+    animation: fadein 2s linear forwards;
 }
