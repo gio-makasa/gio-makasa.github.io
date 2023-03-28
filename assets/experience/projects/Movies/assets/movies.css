@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: #202020;
+  color: white;
+}
+
+.hide {
+  display: none !important;
+}
+
+header {
+  position: relative;
+  height: 30vh;
+  background-color: #575757;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: larger;
+}
+
+nav p:hover {
+  color: black;
+}
+
+#searchBox {
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+}
+
+#searchInput {
+  display: flex;
+  background-color: white;
+  border-radius: 50rem;
+  padding: 1rem 2rem;
+}
+
+#searchInput input {
+  background-color: transparent;
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: x-large;
+}
+
+#searchInput svg {
+  width: 2.5rem;
+}
+
+#searchResults {
+  background-color: #575757;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  padding: 5rem 1rem 0;
+  z-index: -1;
+}
+
+#searchResults h3 {
+  text-transform: uppercase;
+  padding: 1rem 0 0;
+}
+
+#searchResults div {
+  display: flex;
+  gap: 1rem;
+  overflow-x: scroll;
+}
+
+#searchResults div::-webkit-scrollbar {
+  height: 0.5rem;
+}
+
+#searchResults div::-webkit-scrollbar-thumb {
+  background: floralwhite;
+  border-radius: 1rem;
+}
+
+#searchResults div::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px black;
+  border-radius: 1rem;
+}
+
+#searchResults img {
+  width: 13%;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 5rem 0;
+}
+
+section {
+  width: 90%;
+}
+
+section h2 {
+  text-transform: capitalize;
+  padding: 1rem 0;
+}
+
+.secContent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.movieFrame {
+  width: 18%;
+  background-color: rgb(65, 65, 65);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.movieFrame img {
+  width: 100%;
+}
+
+.movieFrame h3 {
+  float: left;
+  padding: 0.5rem;
+  width: 80%;
+}
+
+.movieFrame p {
+  float: left;
+  padding: 1rem 0;
+  width: 20%;
+  text-align: center;
+  color: var(--clr);
+}

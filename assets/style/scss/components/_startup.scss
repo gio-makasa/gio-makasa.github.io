@@ -4,7 +4,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: fadein 2s linear forwards, fadeout 2s 3.5s linear forwards;
+    animation: fadein 2s linear forwards, fadeout 1s 3s linear forwards;
 
     #startupMobile {
         display: none;
@@ -20,20 +20,20 @@
             }
 
             path:nth-child(2) {
-                animation-delay: 1.7s;
+                animation-delay: 1s;
             }
 
             path:nth-child(3),
             path:nth-child(4) {
-                animation-delay: 2s;
+                animation-delay: 1.5s;
             }
 
             path:nth-child(5) {
-                animation-delay: 2.3s;
+                animation-delay: 2s;
             }
 
             path:nth-child(6) {
-                animation-delay: 3s;
+                animation-delay: 2.5s;
             }
         }
     }

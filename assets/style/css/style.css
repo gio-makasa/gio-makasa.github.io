@@ -49,8 +49,8 @@ section:not(:first-child) {
 }
 
 main {
-  -webkit-animation: fadein 2s linear forwards;
-          animation: fadein 2s linear forwards;
+  -webkit-animation: fadein 1s linear forwards;
+          animation: fadein 1s linear forwards;
 }
 
 @-webkit-keyframes startup-anim {
@@ -173,8 +173,8 @@ main {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  -webkit-animation: fadein 2s linear forwards, fadeout 2s 3.5s linear forwards;
-          animation: fadein 2s linear forwards, fadeout 2s 3.5s linear forwards;
+  -webkit-animation: fadein 2s linear forwards, fadeout 1s 3s linear forwards;
+          animation: fadein 2s linear forwards, fadeout 1s 3s linear forwards;
 }
 #startUp #startupMobile {
   display: none;
@@ -187,21 +187,21 @@ main {
   visibility: hidden;
 }
 #startUp svg g path:nth-child(2) {
-  -webkit-animation-delay: 1.7s;
-          animation-delay: 1.7s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 #startUp svg g path:nth-child(3),
 #startUp svg g path:nth-child(4) {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+#startUp svg g path:nth-child(5) {
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
 }
-#startUp svg g path:nth-child(5) {
-  -webkit-animation-delay: 2.3s;
-          animation-delay: 2.3s;
-}
 #startUp svg g path:nth-child(6) {
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
 }
 
 header {
@@ -215,8 +215,8 @@ header {
           justify-content: center;
   background-color: rgb(240, 240, 255);
   z-index: 50;
-  -webkit-animation: fadein 2s linear forwards;
-          animation: fadein 2s linear forwards;
+  -webkit-animation: fadein 1s linear forwards;
+          animation: fadein 1s linear forwards;
 }
 header nav {
   position: relative;
@@ -243,7 +243,6 @@ header nav .tab:last-of-type {
   border-right: 0.1rem solid rgb(192, 192, 192);
 }
 header #cvbtn {
-  display: none;
   position: absolute;
   right: 0;
   background-color: blue;
@@ -254,7 +253,7 @@ header #cvbtn {
   padding: 0.8rem 1rem;
   font-size: large;
   border: none;
-  cursor: pointer;
+  text-decoration: none;
 }
 
 #home #homeContainer {
@@ -264,11 +263,13 @@ header #cvbtn {
   font-size: larger;
 }
 #home #homeContainer #homeInfo {
+  position: relative;
   grid-area: info;
   padding: 0.5rem 1rem;
   border-radius: 1rem;
   border: 2px dashed blue;
   font-size: larger;
+  overflow: hidden;
 }
 #home #homeContainer #homeInfo h2 {
   color: blue;
@@ -300,7 +301,19 @@ header #cvbtn {
 #home #homeContainer #homeInfo #shortInfo {
   font-family: "Patrick";
 }
-#home #homeContainer img {
+#home #homeContainer #homeInfo #socialLinks {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+#home #homeContainer #homeInfo #socialLinks a {
+  padding: 0 0.2rem;
+  text-decoration: none;
+}
+#home #homeContainer #homeInfo #socialLinks a img {
+  width: 2rem;
+}
+#home #homeContainer #avatar {
   grid-area: img;
   width: 18rem;
   height: auto;

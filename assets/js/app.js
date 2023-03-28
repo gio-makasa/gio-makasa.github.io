@@ -14,6 +14,7 @@ const avatar = document.querySelector('#avatar');
 const shortInfo = document.querySelector('#shortInfo');
 const fields = document.querySelector('#fields');
 const dayPart = document.querySelector('#dayPart');
+const socialLinks = document.querySelector('#socialLinks');
 const quote = document.querySelector('#quote');
 const author = document.querySelector('#author');
 const hoursNow = new Date().getHours();
@@ -29,6 +30,7 @@ const games = document.querySelector('#games');
 setTimeout(() => {
     header.classList.remove('hide');
     main.classList.remove('hide');
+    startup.classList.add('hide');
 }, 3700);
 
 getHomeInfo();
@@ -53,6 +55,14 @@ function getHomeInfo() {
         dayPart.innerText = 'evening';
     } else if (hoursNow >= 22 || hoursNow < 6) {
         dayPart.innerText = 'night';
+    }
+
+    for (let [key, value] of Object.entries(info.socials)) {
+        socialLinks.innerHTML += `
+        <a href="${value}">
+            <img src="./assets/images/socials/${key}.png" alt="${key}">
+        </a>
+        `;
     }
 
     getQuote();

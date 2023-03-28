@@ -7,11 +7,13 @@
         font-size: larger;
 
         #homeInfo {
+            position: relative;
             grid-area: info;
             padding: 0.5rem 1rem;
             border-radius: 1rem;
             border: 2px dashed $mainColor;
             font-size: larger;
+            overflow: hidden;
 
             h2 {
                 color: $mainColor;
@@ -42,9 +44,24 @@
             #shortInfo {
                 font-family: 'Patrick';
             }
+
+            #socialLinks {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+
+                a {
+                    padding: 0 0.2rem;
+                    text-decoration: none;
+                    
+                    img{
+                        width: 2rem;
+                    }
+                }
+            }
         }
 
-        img {
+        #avatar {
             grid-area: img;
             width: 18rem;
             height: auto;

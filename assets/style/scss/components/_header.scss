@@ -5,7 +5,7 @@ header {
     justify-content: center;
     background-color: $backgroundColor;
     z-index: 50;
-    animation: fadein 2s linear forwards;
+    animation: fadein 1s linear forwards;
 
     nav {
         position: relative;
@@ -30,9 +30,6 @@ header {
     }
 
     #cvbtn {
-        display: none;
-
-
         position: absolute;
         right: 0;
         background-color: $mainColor;
@@ -42,7 +39,7 @@ header {
         padding: 0.8rem 1rem;
         font-size: large;
         border: none;
-        cursor: pointer;
+        text-decoration: none;
 
         // &::before {
         //     @include cutCorner;

@@ -5,10 +5,10 @@
         "Front-end Developer"
     ],
     "shortInfo": "I am front-end Developer with 1 year of experience, most of my project are built using HTML, CSS(Scss/Sass) and JS, but couple of my personal projects are built using Vue.js(VUEX) and also I have little experience with React.",
-    "socialNetworks": {
-        "linkeden": "",
-        "github": "",
-        "codepen": ""
+    "socials": {
+        "codepen": "https://codepen.io/happy0123",
+        "github": "https://github.com/gio-makasa",
+        "linkedin": "https://www.linkedin.com/in/giorgi-makasa/"
     },
     "aboutme": "I am a student now studying at Caucasus University (3rd year), major: Computer Science. In terms of Web Development, I have a solid knowledge and experience in HTML, CSS(Sass/Scss), JavaScript (JQuery), Vue.js. I have worked on real projects, also I have basic knowledge at React and Angular. In term of Backend, I know Python (Flask) and have basic knowledge at PHP. I have experience and knowledge at SQL, I can work with data in Relational Database Management System (RDBMS), create data bases and write procedures, also I have basic knowledge at C, C++, Racket, Algorithms and Data structures. I am detail-oriented, quick learner, analytical thinker and organized with a high sense of responsibility.",
     "aboutDetails": {
@@ -235,6 +235,60 @@
     ],
     "personalProjects": [
         {
+            "t": "Movies",
+            "l": "./assets/experience/projects/Movies/index.html",
+            "p": "./assets/images/projects/movies.png",
+            "teches": [
+                "html",
+                "css",
+                "js",
+                "api"
+            ]
+        },
+        {
+            "t": "Recipe",
+            "l": "./assets/experience/projects/Recipe/index.html",
+            "p": "./assets/images/projects/recipe.png",
+            "teches": [
+                "html",
+                "css",
+                "js",
+                "api"
+            ]
+        },
+        {
+            "t": "To Do",
+            "l": "https://makasa-todo.netlify.app",
+            "p": "./assets/images/projects/to_do.png",
+            "teches": [
+                "html",
+                "css",
+                "TypeScript"
+            ]
+        },
+        {
+            "t": "Golder bunny",
+            "l": "https://makasa-golden-bunny.netlify.app",
+            "p": "./assets/images/projects/golden_bunny.png",
+            "teches": [
+                "html",
+                "css",
+                "api",
+                "Vue"
+            ]
+        },
+        {
+            "t": "Movie app",
+            "l": "https://makasa-movie-app.netlify.app",
+            "p": "./assets/images/projects/movie_app.png",
+            "teches": [
+                "html",
+                "css",
+                "api",
+                "Vue"
+            ]
+        },
+        {
             "t": "Form",
             "l": "./assets/experience/projects/Alliance/index.html",
             "p": "./assets/images/projects/alliance.png",
@@ -265,28 +319,6 @@
             ]
         },
         {
-            "t": "Movies",
-            "l": "./assets/experience/projects/Movies/index.html",
-            "p": "./assets/images/projects/movies.png",
-            "teches": [
-                "html",
-                "css",
-                "js",
-                "api"
-            ]
-        },
-        {
-            "t": "Movies2",
-            "l": "./assets/experience/projects/Movies2/index.html",
-            "p": "./assets/images/projects/movies2.png",
-            "teches": [
-                "html",
-                "css",
-                "js",
-                "api"
-            ]
-        },
-        {
             "t": "Notes",
             "l": "./assets/experience/projects/Notes/index.html",
             "p": "./assets/images/projects/notes.png",
@@ -307,17 +339,6 @@
             ]
         },
         {
-            "t": "Recipe",
-            "l": "./assets/experience/projects/Recipe/index.html",
-            "p": "./assets/images/projects/recipe.png",
-            "teches": [
-                "html",
-                "css",
-                "js",
-                "api"
-            ]
-        },
-        {
             "t": "Shop",
             "l": "./assets/experience/projects/Shop/index.html",
             "p": "./assets/images/projects/onlineshop.png",
@@ -325,16 +346,6 @@
                 "html",
                 "css",
                 "js"
-            ]
-        },
-        {
-            "t": "To Do",
-            "l": "https://makasa-todo.netlify.app",
-            "p": "./assets/images/projects/to_do.png",
-            "teches": [
-                "html",
-                "css",
-                "TypeScript"
             ]
         },
         {
@@ -387,28 +398,6 @@
                 "api",
                 "js"
             ]
-        },
-        {
-            "t": "Golder bunny",
-            "l": "https://makasa-golden-bunny.netlify.app",
-            "p": "./assets/images/projects/golden_bunny.png",
-            "teches": [
-                "html",
-                "css",
-                "api",
-                "Vue"
-            ]
-        },
-        {
-            "t": "Movie app",
-            "l": "https://makasa-movie-app.netlify.app",
-            "p": "./assets/images/projects/movie_app.png",
-            "teches": [
-                "html",
-                "css",
-                "api",
-                "Vue"
-            ]
         }
     ],
     "games": [
@@ -436,6 +425,16 @@
             "t": "domino",
             "l": "./assets/experience/games/domino/index.html",
             "p": "./assets/images/projects/domino.png",
+            "teches": [
+                "html",
+                "css",
+                "js"
+            ]
+        },
+        {
+            "t": "TIC TAC TOE",
+            "l": "https://makasa-tic-tac-toe.netlify.app",
+            "p": "./assets/images/projects/tictactoe.png",
             "teches": [
                 "html",
                 "css",
