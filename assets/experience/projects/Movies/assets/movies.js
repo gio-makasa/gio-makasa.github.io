@@ -8,6 +8,7 @@ const topRatedAPI = 'https://api.themoviedb.org/3/movie/top_rated?api_key=04c357
 const upcomingAPI = 'https://api.themoviedb.org/3/movie/upcoming?api_key=04c35731a5ee918f014970082a0088b1&language=en-US&page=1';
 const tvAPI = 'https://api.themoviedb.org/3/tv/popular?api_key=04c35731a5ee918f014970082a0088b1&language=en-US&page=1';
 
+const nav = document.querySelector('nav');
 const search = document.querySelector('#search');
 const searchResults = document.querySelector('#searchResults');
 const latestContent = document.querySelector('#latestContent');
@@ -81,6 +82,14 @@ function showMovies(data, element) {
     <p style="--clr: ${clr};">${movie.vote_average}</p>
     </div>`;
   });
+}
+
+function toggleNav() {
+  if (nav.style.display != 'flex') {
+    nav.style.display = 'flex';
+  } else {
+    nav.style.display = 'none';
+  }
 }
 
 getMovies(popularAPI, popularContent);

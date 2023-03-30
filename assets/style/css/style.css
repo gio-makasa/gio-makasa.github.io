@@ -173,8 +173,8 @@ main {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  -webkit-animation: fadein 2s linear forwards, fadeout 1s 3s linear forwards;
-          animation: fadein 2s linear forwards, fadeout 1s 3s linear forwards;
+  -webkit-animation: fadein 1s linear forwards, fadeout 1s 2.5s linear forwards;
+          animation: fadein 1s linear forwards, fadeout 1s 2.5s linear forwards;
 }
 #startUp #startupMobile {
   display: none;
@@ -182,8 +182,8 @@ main {
 #startUp svg g path {
   stroke-dasharray: 100000;
   stroke-dashoffset: 100000;
-  -webkit-animation: startup-anim 10s linear forwards;
-          animation: startup-anim 10s linear forwards;
+  -webkit-animation: startup-anim 15s linear forwards;
+          animation: startup-anim 15s linear forwards;
   visibility: hidden;
 }
 #startUp svg g path:nth-child(2) {
@@ -192,16 +192,16 @@ main {
 }
 #startUp svg g path:nth-child(3),
 #startUp svg g path:nth-child(4) {
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
 }
 #startUp svg g path:nth-child(5) {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
 }
 #startUp svg g path:nth-child(6) {
-  -webkit-animation-delay: 2.5s;
-          animation-delay: 2.5s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 
 header {

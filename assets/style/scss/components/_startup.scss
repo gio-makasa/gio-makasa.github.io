@@ -4,7 +4,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    animation: fadein 2s linear forwards, fadeout 1s 3s linear forwards;
+    animation: fadein 1s linear forwards, fadeout 1s 2.5s linear forwards;
 
     #startupMobile {
         display: none;
@@ -15,7 +15,7 @@
             path {
                 stroke-dasharray: 100000;
                 stroke-dashoffset: 100000;
-                animation: startup-anim 10s linear forwards;
+                animation: startup-anim 15s linear forwards;
                 visibility: hidden;
             }
 
@@ -25,15 +25,15 @@
 
             path:nth-child(3),
             path:nth-child(4) {
-                animation-delay: 1.5s;
+                animation-delay: 1.3s;
             }
 
             path:nth-child(5) {
-                animation-delay: 2s;
+                animation-delay: 1.6s;
             }
 
             path:nth-child(6) {
-                animation-delay: 2.5s;
+                animation-delay: 2s;
             }
         }
     }

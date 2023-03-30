@@ -18,6 +18,11 @@ header {
   background-color: #575757;
 }
 
+#menuIcon,
+#Xicon {
+  display: none;
+}
+
 nav {
   display: flex;
   justify-content: center;
@@ -121,20 +126,21 @@ section {
 section h2 {
   text-transform: capitalize;
   padding: 1rem 0;
+  font-size: xx-large;
 }
 
 .secContent {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
   gap: 1rem;
-  justify-content: space-between;
 }
 
 .movieFrame {
-  width: 18%;
+  position: relative;
   background-color: rgb(65, 65, 65);
   border-radius: 1rem;
   overflow: hidden;
+  z-index: -1;
 }
 
 .movieFrame img {
@@ -153,4 +159,111 @@ section h2 {
   width: 20%;
   text-align: center;
   color: var(--clr);
+}
+
+@media screen and (max-width: 1000px) {
+  .secContent {
+    grid-template-columns: auto auto auto auto;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .secContent {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+
+@media screen and (max-width: 750px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+  }
+
+  #menuIcon,
+  #Xicon {
+    position: relative;
+    display: block;
+    width: 2.5rem;
+    margin: 0 0.5rem;
+    z-index: 1;
+  }
+
+  nav {
+    position: absolute;
+    top: 0;
+    display: none;
+    justify-content: start;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: rgba(87, 87, 87, 0.9);
+    width: 30%;
+    height: 100vh;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: larger;
+  }
+
+  #searchBox {
+    position: relative;
+    width: 90%;
+    left: 0;
+    transform: translate(0, 0);
+  }
+
+  #searchInput {
+    display: flex;
+    background-color: white;
+    padding: 1rem;
+  }
+
+  #searchInput input {
+    background-color: transparent;
+    width: 100%;
+    outline: none;
+    border: none;
+  }
+
+  #searchInput svg {
+    display: none;
+    width: 2.5rem;
+  }
+
+  #searchResults {
+    position: absolute;
+    width: 100vw;
+    transform: translateX(-100%);
+    left: 100%;
+    padding: 3rem 1rem 0;
+  }
+
+  #ads {
+    width: 100%;
+  }
+
+  .movieFrame h3 {
+    width: 100%;
+  }
+
+  .movieFrame p {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(87, 87, 87, 0.5);
+    border-bottom-left-radius: 1rem;
+    color: var(--clr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .secContent {
+    grid-template-columns: auto auto;
+  }
 }

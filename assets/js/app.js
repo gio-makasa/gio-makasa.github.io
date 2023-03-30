@@ -31,7 +31,7 @@ setTimeout(() => {
     header.classList.remove('hide');
     main.classList.remove('hide');
     startup.classList.add('hide');
-}, 3700);
+}, 3000);
 
 getHomeInfo();
 getAboutInfo();
