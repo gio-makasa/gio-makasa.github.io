@@ -235,6 +235,38 @@
     ],
     "personalProjects": [
         {
+            "t": "Golder bunny",
+            "l": "https://makasa-golden-bunny.netlify.app",
+            "p": "./assets/images/projects/golden_bunny.png",
+            "teches": [
+                "html",
+                "css",
+                "api",
+                "Vue"
+            ]
+        },
+        {
+            "t": "Movie app",
+            "l": "https://makasa-movie-app.netlify.app",
+            "p": "./assets/images/projects/movie_app.png",
+            "teches": [
+                "html",
+                "css",
+                "api",
+                "Vue"
+            ]
+        },
+        {
+            "t": "Notes app",
+            "l": "https://makasa-notes.netlify.app",
+            "p": "./assets/images/projects/notes.png",
+            "teches": [
+                "html",
+                "css",
+                "Vue"
+            ]
+        },
+        {
             "t": "Movies",
             "l": "./assets/experience/projects/Movies/index.html",
             "p": "./assets/images/projects/movies.png",
@@ -267,38 +299,6 @@
             ]
         },
         {
-            "t": "Golder bunny",
-            "l": "https://makasa-golden-bunny.netlify.app",
-            "p": "./assets/images/projects/golden_bunny.png",
-            "teches": [
-                "html",
-                "css",
-                "api",
-                "Vue"
-            ]
-        },
-        {
-            "t": "Movie app",
-            "l": "https://makasa-movie-app.netlify.app",
-            "p": "./assets/images/projects/movie_app.png",
-            "teches": [
-                "html",
-                "css",
-                "api",
-                "Vue"
-            ]
-        },
-        {
-            "t": "Form",
-            "l": "./assets/experience/projects/Alliance/index.html",
-            "p": "./assets/images/projects/alliance.png",
-            "teches": [
-                "html",
-                "css",
-                "js"
-            ]
-        },
-        {
             "t": "Europebet",
             "l": "./assets/experience/projects/Europebet/index.html",
             "p": "./assets/images/projects/europebet.png",
@@ -312,26 +312,6 @@
             "t": "Lost and found",
             "l": "./assets/experience/projects/Lost_Found/index.html",
             "p": "./assets/images/projects/lost_found.png",
-            "teches": [
-                "html",
-                "css",
-                "js"
-            ]
-        },
-        {
-            "t": "Notes",
-            "l": "./assets/experience/projects/Notes/index.html",
-            "p": "./assets/images/projects/notes.png",
-            "teches": [
-                "html",
-                "css",
-                "js"
-            ]
-        },
-        {
-            "t": "Quiz",
-            "l": "./assets/experience/projects/Quiz/index.html",
-            "p": "./assets/images/projects/quiz.png",
             "teches": [
                 "html",
                 "css",
