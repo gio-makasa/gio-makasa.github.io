@@ -6,27 +6,33 @@
     #aboutMeInfo {
         position: relative;
         width: 100%;
-        font-family: 'patrick';
+        font-family: 'averia';
     }
 
-    table {
+    #aboutDetails {
         width: 100%;
         margin: 5rem 0 10rem;
-        border-collapse: collapse;
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        justify-content: space-between;
 
-        tr {
-            width: auto;
+        div {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 0.2rem;
+            border-left: 1px solid black;
+            padding: 0.5rem 0;
 
-            td {
-                border-left: 1px solid black;
-                width: 33%;
+            h4 {
+                color: $mainColor;
+                text-transform: capitalize;
+                margin-left: 1rem;
+            }
+
+            p {
                 text-align: center;
-                padding: 0.5rem 0;
-
-                * {
-                    color: $mainColor;
-                    text-transform: capitalize;
-                }
+                font-family: 'averia';
             }
         }
     }
@@ -61,7 +67,10 @@
             &>* {
                 background-color: rgb(230, 230, 230);
                 padding: 2rem;
-                border-radius: 1rem;
+
+                p {
+                    font-family: 'averia';
+                }
 
                 span {
                     font-size: medium;
@@ -95,7 +104,7 @@
         }
     }
 
-    &::before{
+    &::before {
         @include beforeSection;
         content: 'About me:';
     }

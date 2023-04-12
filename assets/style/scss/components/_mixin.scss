@@ -1,3 +1,11 @@
+@mixin pill {
+    color: $backgroundColor;
+    background: $pillColor;
+    border-radius: 1rem;
+    padding: 0.2rem 1rem;
+    width: fit-content;
+}
+
 @mixin cutCorner {
     content: '';
     position: absolute;

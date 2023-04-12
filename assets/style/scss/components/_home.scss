@@ -10,7 +10,6 @@
             position: relative;
             grid-area: info;
             padding: 0.5rem 1rem;
-            border-radius: 1rem;
             border: 2px dashed $mainColor;
             font-size: larger;
             overflow: hidden;
@@ -32,29 +31,26 @@
                 cursor: default;
 
                 p {
-                    color: $backgroundColor;
-                    background: $pillColor;
-                    width: fit-content;
-                    border-radius: 1rem;
-                    padding: 0.2rem 1rem;
+                    @include pill;
                     font-size: large;
                 }
             }
 
             #shortInfo {
-                font-family: 'Patrick';
+                font-family: 'averia';
             }
 
             #socialLinks {
-                position: absolute;
-                right: 0;
-                bottom: 0;
+                position: relative;
+                margin-top: 1rem;
+                width: 100%;
 
                 a {
                     padding: 0 0.2rem;
                     text-decoration: none;
-                    
-                    img{
+                    float: right;
+
+                    img {
                         width: 2rem;
                     }
                 }

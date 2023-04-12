@@ -6,7 +6,7 @@ const services = document.getElementById('services');
 const ourservices = [{ src: './assets/discover/john-mcarthur-7.png', h3: 'flight booking', p: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint quidem veniam consequatur aperiam!' },
 { src: './assets/discover/shawn-lee-78506.png', h3: 'HOTEL & RESORT BOOKING', p: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint quidem veniam consequatur aperiam!' },
 { src: './assets/discover/natalya-zaritskaya-144626-unsplash.png', h3: 'FAMILY TRIP PLANNER', p: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint quidem veniam consequatur aperiam!' },
-{ src: './assets/discover/vidar-nordli-mathisen-559120-unsplash.png', h3: 'CRUISE TOUR', p: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint quidem veniam consequatur aperiam!' },
+{ src: './assets/discover/Luxury-Cruise.jpg', h3: 'CRUISE TOUR', p: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint quidem veniam consequatur aperiam!' },
 { src: './assets/discover/robson-hatsukami-morgan-178532-unsplash.png', h3: 'FIRE CAMP', p: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint quidem veniam consequatur aperiam!' },
 { src: './assets/discover/mimi-thian-737711-unsplash.png', h3: 'CORPORATE HOLIDAYS', p: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint quidem veniam consequatur aperiam!' }
 ];

@@ -4,72 +4,58 @@
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    align-items: center;
     gap: 11%;
+    row-gap: 3rem;
+    margin-bottom: 3rem;
 
     .frames {
-        width: min(18rem, 100%);
-        margin: 2rem 0;
-        background-color: #393939;
-        border: solid 0.2rem var(--rgbcolor);
-        border-style: ridge;
+        background-color: white;
+        width: 17rem;
+        height: 14rem;
+        border: ridge 0.1rem var(--rgbcolor);
         box-shadow: 0 0 3rem var(--rgbcolor);
-
-        .cover {
-            position: relative;
-            width: 100%;
-            height: 12.5rem;
-            cursor: pointer;
-            transition: transform 0.8s;
-            transform-style: preserve-3d;
-
-            .front,
-            .back {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                backface-visibility: hidden;
-            }
-
-            .front {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                h2 {
-                    color: white;
-                    text-transform: capitalize;
-                    text-align: center;
-                    text-shadow: 0 0 10px $mainColor, 0 0 20px $mainColor;
-                }
-            }
-
-            .back {
-                transform: rotateY(180deg);
-
-                img {
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-        }
-
-        &:hover .cover {
-            transform: rotateY(180deg);
-        }
-    }
-
-    .techs {
         display: flex;
-        padding: 0.5rem 0;
+        flex-direction: column;
+        overflow: hidden;
+        transition: 0.3s;
 
-        p {
-            color: $backgroundColor;
-            background: $pillColor;
-            text-transform: uppercase;
-            border-radius: 50rem;
-            padding: 0.1rem 1rem;
-            margin-left: 0.3rem;
+        a {
+            flex-grow: 7;
+            overflow: hidden;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        h2 {
+            flex-grow: 2;
+            padding: 0.5rem;
+            text-align: center;
+            text-transform: capitalize;
+            text-shadow: 0 0 10px $mainColor, 0 0 20px $mainColor;
+        }
+
+        .techs {
+            display: flex;
+            justify-content: space-between;
+
+            p {
+                text-align: center;
+                color: white;
+                background: $pillColor;
+                text-transform: uppercase;
+                flex-grow: 1;
+                width: auto;
+                border: solid 1px white;
+            }
+        }
+
+        &:hover {
+            border-color: blue;
+            box-shadow: 0 0 5rem blue;
         }
     }
 

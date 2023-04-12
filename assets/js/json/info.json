@@ -202,14 +202,15 @@
     ],
     "softskills": [
         "Leadership",
-        "Collaboration/Teamwork",
+        "Collaboration",
         "Time Management",
         "Problem Solving",
         "Critical thinking",
         "Self Motivated",
         "Responsibility",
         "Flexibility/Adaptability",
-        "Accountability"
+        "Accountability",
+        "Teamwork"
     ],
     "liveProjects": [
         {
@@ -257,6 +258,28 @@
             ]
         },
         {
+            "t": "Form to get laptop",
+            "l": "https://makasa-pcfy.netlify.app",
+            "p": "./assets/images/projects/Form_to_get_laptop.png",
+            "teches": [
+                "html",
+                "css",
+                "api",
+                "vue"
+            ]
+        },
+        {
+            "t": "Resume maker (redberry)",
+            "l": "https://makasa-redberry-resume.netlify.app",
+            "p": "./assets/images/projects/resume_maker.png",
+            "teches": [
+                "html",
+                "css",
+                "api",
+                "Vue"
+            ]
+        },
+        {
             "t": "Notes app",
             "l": "https://makasa-notes.netlify.app",
             "p": "./assets/images/projects/notes.png",
@@ -286,16 +309,6 @@
                 "css",
                 "js",
                 "api"
-            ]
-        },
-        {
-            "t": "To Do",
-            "l": "https://makasa-todo.netlify.app",
-            "p": "./assets/images/projects/to_do.png",
-            "teches": [
-                "html",
-                "css",
-                "TypeScript"
             ]
         },
         {
@@ -366,17 +379,6 @@
                 "html",
                 "css",
                 "React.js"
-            ]
-        },
-        {
-            "t": "Form to get laptop",
-            "l": "https://makasa-redberry.netlify.app",
-            "p": "./assets/images/projects/Form_to_get_laptop.png",
-            "teches": [
-                "html",
-                "css",
-                "api",
-                "js"
             ]
         }
     ],

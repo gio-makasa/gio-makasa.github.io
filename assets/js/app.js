@@ -76,23 +76,17 @@ function getQuote() {
 
 function getAboutInfo() {
     aboutMeInfo.innerText = info.aboutme;
-    let tr = document.createElement('tr');
+    let div = document.createElement('div');
 
     for (let [index, [key, value]] of Object.entries(Object.entries(info.aboutDetails))) {
         if (key == 'age') {
             value = (new Date().getFullYear()) - (new Date(info.aboutDetails.birthday).getFullYear());
         }
 
-        tr.innerHTML += `<td><span>${key}:</span> ${value}</td>`;
-
-        if ((index + 1) % 3 == 0) {
-            aboutDetails.appendChild(tr.cloneNode(true));
-            tr.innerHTML = '';
-        }
+        div.innerHTML += `<h4>${key}:</h4> <p>${value}</p>`;
+        aboutDetails.appendChild(div.cloneNode(true));
+        div.innerHTML = '';
     }
-
-    aboutDetails.appendChild(tr.cloneNode(true));
-
 
     info.education.forEach(education => {
         let div = document.createElement('div');
@@ -174,16 +168,10 @@ function randFrames(where, array) {
 
         where.innerHTML += `
             <div class="frames" style="--rgbcolor:${rgb}">
-                <div class="cover">
-                    <div class="front">
-                        <h2>${project.t}</h2>
-                    </div>
-                    <div class="back">
-                        <a href="${project.l}">
-                            <img src="${project.p}" alt="${project.t}">
-                        </a>
-                    </div>
-                </div>
+                <a href="${project.l}">
+                    <img src="${project.p}" alt="${project.t}">
+                </a>
+                <h2>${project.t}</h2>
                 ${teches}
             </div>
         `
