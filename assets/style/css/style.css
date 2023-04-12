@@ -730,9 +730,13 @@ header #cvbtn {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    gap: 5rem;
   }
   #aboutMe .education-experience::before, #aboutMe .education-experience::after {
-    display: none;
+    width: 100%;
+  }
+  #aboutMe .education-experience::after {
+    top: 47%;
   }
 }
 @media screen and (max-width: 650px) {
@@ -799,7 +803,6 @@ header #cvbtn {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    gap: 3rem;
   }
   #aboutMe .education-experience > * {
     position: relative;

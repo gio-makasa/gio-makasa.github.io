@@ -50,10 +50,15 @@
 
         .education-experience {
             flex-direction: column;
+            gap: 5rem;
 
             &::before,
             &::after {
-                display: none;
+                width: 100%;
+            }
+
+            &::after {
+                top: 47%;
             }
         }
     }
@@ -117,7 +122,6 @@
             display: flex;
             width: 100%;
             justify-content: space-between;
-            gap: 3rem;
 
             &>* {
                 position: relative;
