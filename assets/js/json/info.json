@@ -125,7 +125,7 @@
             "color2": "black"
         },
         {
-            "skill": "React.js",
+            "skill": "react",
             "color1": "#61d9fc",
             "color2": "#2b2c30"
         },
@@ -258,6 +258,17 @@
             ]
         },
         {
+            "t": "Music app",
+            "l": "https://makasa-music-app.netlify.app",
+            "p": "./assets/images/projects/music_app.png",
+            "teches": [
+                "html",
+                "css",
+                "api",
+                "Vue"
+            ]
+        },
+        {
             "t": "Form to get laptop",
             "l": "https://makasa-pcfy.netlify.app",
             "p": "./assets/images/projects/Form_to_get_laptop.png",
@@ -293,17 +304,6 @@
             "t": "Movies",
             "l": "./assets/experience/projects/Movies/index.html",
             "p": "./assets/images/projects/movies.png",
-            "teches": [
-                "html",
-                "css",
-                "js",
-                "api"
-            ]
-        },
-        {
-            "t": "Recipe",
-            "l": "./assets/experience/projects/Recipe/index.html",
-            "p": "./assets/images/projects/recipe.png",
             "teches": [
                 "html",
                 "css",
@@ -378,7 +378,7 @@
             "teches": [
                 "html",
                 "css",
-                "React.js"
+                "react"
             ]
         }
     ],
@@ -420,7 +420,7 @@
             "teches": [
                 "html",
                 "css",
-                "js"
+                "react"
             ]
         },
         {
