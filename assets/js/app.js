@@ -78,9 +78,16 @@ function getAboutInfo() {
     aboutMeInfo.innerText = info.aboutme;
     let div = document.createElement('div');
 
-    for (let [index, [key, value]] of Object.entries(Object.entries(info.aboutDetails))) {
+    for (let [key, value] of Object.entries(info.aboutDetails)) {
         if (key == 'age') {
-            value = (new Date().getFullYear()) - (new Date(info.aboutDetails.birthday).getFullYear());
+            let now = new Date();
+            let birth = new Date(info.aboutDetails.birthday);
+            value = (now.getFullYear()) - (birth.getFullYear());
+            if (now.getMonth() <= birth.getMonth()) {
+                if (now.getDate() < birth.getDate()) {
+                    value--;
+                }
+            }
         }
 
         div.innerHTML += `<h4>${key}:</h4> <p>${value}</p>`;

@@ -4,13 +4,13 @@
     "fields": [
         "Front-end Developer"
     ],
-    "shortInfo": "I am front-end Developer with 1 year of experience, most of my project are built using HTML, CSS(Scss/Sass) and JS, but couple of my personal projects are built using Vue.js(VUEX) and also I have little experience with React.",
+    "shortInfo": "I am front-end Developer with 1 year of experience, most of my project are built using HTML, CSS(Scss/Sass) and JS, but some of my personal projects are built using Vue.js(VUEX) and also I have little experience with React, TypeScript and Angular.",
     "socials": {
         "codepen": "https://codepen.io/happy0123",
         "github": "https://github.com/gio-makasa",
         "linkedin": "https://www.linkedin.com/in/giorgi-makasa/"
     },
-    "aboutme": "I am a student now studying at Caucasus University (3rd year), major: Computer Science. In terms of Web Development, I have a solid knowledge and experience in HTML, CSS(Sass/Scss), JavaScript (JQuery), Vue.js. I have worked on real projects, also I have basic knowledge at React and Angular. In term of Backend, I know Python (Flask) and have basic knowledge at PHP. I have experience and knowledge at SQL, I can work with data in Relational Database Management System (RDBMS), create data bases and write procedures, also I have basic knowledge at C, C++, Racket, Algorithms and Data structures. I am detail-oriented, quick learner, analytical thinker and organized with a high sense of responsibility.",
+    "aboutme": "I am a student now studying at Caucasus University (3rd year), Computer Science. In terms of Web    Development, I have excellent knowledge and experience in HTML, CSS(Sass/Scss), JavaScript (JQuery),    Vue.js. For 6 months I have been working on real projects, some of them are already up and running. Also, I    have some personal projects built using Vue.js and a little experience of Typescript, React and Angular. In    terms of Backend, I know Python (Flask) and have basic knowledge of PHP. I have experience and knowledge    of SQL, I can work with data in Relational Database Management System (RDBMS), create data bases and    write procedures, also I have basic knowledge at C, C++, Racket, Algorithms and Data structures.    I am detail-oriented, quick learner, analytical thinker and organized with a high sense of responsibility.",
     "aboutDetails": {
         "email": "giorgimakasarashvili@gmail.com",
         "phone": "+995 571 70 66 32",
@@ -232,6 +232,36 @@
                 "css",
                 "js"
             ]
+        },
+        {
+            "t": "Luna chatbot",
+            "l": "https://gkhundadze.github.io/chatbot-luna/",
+            "p": "./assets/images/projects/luna.png",
+            "teches": [
+                "html",
+                "css",
+                "js"
+            ]
+        },
+        {
+            "t": "Ava chatbot",
+            "l": "https://murasamane.github.io/Technologies-School-Chatbot/",
+            "p": "./assets/images/projects/ava.png",
+            "teches": [
+                "html",
+                "css",
+                "js"
+            ]
+        },
+        {
+            "t": "Programming chatbot",
+            "l": "https://gkhundadze.github.io/programming-chatbot/",
+            "p": "./assets/images/projects/prog_bot.png",
+            "teches": [
+                "html",
+                "css",
+                "js"
+            ]
         }
     ],
     "personalProjects": [
@@ -339,16 +369,6 @@
                 "html",
                 "css",
                 "js"
-            ]
-        },
-        {
-            "t": "Shopping list",
-            "l": "./assets/experience/projects/Shopping_list/index.html",
-            "p": "./assets/images/projects/Shopping_list.png",
-            "teches": [
-                "html",
-                "css",
-                "Angular.JS"
             ]
         },
         {
