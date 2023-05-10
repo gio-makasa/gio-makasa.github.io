@@ -90,11 +90,6 @@
             "color2": "#4000ff"
         },
         {
-            "skill": "W3.css",
-            "color1": "#00ff78",
-            "color2": "green"
-        },
-        {
             "skill": "JavaScript",
             "color1": "#ff4900",
             "color2": "#ffb900"
@@ -120,19 +115,14 @@
             "color2": "#4a98ce"
         },
         {
-            "skill": "Vue.js",
+            "skill": "Vue.js (Vuex)",
             "color1": "green",
             "color2": "black"
         },
         {
-            "skill": "react",
-            "color1": "#61d9fc",
-            "color2": "#2b2c30"
-        },
-        {
-            "skill": "AngularJS",
+            "skill": "Angular",
             "color1": "red",
-            "color2": "white"
+            "color2": "#D7D7D7"
         },
         {
             "skill": "Python",
@@ -147,12 +137,12 @@
         {
             "skill": "PHP",
             "color1": "#4f5b93",
-            "color2": "white"
+            "color2": "#D7D7D7"
         },
         {
-            "skill": "C/C++",
+            "skill": "C/C++/C#",
             "color1": "#0868ac",
-            "color2": "white"
+            "color2": "#D7D7D7"
         },
         {
             "skill": "Git (Github)",
@@ -191,7 +181,7 @@
         },
         {
             "skill": "Data structures",
-            "color1": "white",
+            "color1": "#D7D7D7",
             "color2": "blue"
         },
         {
@@ -339,66 +329,6 @@
                 "css",
                 "js",
                 "api"
-            ]
-        },
-        {
-            "t": "Europebet",
-            "l": "./assets/experience/projects/Europebet/index.html",
-            "p": "./assets/images/projects/europebet.png",
-            "teches": [
-                "html",
-                "css",
-                "js"
-            ]
-        },
-        {
-            "t": "Lost and found",
-            "l": "./assets/experience/projects/Lost_Found/index.html",
-            "p": "./assets/images/projects/lost_found.png",
-            "teches": [
-                "html",
-                "css",
-                "js"
-            ]
-        },
-        {
-            "t": "Shop",
-            "l": "./assets/experience/projects/Shop/index.html",
-            "p": "./assets/images/projects/onlineshop.png",
-            "teches": [
-                "html",
-                "css",
-                "js"
-            ]
-        },
-        {
-            "t": "Tourist",
-            "l": "./assets/experience/projects/Tourist_Landing_Page/index.html",
-            "p": "./assets/images/projects/tourist_landing_page.png",
-            "teches": [
-                "html",
-                "scss",
-                "js"
-            ]
-        },
-        {
-            "t": "Tours Georgia",
-            "l": "./assets/experience/projects/Tours_Georgia/index.html",
-            "p": "./assets/images/projects/tours.png",
-            "teches": [
-                "html",
-                "scss",
-                "js"
-            ]
-        },
-        {
-            "t": "City tours",
-            "l": "https://makasa-city-tours.netlify.app",
-            "p": "./assets/images/projects/city_tours.png",
-            "teches": [
-                "html",
-                "css",
-                "react"
             ]
         }
     ],
