@@ -8,6 +8,7 @@ const quotes = await getData('./assets/js/json/quotes.json');
 
 const startup = document.querySelector('#startUp');
 const header = document.querySelector('header');
+const menuButton = document.querySelector('#menuButton');
 const main = document.querySelector('main');
 const fullname = document.querySelector('#fullname');
 const avatar = document.querySelector('#avatar');
@@ -185,14 +186,18 @@ function randFrames(where, array) {
     });
 }
 
+menuButton.addEventListener('click', () => {
+    header.classList.contains('show') ? header.classList.remove('show') : header.classList.add('show');
+})
+
 $(document).ready(function () {
     $("a").on('click', function (event) {
         if (this.hash !== "") {
             event.preventDefault();
             let hash = this.hash;
-            console.log($(hash).offset().top)
+            header.classList.remove('show');
             $('html, body').animate({
-                scrollTop: $(hash).offset().top-100
+                scrollTop: $(hash).offset().top - 100
             }, 800);
         }
     });

@@ -12,8 +12,33 @@
 }
 
 @media screen and (max-width: 1000px) {
+    #menuButton {
+        display: block;
+    }
+
     header {
         display: none;
+        width: 30%;
+        right: 0;
+        height: 100%;
+
+        nav {
+            flex-direction: column;
+            justify-content: start;
+
+            .tab {
+                border: none;
+                transform: none;
+
+                &:first-of-type {
+                    border-left: none;
+                }
+            }
+
+            #cvbtn {
+                position: relative;
+            }
+        }
     }
 
     body {

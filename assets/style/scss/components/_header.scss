@@ -4,25 +4,29 @@ header {
     display: flex;
     justify-content: center;
     background-color: $backgroundColor;
-    z-index: 50;
+    z-index: 15;
     animation: fadein 1s linear forwards;
+
+    &[class|="show"]{
+        display: flex;
+    }
 
     nav {
         position: relative;
         display: flex;
         justify-content: center;
-        width: fit-content;
+        width: 100%;
 
         .tab {
-            border-left: 0.1rem solid $borderColor;
+            border-right: 0.1rem solid $borderColor;
             color: $mainColor;
             padding: 1rem 2rem;
             text-transform: uppercase;
             transform: skewY(-10deg) rotateZ(10deg);
             text-decoration: none;
 
-            &:last-of-type {
-                border-right: 0.1rem solid $borderColor;
+            &:first-of-type {
+                border-left: 0.1rem solid $borderColor;
             }
 
             &:hover {
@@ -30,7 +34,6 @@ header {
                 text-shadow: 0 0 0.2rem blue;
 
                 &::after {
-                    // border-bottom: groove 0.2rem white;
                     content: '';
                     position: absolute;
                     width: 100%;
@@ -42,30 +45,30 @@ header {
                 }
             }
         }
-    }
 
-    #cvbtn {
-        position: absolute;
-        right: 0;
-        background-color: $mainColor;
-        color: white;
-        align-self: center;
-        margin-right: 1rem;
-        padding: 0.8rem 1rem;
-        font-size: large;
-        border: none;
-        text-decoration: none;
+        #cvbtn {
+            position: absolute;
+            right: 0;
+            background-color: $mainColor;
+            color: white;
+            align-self: center;
+            margin-right: 1rem;
+            padding: 0.8rem 1rem;
+            font-size: large;
+            border: none;
+            text-decoration: none;
 
-        &::before {
-            @include cutCorner;
-            top: -0.5rem;
-            left: -0.5rem;
-        }
+            &::before {
+                @include cutCorner;
+                top: -0.5rem;
+                left: -0.5rem;
+            }
 
-        &::after {
-            @include cutCorner;
-            bottom: -0.5rem;
-            right: -0.5rem;
+            &::after {
+                @include cutCorner;
+                bottom: -0.5rem;
+                right: -0.5rem;
+            }
         }
     }
 }
