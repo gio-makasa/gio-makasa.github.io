@@ -13,25 +13,66 @@ body {
     &::-webkit-scrollbar {
         display: none;
     }
+
+    main {
+        animation: fadein 1s linear forwards;
+        width: 80%;
+        margin: auto;
+
+        .secTitle {
+            position: relative;
+            font-size: xx-large;
+            color: $mainColor;
+            background-color: $backgroundColor;
+            top: 0.2rem;
+            padding: 0 0.5rem;
+            width: fit-content;
+            border-color: blue;
+            border-width: 0.2rem;
+            border-style: solid solid none solid;
+            z-index: 2;
+            margin-top: 10rem;
+
+            &::before {
+                @include cutCorner;
+                top: -0.6rem;
+                left: -0.7rem;
+                border-right: 0.2rem solid blue;
+            }
+        }
+
+        section {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 100vh;
+            padding: 0.5rem;
+
+            &:not(:first-of-type):before {
+                content: '';
+                position: absolute;
+                height: 100%;
+                width: 0.2rem;
+                left: 0;
+                top: 0;
+                background: linear-gradient(blue, $backgroundColor);
+            }
+
+            &:not(:first-of-type)::after {
+                content: '';
+                position: absolute;
+                height: 0.2rem;
+                width: 100%;
+                left: 0;
+                top: 0;
+                background: linear-gradient(90deg, blue, $backgroundColor);
+            }
+        }
+    }
 }
 
-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    width: 80%;
-    margin: auto;
-}
-
-section:not(:first-child) {
-    padding-top: 10rem;
-}
 
 .hide {
     display: none;
-}
-
-main {
-    animation: fadein 1s linear forwards;
 }

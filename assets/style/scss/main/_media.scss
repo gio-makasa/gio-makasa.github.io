@@ -16,49 +16,51 @@
         display: none;
     }
 
-    section {
-        width: 100%;
-    }
+    body {
+        main {
+            width: 100%;
+        }
 
-    #home {
-        #homeContainer {
-            grid-template-areas: 'info info info'
-                '. img .'
-                'quote quote quote';
-            gap: 0;
-            row-gap: 1rem;
+        #home {
+            #homeContainer {
+                grid-template-areas: 'info info info'
+                    '. img .'
+                    'quote quote quote';
+                gap: 0;
+                row-gap: 1rem;
 
-            #quotes {
+                #quotes {
+                    padding: 0.1rem;
+                }
+            }
+        }
+
+        #aboutMe {
+            #aboutMeInfo {
                 padding: 0.1rem;
             }
-        }
-    }
 
-    #aboutMe {
-        #aboutMeInfo {
-            padding: 0.1rem;
-        }
+            #aboutDetails {
+                grid-template-columns: 100%;
 
-        #aboutDetails {
-            grid-template-columns: 100%;
-
-            div {
-                justify-content: center;
-                border-bottom: 0.1rem solid black;
-            }
-        }
-
-        .education-experience {
-            flex-direction: column;
-            gap: 5rem;
-
-            &::before,
-            &::after {
-                width: 100%;
+                div {
+                    justify-content: center;
+                    border-bottom: 0.1rem solid black;
+                }
             }
 
-            &::after {
-                top: 47%;
+            .education-experience {
+                flex-direction: column;
+                gap: 5rem;
+
+                &::before,
+                &::after {
+                    width: 100%;
+                }
+
+                &::after {
+                    top: 47%;
+                }
             }
         }
     }

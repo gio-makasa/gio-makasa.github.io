@@ -7,7 +7,6 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        padding-top: 10rem;
         
         .hardskill {
             background-image: linear-gradient(to bottom right, var(--clr1), var(--clr2));
@@ -19,11 +18,6 @@
                 text-align: center;
                 padding: 1rem;
             }
-        }
-        
-        &::before {
-            @include beforeSection;
-            content: 'Hardskills:';
         }
     }
     

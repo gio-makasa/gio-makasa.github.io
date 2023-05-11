@@ -59,20 +59,19 @@
 
         #avatar {
             grid-area: img;
-            width: 18rem;
-            height: auto;
+            width: 19rem;
+            height: 100%;
             border: 0.3rem ridge $mainColor;
         }
+    }
+    #quotes {
+        grid-area: quote;
+        text-align: center;
+        font-size: 2rem;
+        margin-top: 1rem;
 
-        #quotes {
-            grid-area: quote;
-            text-align: center;
-            font-size: 2rem;
-            margin-top: 1rem;
-
-            #author {
-                color: $mainColor;
-            }
+        #author {
+            color: $mainColor;
         }
     }
 }

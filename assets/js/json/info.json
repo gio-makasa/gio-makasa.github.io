@@ -21,14 +21,14 @@
     },
     "education": [
         {
-            "years": "2020-present",
-            "title": "Computer Science",
-            "info": "Caucasus University"
-        },
-        {
             "years": "2022",
             "title": "Vue",
             "info": "The Complete Guide (incl. Router & Composition API) - udemy.com"
+        },
+        {
+            "years": "2022",
+            "title": "Angular",
+            "info": "Angular - The Complete Guide (2023 Edition)"
         },
         {
             "years": "2022",
@@ -36,22 +36,17 @@
             "info": "CS50 - cs50.harvard.edu"
         },
         {
-            "years": "2023",
-            "title": "Python Basics for Data Science",
-            "info": "courses.edx.org"
-        },
-        {
-            "years": "2023",
-            "title": "Analyzing Data with Python",
-            "info": "courses.edx.org"
-        },
-        {
-            "years": "2023",
-            "title": "Visualizing Data with Python",
-            "info": "courses.edx.org"
+            "years": "2020-present",
+            "title": "Computer Science",
+            "info": "Caucasus University"
         }
     ],
     "experience": [
+        {
+            "years": "2022-2023",
+            "title": "Front end developer",
+            "info": "Unilab - creating web pages using HTML, CSS, JavaScript"
+        },
         {
             "years": "2021-2022",
             "title": "Front end developer",
@@ -61,11 +56,6 @@
             "years": "2021-2022",
             "title": "Front end developer",
             "info": "Fiverr - Freelancer, code editing and bug fixing"
-        },
-        {
-            "years": "2022-2023",
-            "title": "Front end developer",
-            "info": "Unilab - creating web pages using HTML, CSS, JavaScript"
         }
     ],
     "hardskills": [
@@ -88,6 +78,11 @@
             "skill": "Bootstrap 5",
             "color1": "purple",
             "color2": "#4000ff"
+        },
+        {
+            "skill": "W3.CSS",
+            "color1": "green",
+            "color2": "white"
         },
         {
             "skill": "JavaScript",

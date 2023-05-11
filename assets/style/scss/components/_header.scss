@@ -16,15 +16,30 @@ header {
         .tab {
             border-left: 0.1rem solid $borderColor;
             color: $mainColor;
-            background-color: $backgroundColor;
             padding: 1rem 2rem;
             text-transform: uppercase;
-            // transform: skewY(-10deg) rotateZ(10deg);
+            transform: skewY(-10deg) rotateZ(10deg);
             text-decoration: none;
-            cursor: pointer;
 
             &:last-of-type {
                 border-right: 0.1rem solid $borderColor;
+            }
+
+            &:hover {
+                color: white;
+                text-shadow: 0 0 0.2rem blue;
+
+                &::after {
+                    // border-bottom: groove 0.2rem white;
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 0.1rem;
+                    background-color: white;
+                    box-shadow: 0 0 1rem white, 0 0 1rem 0.2rem blue;
+                    left: 0;
+                    bottom: 0;
+                }
             }
         }
     }
@@ -41,16 +56,16 @@ header {
         border: none;
         text-decoration: none;
 
-        // &::before {
-        //     @include cutCorner;
-        //     top: -0.5rem;
-        //     left: -0.5rem;
-        // }
+        &::before {
+            @include cutCorner;
+            top: -0.5rem;
+            left: -0.5rem;
+        }
 
-        // &::after {
-        //     @include cutCorner;
-        //     bottom: -0.5rem;
-        //     right: -0.5rem;
-        // }
+        &::after {
+            @include cutCorner;
+            bottom: -0.5rem;
+            right: -0.5rem;
+        }
     }
 }

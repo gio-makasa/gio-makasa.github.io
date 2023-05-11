@@ -189,12 +189,11 @@ $(document).ready(function () {
     $("a").on('click', function (event) {
         if (this.hash !== "") {
             event.preventDefault();
-            var hash = this.hash;
+            let hash = this.hash;
+            console.log($(hash).offset().top)
             $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 800, function () {
-                window.location.hash = hash;
-            });
+                scrollTop: $(hash).offset().top-100
+            }, 800);
         }
     });
 });

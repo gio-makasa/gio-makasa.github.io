@@ -21,7 +21,7 @@
             display: flex;
             align-items: center;
             gap: 0.2rem;
-            border-left: 1px solid black;
+            border-left: 1px solid white;
             padding: 0.5rem 0;
 
             h4 {
@@ -50,10 +50,9 @@
             flex-direction: column;
             gap: 1rem;
             width: 100%;
-            background-color: white;
             padding: 2rem;
             height: 25rem;
-            overflow: scroll;
+            overflow-y: scroll;
 
             &::-webkit-scrollbar {
                 width: 0.5rem;
@@ -65,7 +64,7 @@
             }
 
             &>* {
-                background-color: rgb(230, 230, 230);
+                background-color: $lightBackgroundColor;
                 padding: 2rem;
 
                 p {
@@ -102,10 +101,5 @@
             content: 'Experience';
             right: 0;
         }
-    }
-
-    &::before {
-        @include beforeSection;
-        content: 'About me:';
     }
 }
