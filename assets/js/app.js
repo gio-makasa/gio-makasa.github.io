@@ -178,8 +178,8 @@ function randFrames(where, array) {
             <div class="frames" style="--rgbcolor:${rgb}">
                 <a href="${project.l}">
                     <img src="${project.p}" alt="${project.t}">
+                    <h2>${project.t}</h2>
                 </a>
-                <h2>${project.t}</h2>
                 ${teches}
             </div>
         `

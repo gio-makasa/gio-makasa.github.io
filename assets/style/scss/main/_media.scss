@@ -21,6 +21,7 @@
         width: fit-content;
         right: 0;
         height: 100%;
+        overflow: hidden;
 
         nav {
             flex-direction: column;
@@ -101,7 +102,7 @@
         justify-content: space-evenly;
 
         .frames {
-            width: min(15rem,50%);
+            width: min(15rem, 50%);
             height: 13rem;
         }
     }
