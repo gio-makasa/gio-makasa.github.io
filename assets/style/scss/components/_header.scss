@@ -5,6 +5,7 @@ header {
     justify-content: center;
     background-color: $backgroundColor;
     z-index: 15;
+    overflow: hidden;
     animation: fadein 1s linear forwards;
 
     &[class|="show"]{
