@@ -204,7 +204,7 @@
             "p": "./assets/images/projects/E207.png",
             "teches": [
                 "html",
-                "css",
+                "scss",
                 "js"
             ]
         },
@@ -313,6 +313,28 @@
                 "html",
                 "css",
                 "Vue"
+            ]
+        },
+        {
+            "t": "Recipes",
+            "l": "https://makasa-recipes.netlify.app/recipes",
+            "p": "./assets/images/projects/recipes.png",
+            "teches": [
+                "html",
+                "css",
+                "Angular",
+                "api"
+            ]
+        },
+        {
+            "t": "Cocktails",
+            "l": "https://makasa-cocktails-app.netlify.app",
+            "p": "./assets/images/projects/cocktails.png",
+            "teches": [
+                "html",
+                "scss",
+                "Angular",
+                "api"
             ]
         },
         {

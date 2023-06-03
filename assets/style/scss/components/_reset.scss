@@ -24,20 +24,20 @@ body {
             font-size: xx-large;
             color: $mainColor;
             background-color: $backgroundColor;
-            top: 0.2rem;
+            top: 0.1rem;
             padding: 0 0.5rem;
             width: fit-content;
             border-color: blue;
-            border-width: 0.2rem;
+            border-width: 0.1rem;
             border-style: solid solid none solid;
             z-index: 2;
             margin-top: 10rem;
 
             &::before {
                 @include cutCorner;
-                top: -0.6rem;
-                left: -0.7rem;
-                border-right: 0.2rem solid blue;
+                top: -0.55rem;
+                left: -0.6rem;
+                border-right: 0.1rem solid blue;
             }
         }
 
@@ -53,7 +53,7 @@ body {
                 content: '';
                 position: absolute;
                 height: 100%;
-                width: 0.2rem;
+                width: 0.1rem;
                 left: 0;
                 top: 0;
                 background: linear-gradient(blue, $backgroundColor);
@@ -62,7 +62,7 @@ body {
             &:not(:first-of-type)::after {
                 content: '';
                 position: absolute;
-                height: 0.2rem;
+                height: 0.1rem;
                 width: 100%;
                 left: 0;
                 top: 0;
