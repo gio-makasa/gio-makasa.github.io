@@ -316,6 +316,17 @@
             ]
         },
         {
+            "t": "QR Generator",
+            "l": "https://makasa-qrgenerator.netlify.app",
+            "p": "./assets/images/projects/QR.png",
+            "teches": [
+                "html",
+                "scss",
+                "typescript",
+                "Vue"
+            ]
+        },
+        {
             "t": "Recipes",
             "l": "https://makasa-recipes.netlify.app/recipes",
             "p": "./assets/images/projects/recipes.png",
