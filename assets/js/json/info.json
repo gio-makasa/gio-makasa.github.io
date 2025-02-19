@@ -2,7 +2,8 @@
     "fullname": "George Makasarashvili",
     "avatarPhoto": "./assets/images/avatar.png",
     "fields": [
-        "Front-end Developer"
+        "Database Developer",
+        "AI Artist"
     ],
     "shortInfo": "I am front-end Developer with 1 year of experience, most of my project are built using HTML, CSS(Scss/Sass) and JS, but some of my personal projects are built using Vue.js(VUEX) and also I have little experience with React, TypeScript and Angular.",
     "socials": {
