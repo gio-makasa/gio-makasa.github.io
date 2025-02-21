@@ -32,6 +32,7 @@
 
                 p {
                     @include pill;
+                    font-family: 'delius';
                     font-size: large;
                 }
             }
@@ -64,11 +65,16 @@
             border: 0.3rem ridge $mainColor;
         }
     }
+
     #quotes {
         grid-area: quote;
         text-align: center;
         font-size: 2rem;
         margin-top: 1rem;
+
+        #quote{
+            font-family: 'delius';
+        }
 
         #author {
             color: $mainColor;

@@ -10,6 +10,12 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: "delius";
+    src: url(../../fonts/Delius/Delius-Regular.ttf) format('truetype');
+    font-display: swap;
+}
+
 @import '../components/variables';
 @import '../components/mixin';
 @import '../components/animations';
