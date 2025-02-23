@@ -40,9 +40,10 @@
     .education-experience {
         position: relative;
         display: flex;
+        flex-direction: column;
         width: 100%;
         justify-content: space-between;
-        gap: 3rem;
+        gap: 10rem;
 
         &>* {
             position: relative;
@@ -87,20 +88,19 @@
             position: absolute;
             font-size: xx-large;
             text-align: center;
-            width: 50%;
-            bottom: 100%;
+            width: 100%;
             margin-bottom: 1rem;
             color: $mainColor;
         }
 
         &::before {
             content: 'Education';
-            left: 0;
+            bottom: 100%;
         }
 
         &::after {
             content: 'Experience';
-            right: 0;
+            bottom: 42%;
         }
     }
 }
