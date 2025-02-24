@@ -9,6 +9,9 @@
         justify-content: space-evenly;
         
         .hardskill {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             background-image: linear-gradient(to bottom right, var(--clr1), var(--clr2));
             width: 10rem;
             margin: 1.3rem 0;

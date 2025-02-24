@@ -11,7 +11,7 @@
         "github": "https://github.com/gio-makasa",
         "linkedin": "https://www.linkedin.com/in/gio-makasa/"
     },
-    "aboutme": "I consider myself a hardworking and detail-oriented professional. My analytical and critical thinking skills help me find innovative solutions to challenging problems. I am a quick learner with a high sense of responsibility, always eager to embrace new challenges and technologies. \n\nI have experience in various fields:\n\nFront End\n------------------------------------------\nI have extensive knowledge and experience in front-end development. \nHTML, CSS (Sass/SCSS), JavaScript and TypeScript.\nIn my personal projects, I’ve used Vue.js along with Vuex for state management. \n\nBack End\n------------------------------------------ \nIn my personal projects, I have also used Python, working with Tkinter and pyodbc. I gained foundational experience in C, C#, .NET, C++, and a solid understanding of algorithms and data structures during my university studies.\n\nDatabase \n------------------------------------------\nAs a Database Developer, I have experience with SQL databases, creating procedures and jobs in SSMS, Creating reports in SSRS and Managing ETL (Extract, Transform, Load) processes in SSIS. Working on Data Warehouse and Data Lakehouse. Write scripts and create jobs on Databricks.\n\nCybersecurity\n------------------------------------------\nI am passionate about expanding my knowledge and skillset in the dynamic and ever-evolving field of cybersecurity. With a strong foundation in technology, I am d\ndicated to learning the latest cybersecurity trends, tools, and techniques.\nI hold several certifications in cybersecurity, which have equipped me with the essential skills in threat detection, risk assessment, and mitigation strategies.",
+    "aboutme": "I consider myself a hardworking and detail-oriented professional. My analytical and critical thinking skills help me find innovative solutions to challenging problems. I am a quick learner with a high sense of responsibility, always eager to embrace new challenges and technologies. \n\n\nI have experience in various fields:\n\nFront End\n------------------------------------------\nI have extensive knowledge and experience in front-end development. \nHTML, CSS (Sass/SCSS), JavaScript and TypeScript.\nIn my personal projects, I’ve used Vue.js along with Vuex for state management. \n\nBack End\n------------------------------------------ \nIn my personal projects, I have also used Python, working with Tkinter and pyodbc. I gained foundational experience in C, C#, .NET, C++, and a solid understanding of algorithms and data structures during my university studies.\n\nDatabase \n------------------------------------------\nAs a Database Developer, I have experience with SQL databases, creating procedures and jobs in SSMS, Creating reports in SSRS and Managing ETL (Extract, Transform, Load) processes in SSIS. Working on Data Warehouse and Data Lakehouse. Write scripts and create jobs on Databricks.\n\nCybersecurity\n------------------------------------------\nI am passionate about expanding my knowledge and skillset in the dynamic and ever-evolving field of cybersecurity. With a strong foundation in technology, I am dedicated to learning the latest cybersecurity trends, tools, and techniques.\nI hold several certifications in cybersecurity, which have equipped me with the essential skills in threat detection, risk assessment, and mitigation strategies.",
     "aboutDetails": {
         "birthday": "30-nov-2001",
         "city": "Tbilisi, Georgia",
@@ -63,49 +63,24 @@
             "color2": "orange"
         },
         {
-            "skill": "CSS",
+            "skill": "CSS <br> Sass/Scss",
             "color1": "blue",
             "color2": "green"
         },
         {
-            "skill": "Sass/Scss",
-            "color1": "pink",
-            "color2": "purple"
-        },
-        {
-            "skill": "Bootstrap 5",
+            "skill": "Bootstrap 5 <br> W3.CSS",
             "color1": "purple",
             "color2": "#4000ff"
         },
         {
-            "skill": "W3.CSS",
-            "color1": "green",
-            "color2": "white"
-        },
-        {
-            "skill": "JavaScript",
+            "skill": "JavaScript <br> TypeScript",
             "color1": "#ff4900",
             "color2": "#ffb900"
         },
         {
-            "skill": "TypeScript",
-            "color1": "#3178c6",
-            "color2": "#083061"
-        },
-        {
-            "skill": "JQuery",
+            "skill": "JSON/AJAX <br> JQuery",
             "color1": "#0868ac",
             "color2": "#131b28"
-        },
-        {
-            "skill": "JSON",
-            "color1": "#969696",
-            "color2": "#222222"
-        },
-        {
-            "skill": "AJAX",
-            "color1": "#2284c6",
-            "color2": "#4a98ce"
         },
         {
             "skill": "Vue.js (Vuex)",
@@ -113,24 +88,9 @@
             "color2": "black"
         },
         {
-            "skill": "Angular",
-            "color1": "red",
-            "color2": "#D7D7D7"
-        },
-        {
-            "skill": "Python",
-            "color1": "yellow",
-            "color2": "blue"
-        },
-        {
-            "skill": "Flask",
-            "color1": "blue",
-            "color2": "black"
-        },
-        {
-            "skill": "PHP",
-            "color1": "#4f5b93",
-            "color2": "#D7D7D7"
+            "skill": "Git (Github)",
+            "color1": "#e84e31",
+            "color2": "#3c2b00"
         },
         {
             "skill": "C/C++/C#",
@@ -138,34 +98,29 @@
             "color2": "#D7D7D7"
         },
         {
-            "skill": "Git (Github)",
-            "color1": "#e84e31",
-            "color2": "#3c2b00"
-        },
-        {
             "skill": "SQL",
             "color1": "gold",
             "color2": "blue"
         },
         {
-            "skill": "UI/UX Design",
-            "color1": "green",
+            "skill": "DataBricks",
+            "color1": "red",
+            "color2": "#D7D7D7"
+        },
+        {
+            "skill": "PySpark",
+            "color1": "blue",
             "color2": "black"
         },
         {
-            "skill": "Figma",
-            "color1": "#f24e1e",
-            "color2": "#ff7262"
-        },
-        {
-            "skill": "English (B2)",
-            "color1": "red",
+            "skill": "Python",
+            "color1": "yellow",
             "color2": "blue"
         },
         {
-            "skill": "Microsoft apps",
-            "color1": "#f25022",
-            "color2": "#ffb900"
+            "skill": "UI/UX Design <br> Figma",
+            "color1": "green",
+            "color2": "black"
         },
         {
             "skill": "Algorithms",
@@ -178,9 +133,14 @@
             "color2": "blue"
         },
         {
-            "skill": "Agile Methodology",
+            "skill": "Information Security",
             "color1": "blue",
             "color2": "orange"
+        },
+        {
+            "skill": "Microsoft apps",
+            "color1": "#f25022",
+            "color2": "#ffb900"
         }
     ],
     "softskills": [
