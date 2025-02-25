@@ -53,6 +53,21 @@
 
                     img {
                         width: 2rem;
+                        height: fit-content;
+                    }
+                }
+
+                a[href^="mailto"] {
+                    font-family: 'delius';
+                    position: absolute;
+                    background-color: $mainColor;
+                    padding: 0.5rem 1rem;
+                    left: 0;
+
+                    &::before {
+                        @include cutCorner;
+                        top: -0.5rem;
+                        right: -0.5rem;
                     }
                 }
             }
@@ -72,7 +87,7 @@
         font-size: 2rem;
         margin-top: 1rem;
 
-        #quote{
+        #quote {
             font-family: 'delius';
         }
 

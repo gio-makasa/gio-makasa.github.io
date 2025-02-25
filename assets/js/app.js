@@ -59,11 +59,19 @@ function getHomeInfo() {
     }
 
     for (let [key, value] of Object.entries(info.socials)) {
-        socialLinks.innerHTML += `
-        <a href="${value}">
-            <img src="./assets/images/socials/${key}.png" alt="${key}">
-        </a>
-        `;
+        if (key == 'gmail') {
+            socialLinks.innerHTML += `
+            <a href="mailto:${value}">
+                ${value}
+            </a>
+            `;
+        } else {
+            socialLinks.innerHTML += `
+            <a href="${value}">
+                <img src="./assets/images/socials/${key}.png" alt="${key}">
+            </a>
+            `;
+        }
     }
 
     getQuote();
