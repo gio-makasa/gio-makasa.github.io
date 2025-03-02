@@ -11,7 +11,7 @@
     }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1100px) {
     #menuButton {
         display: block;
     }
@@ -104,6 +104,31 @@
         .frames {
             width: min(15rem, 50%);
             height: 13rem;
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #home {
+        #homeContainer {
+            #homeInfo {
+                #socialLinks {
+                    display: flex;
+                    flex-wrap: wrap-reverse;
+                    justify-content: center;
+
+                    a {
+                        float: none;
+                    }
+
+                    a[href^="mailto"] {
+                        position: relative;
+                        width: 100%;
+                        text-align: center;
+                        font-size: medium;
+                    }
+                }
+            }
         }
     }
 }
