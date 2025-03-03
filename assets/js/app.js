@@ -195,7 +195,8 @@ function randFrames(where, array) {
 }
 
 menuButton.addEventListener('click', () => {
-    header.classList.contains('show') ? header.classList.remove('show') : header.classList.add('show');
+    header.classList.value == '' ? header.classList.add('fadein') : 
+    header.classList.contains('fadein') ? header.classList.replace('fadein','fadeout') : header.classList.replace('fadeout','fadein');
 })
 
 $(document).ready(function () {
@@ -203,7 +204,7 @@ $(document).ready(function () {
         if (this.hash !== "") {
             event.preventDefault();
             let hash = this.hash;
-            header.classList.remove('show');
+            header.classList.replace('fadein','fadeout');
             $('html, body').animate({
                 scrollTop: $(hash).offset().top - 100
             }, 800);

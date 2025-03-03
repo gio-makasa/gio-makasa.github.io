@@ -5,10 +5,14 @@ header {
     justify-content: center;
     background-color: $backgroundColor;
     z-index: 15;
-    animation: fadein 1s linear forwards;
 
-    &[class|="show"]{
+    &[class|="fadein"]{
         display: flex;
+        animation: fadein 0.5s linear forwards;
+    }
+    
+    &[class|="fadeout"]{
+        animation: fadeout 0.5s linear forwards;
     }
 
     nav {
